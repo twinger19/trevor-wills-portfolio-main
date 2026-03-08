@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>S/S 27 — Men's Accessories Trend Forecast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════
+   RESET & BASE — Light, Warm, Editorial
+   ═══════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #F5EDE3;
+  color: #2C2418;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+:root {
+  --cream: #F5EDE3;
+  --cream-dark: #EDE3D5;
+  --cream-light: #FAF6F0;
+  --ink: #2C2418;
+  --ink-light: #5C5042;
+  --ink-muted: #8A7E70;
+  --ink-faint: #B8AFA4;
+  --accent-warm: #C9A87C;
+  --accent-sage: #8B9E7E;
+  --retro: #D4613A;
+  --earth: #3B6FA0;
+  --artisan: #8B3A4A;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+  --mono: 'DM Mono', 'SF Mono', monospace;
+}
+
+/* ═══════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════ */
+nav {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 1000;
+  padding: 0 56px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(245,237,227,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(44,36,24,0.06);
+  transition: all 0.4s ease;
+}
+nav.scrolled { background: rgba(245,237,227,0.95); }
+.nav-brand { display: flex; align-items: center; gap: 16px; }
+.nav-logo {
+  height: 18px;
+  width: auto;
+  opacity: 0.45;
+  transition: opacity 0.3s;
+}
+.nav-logo:hover { opacity: 0.7; }
+.nav-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--ink-faint);
+  margin: 0 2px;
+}
+.nav-brand-name {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--ink);
+}
+.nav-season {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-muted);
+  letter-spacing: 0.06em;
+}
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-muted);
+  letter-spacing: 0.03em;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--ink); }
+
+/* ═══════════════════════════════════════
+   HERO — Full bleed, warm atmosphere
+   ═══════════════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 48px 80px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(170deg, #E8D5C0 0%, #F0DCC8 30%, #F5EDE3 70%, #EDE3D5 100%);
+}
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  background: url('images/Hero-bg.jpg') center/cover;
+  opacity: 0.12;
+  mix-blend-mode: multiply;
+}
+.hero-content {
+  position: relative; z-index: 1;
+  max-width: 900px;
+}
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 40px;
+  opacity: 0; transform: translateY(20px);
+  animation: fadeUp 0.8s 0.3s ease forwards;
+}
+.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(56px, 9vw, 120px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 36px;
+  opacity: 0; transform: translateY(30px);
+  animation: fadeUp 1s 0.5s ease forwards;
+}
+.hero-subtitle {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 400;
+  color: var(--ink-light);
+  max-width: 560px;
+  margin: 0 auto 48px;
+  line-height: 1.65;
+  opacity: 0; transform: translateY(20px);
+  animation: fadeUp 0.8s 0.7s ease forwards;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 36px;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  color: var(--ink);
+  transition: all 0.35s ease;
+  opacity: 0; transform: translateY(20px);
+  animation: fadeUp 0.8s 0.9s ease forwards;
+}
+.hero-cta:hover { background: var(--ink); color: var(--cream); }
+.hero-cta svg { width: 18px; height: 18px; transition: transform 0.3s; }
+.hero-cta:hover svg { transform: translateX(4px); }
+.hero-scroll {
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ink-faint);
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  opacity: 0; animation: fadeUp 0.6s 1.3s ease forwards;
+}
+.scroll-line { width: 1px; height: 48px; background: linear-gradient(to bottom, var(--ink-faint), transparent); animation: scrollPulse 2.5s ease-in-out infinite; }
+
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes scrollPulse { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+/* ═══════════════════════════════════════
+   SHARED SECTION STYLES
+   ═══════════════════════════════════════ */
+section { padding: 140px 56px; position: relative; }
+.section-container { max-width: 1200px; margin: 0 auto; }
+.section-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 24px;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(40px, 5.5vw, 72px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 28px;
+}
+.section-text {
+  font-size: 17px;
+  color: var(--ink-light);
+  max-width: 520px;
+  line-height: 1.8;
+}
+.btn-pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em;
+  border: 1.5px solid var(--ink-faint); border-radius: 999px;
+  color: var(--ink); transition: all 0.35s ease; margin-top: 32px;
+}
+.btn-pill:hover { border-color: var(--ink); background: var(--ink); color: var(--cream); }
+.btn-pill svg { width: 16px; height: 16px; }
+
+/* ═══════════════════════════════════════
+   IMAGE COMPONENTS
+   ═══════════════════════════════════════ */
+.img-frame {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+.img-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-frame:hover img { transform: scale(1.04); }
+.img-caption {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 12px;
+}
+
+/* ═══════════════════════════════════════
+   FLOATING IMAGE SECTIONS (microsoft.ai style)
+   ═══════════════════════════════════════ */
+.float-section {
+  padding: 100px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.float-text-center {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.float-img {
+  position: absolute;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(44,36,24,0.1);
+}
+.float-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ═══════════════════════════════════════
+   INTRO / ABOUT SECTION with floating images
+   ═══════════════════════════════════════ */
+.intro-section {
+  padding: 160px 56px 180px;
+  position: relative;
+  overflow: hidden;
+  background: var(--cream-light);
+}
+.intro-text {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+.intro-text .section-label { margin-bottom: 20px; }
+.intro-body {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.intro-float-img {
+  position: absolute;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 50px rgba(44,36,24,0.12);
+}
+.intro-float-img img { width: 100%; height: 100%; object-fit: cover; }
+.intro-img-1 { width: 260px; height: 340px; top: 80px; left: 4%; }
+.intro-img-2 { width: 220px; height: 300px; top: 60px; right: 5%; }
+.intro-img-3 { width: 200px; height: 260px; bottom: 60px; left: 8%; }
+.intro-img-4 { width: 240px; height: 320px; bottom: 40px; right: 4%; }
+
+/* ═══════════════════════════════════════
+   MARQUEE
+   ═══════════════════════════════════════ */
+.marquee-section {
+  padding: 28px 0; overflow: hidden;
+  border-top: 1px solid rgba(44,36,24,0.08);
+  border-bottom: 1px solid rgba(44,36,24,0.08);
+  background: var(--cream);
+}
+.marquee-track { display: flex; animation: marquee 35s linear infinite; width: max-content; }
+.marquee-item {
+  padding: 0 40px;
+  font-family: var(--mono); font-size: 12px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-faint); white-space: nowrap;
+  display: flex; align-items: center; gap: 40px;
+}
+.marquee-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--ink-faint); }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* ═══════════════════════════════════════
+   THREE NARRATIVE CARDS — Large image-led
+   ═══════════════════════════════════════ */
+.narratives-section { background: var(--cream); padding-bottom: 80px; }
+.narratives-header { text-align: center; max-width: 600px; margin: 0 auto 80px; }
+.narrative-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; max-width: 1200px; margin: 0 auto; }
+.narrative-card {
+  border-radius: 20px; overflow: hidden;
+  background: var(--cream-light);
+  border: 1px solid rgba(44,36,24,0.06);
+  transition: all 0.5s cubic-bezier(0.16,1,0.3,1);
+  cursor: pointer;
+}
+.narrative-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(44,36,24,0.12); }
+.card-image { height: 360px; overflow: hidden; position: relative; }
+.card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s ease; }
+.narrative-card:hover .card-image img { transform: scale(1.06); }
+.card-image .card-number {
+  position: absolute; top: 20px; left: 24px;
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.1em; color: white;
+  background: rgba(0,0,0,0.3); backdrop-filter: blur(8px);
+  padding: 6px 14px; border-radius: 999px;
+}
+.card-body { padding: 28px; }
+.card-title {
+  font-family: var(--serif); font-size: 28px; font-weight: 500;
+  font-style: italic; line-height: 1.2; margin-bottom: 12px; color: var(--ink);
+}
+.card-desc { font-size: 14px; color: var(--ink-light); line-height: 1.7; margin-bottom: 20px; }
+.card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.card-tag {
+  padding: 5px 12px; font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.04em; border-radius: 999px;
+  background: rgba(44,36,24,0.04); border: 1px solid rgba(44,36,24,0.08);
+  color: var(--ink-muted);
+}
+.card-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 12px; color: var(--ink);
+  transition: gap 0.3s ease;
+}
+.card-link:hover { gap: 14px; }
+.card-link svg { width: 14px; height: 14px; }
+
+/* ═══════════════════════════════════════
+   DEEP DIVE — Editorial spreads with large images
+   ═══════════════════════════════════════ */
+.deepdive { padding: 160px 56px; position: relative; overflow: hidden; }
+.deepdive-container { max-width: 1200px; margin: 0 auto; }
+.deepdive-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-bottom: 100px; }
+.deepdive-hero-text {}
+.deepdive-hero-img { border-radius: 20px; overflow: hidden; height: 520px; }
+.deepdive-hero-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Image mosaic grid */
+.image-mosaic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 80px 0;
+}
+.mosaic-item { border-radius: 16px; overflow: hidden; }
+.mosaic-tall { grid-row: span 2; }
+.mosaic-item img { width: 100%; height: 100%; object-fit: cover; min-height: 240px; transition: transform 0.8s ease; }
+.mosaic-item:hover img { transform: scale(1.05); }
+
+/* Detail editorial rows */
+.detail-editorial { display: flex; flex-direction: column; gap: 48px; }
+.detail-row {
+  display: flex; gap: 48px; align-items: stretch;
+  background: var(--cream-light); border-radius: 20px;
+  border: 1px solid rgba(44,36,24,0.06);
+  overflow: hidden; transition: all 0.4s ease;
+}
+.detail-row:hover { box-shadow: 0 12px 40px rgba(44,36,24,0.08); }
+.detail-row:nth-child(even) { flex-direction: row-reverse; }
+.detail-row-img {
+  flex: 0 0 42%; position: relative; overflow: hidden;
+  min-height: 320px; background: rgba(44,36,24,0.04);
+}
+.detail-row-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.detail-row:hover .detail-row-img img { transform: scale(1.04); }
+.detail-row-content {
+  flex: 1; padding: 40px 44px; display: flex;
+  flex-direction: column; justify-content: center;
+}
+.detail-label {
+  font-family: var(--mono); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;
+}
+.detail-heading {
+  font-family: var(--serif); font-size: 24px; font-weight: 500;
+  font-style: italic; margin-bottom: 14px; line-height: 1.3; color: var(--ink);
+}
+.detail-text { font-size: 14px; color: var(--ink-light); line-height: 1.75; }
+@media (max-width: 768px) {
+  .detail-row, .detail-row:nth-child(even) { flex-direction: column; }
+  .detail-row-img { flex: none; min-height: 220px; }
+  .detail-row-content { padding: 28px 24px; }
+}
+
+/* Color swatches */
+.color-swatches { display: flex; gap: 14px; margin-top: 20px; flex-wrap: wrap; }
+.swatch { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.swatch-circle {
+  width: 52px; height: 52px; border-radius: 50%;
+  border: 3px solid rgba(44,36,24,0.08); transition: transform 0.3s; cursor: pointer;
+}
+.swatch-circle:hover { transform: scale(1.15); }
+.swatch-name { font-family: var(--mono); font-size: 9px; color: var(--ink-muted); letter-spacing: 0.04em; text-align: center; max-width: 64px; }
+
+/* Material list */
+.material-list { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+.material-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; background: rgba(44,36,24,0.03);
+  border-radius: 12px; font-size: 13px; font-weight: 500;
+  border: 1px solid rgba(44,36,24,0.05); transition: all 0.3s;
+}
+.material-item:hover { background: rgba(44,36,24,0.06); }
+.material-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+/* ═══════════════════════════════════════
+   FULL-WIDTH IMAGE BREAK
+   ═══════════════════════════════════════ */
+.image-break {
+  width: 100%; height: 60vh; min-height: 400px;
+  overflow: hidden; position: relative;
+}
+.image-break img { width: 100%; height: 100%; object-fit: cover; }
+.image-break-overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(44,36,24,0.25);
+}
+.image-break-text {
+  font-family: var(--serif); font-size: clamp(36px,5vw,64px);
+  font-weight: 300; font-style: italic; color: white;
+  text-align: center; max-width: 600px;
+}
+
+/* ═══════════════════════════════════════
+   KEY PRODUCTS — Image-led cards
+   ═══════════════════════════════════════ */
+.products-section { background: var(--cream-light); }
+.products-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 28px; margin-top: 64px; }
+.product-card {
+  border-radius: 20px; overflow: hidden;
+  background: var(--cream); border: 1px solid rgba(44,36,24,0.06);
+  transition: all 0.5s ease;
+}
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(44,36,24,0.1); }
+.product-img { height: 320px; overflow: hidden; }
+.product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+.product-card:hover .product-img img { transform: scale(1.05); }
+.product-info { padding: 28px; }
+.product-label {
+  font-family: var(--mono); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-muted); margin-bottom: 8px;
+}
+.product-name {
+  font-family: var(--serif); font-size: 24px; font-weight: 500;
+  font-style: italic; margin-bottom: 10px; color: var(--ink);
+}
+.product-detail { font-size: 14px; color: var(--ink-light); line-height: 1.7; }
+
+/* ═══════════════════════════════════════
+   DIRECTIONS / TAKEAWAYS
+   ═══════════════════════════════════════ */
+.directions-section { background: var(--cream-dark); text-align: center; }
+.directions-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 48px; margin-top: 72px; text-align: left; }
+.direction-item { padding-left: 24px; border-left: 3px solid var(--ink-faint); }
+.direction-name {
+  font-family: var(--serif); font-size: 22px; font-weight: 500;
+  font-style: italic; margin-bottom: 12px; color: var(--ink);
+}
+.direction-text { font-size: 14px; color: var(--ink-light); line-height: 1.75; }
+
+/* ═══════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════ */
+footer {
+  padding: 56px; border-top: 1px solid rgba(44,36,24,0.08);
+  background: var(--cream);
+}
+.footer-content {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-text { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); }
+.footer-logo {
+  height: 16px;
+  width: auto;
+  opacity: 0.35;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer-links { display: flex; gap: 28px; }
+.footer-links a { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); transition: color 0.3s; }
+.footer-links a:hover { color: var(--ink); }
+
+/* ═══════════════════════════════════════
+   SCROLL ANIMATIONS
+   ═══════════════════════════════════════ */
+.reveal { opacity: 0; transform: translateY(50px); transition: all 1s cubic-bezier(0.16,1,0.3,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-left { opacity: 0; transform: translateX(-80px); transition: all 1.1s cubic-bezier(0.16,1,0.3,1); }
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+.reveal-right { opacity: 0; transform: translateX(80px); transition: all 1.1s cubic-bezier(0.16,1,0.3,1); }
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+.reveal-scale { opacity: 0; transform: scale(0.92); transition: all 1s cubic-bezier(0.16,1,0.3,1); }
+.reveal-scale.visible { opacity: 1; transform: scale(1); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-stagger { transition-delay: calc(var(--i,0) * 0.15s); }
+
+/* ═══════════════════════════════════════
+   IMAGE PLACEHOLDER STYLING
+   ═══════════════════════════════════════ */
+.img-placeholder {
+  background: var(--cream-dark);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink-faint);
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ═══════════════════════════════════════
+   SEASON AT A GLANCE
+   ═══════════════════════════════════════ */
+.season-glance { background: var(--cream-dark); }
+.season-glance-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 60px; }
+.palette-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.palette-swatch { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.palette-dot { width: 44px; height: 44px; border-radius: 50%; border: 2px solid rgba(44,36,24,0.08); transition: transform 0.3s; }
+.palette-dot:hover { transform: scale(1.15); }
+.palette-name { font-family: var(--mono); font-size: 8px; color: var(--ink-muted); letter-spacing: 0.04em; text-align: center; max-width: 56px; }
+.season-directions { display: flex; flex-direction: column; gap: 20px; }
+.season-dir-item { padding-left: 20px; border-left: 2px solid var(--ink-faint); }
+.season-dir-title { font-family: var(--serif); font-size: 18px; font-weight: 500; font-style: italic; margin-bottom: 4px; color: var(--ink); }
+.season-dir-text { font-size: 13px; color: var(--ink-light); line-height: 1.7; }
+
+/* ═══════════════════════════════════════
+   LIFESTYLE TIERS — Visual grid per narrative
+   ═══════════════════════════════════════ */
+.lifestyle-section { margin-top: 80px; }
+.lifestyle-section-title { font-family: var(--mono); font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 28px; }
+.lifestyle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.lifestyle-card { border-radius: 20px; overflow: hidden; background: var(--cream); border: 1px solid rgba(44,36,24,0.06); transition: all 0.4s ease; }
+.lifestyle-card:hover { box-shadow: 0 12px 40px rgba(44,36,24,0.08); transform: translateY(-3px); }
+.lifestyle-card-img { height: 220px; overflow: hidden; }
+.lifestyle-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+.lifestyle-card:hover .lifestyle-card-img img { transform: scale(1.05); }
+.lifestyle-card-body { padding: 24px; }
+.lifestyle-tier-label { font-family: var(--mono); font-size: 9px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+.lifestyle-tier-title { font-family: var(--serif); font-size: 20px; font-weight: 500; font-style: italic; line-height: 1.2; margin-bottom: 8px; color: var(--ink); }
+.lifestyle-apparel { font-size: 12px; color: var(--ink-muted); line-height: 1.6; margin-bottom: 10px; font-style: italic; }
+.lifestyle-accessories { font-size: 13px; color: var(--ink-light); line-height: 1.65; }
+
+/* ═══════════════════════════════════════
+   DENIM CALLOUT
+   ═══════════════════════════════════════ */
+.denim-callout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 60px; padding: 48px; background: var(--cream); border-radius: 24px; border: 1px solid rgba(44,36,24,0.06); }
+.denim-callout-img { border-radius: 16px; overflow: hidden; height: 300px; }
+.denim-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+.denim-callout-text {}
+.denim-label { font-family: var(--mono); font-size: 9px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px; }
+.denim-heading { font-family: var(--serif); font-size: 22px; font-weight: 500; font-style: italic; margin-bottom: 10px; line-height: 1.3; color: var(--ink); }
+.denim-text { font-size: 13px; color: var(--ink-light); line-height: 1.75; }
+
+/* ═══════════════════════════════════════
+   PRODUCT SPECS
+   ═══════════════════════════════════════ */
+.product-specs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.spec-tag { padding: 4px 10px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; border-radius: 999px; background: rgba(44,36,24,0.04); border: 1px solid rgba(44,36,24,0.1); color: var(--ink-muted); }
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .narrative-cards { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+  .deepdive-hero { grid-template-columns: 1fr; }
+  .detail-grid { grid-template-columns: 1fr; }
+  .products-grid { grid-template-columns: 1fr; }
+  .directions-grid { grid-template-columns: 1fr; }
+  .image-mosaic { grid-template-columns: 1fr 1fr; }
+  .intro-float-img { display: none; }
+  .season-glance-grid { grid-template-columns: 1fr; }
+  .lifestyle-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .denim-callout { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  nav { padding: 0 24px; }
+  section, .deepdive, .float-section { padding: 80px 24px; }
+  .hero { padding: 100px 24px 60px; }
+  .nav-links { display: none; }
+  .image-mosaic { grid-template-columns: 1fr; }
+  .footer-content { flex-direction: column; gap: 20px; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; }
+}
+
+/* ═══ MOBILE NAV — Hamburger + Drawer ═══ */
+.mobile-hamburger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1002;
+  padding: 10px;
+  -webkit-tap-highlight-color: transparent;
+}
+.mobile-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+  margin: 5px auto;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.mobile-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.mobile-hamburger.open span:nth-child(2) { opacity: 0; }
+.mobile-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-drawer-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(44,36,24,0.3);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.mobile-drawer-overlay.open { opacity: 1; }
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  max-width: 80vw;
+  height: 100%;
+  background: var(--cream-light, #FAF6F0);
+  z-index: 1001;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: env(safe-area-inset-top, 20px) 28px calc(env(safe-area-inset-bottom, 20px) + 20px) 28px;
+  padding-top: calc(env(safe-area-inset-top, 20px) + 80px);
+  box-shadow: -4px 0 24px rgba(0,0,0,0.08);
+}
+.mobile-drawer.open { transform: translateX(0); }
+
+.mobile-drawer-section {
+  margin-bottom: 24px;
+}
+.mobile-drawer-label {
+  font-family: var(--mono, 'DM Mono', monospace);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint, #B8AFA4);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(44,36,24,0.06);
+}
+.mobile-drawer a {
+  display: block;
+  font-family: var(--sans, 'DM Sans', sans-serif);
+  font-size: 15px;
+  color: var(--ink-light, #5C5042);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(44,36,24,0.04);
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.2s;
+}
+.mobile-drawer a:last-child { border-bottom: none; }
+.mobile-drawer a.active {
+  color: var(--ink, #2C2418);
+  font-weight: 600;
+}
+.mobile-drawer a:active { color: var(--ink, #2C2418); }
+
+/* ═══ SAFARI & MOBILE OPTIMIZATIONS ═══ */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  padding-top: env(safe-area-inset-top, 0);
+}
+@supports (padding: env(safe-area-inset-bottom)) {
+  .page-footer, footer {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 48px);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-hamburger { display: block; }
+  .mobile-drawer-overlay { display: block; pointer-events: none; }
+  .mobile-drawer-overlay.open { pointer-events: auto; }
+
+  /* Prevent body scroll when drawer is open */
+  body.drawer-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="mainNav">
+  <div class="nav-brand">
+    <img src="images/raa logos/RAA_Blue.svg" alt="Randa Apparel & Accessories" class="nav-logo">
+    <span class="nav-divider"></span>
+    <span class="nav-brand-name">S/S 27</span>
+    <span class="nav-season">Men's Accessories Forecast</span>
+  </div>
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#narratives">Narratives</a>
+    <a href="#artisan">The Artisan</a>
+    <a href="#retro">Retro Sport</a>
+    <a href="#earth">Earth &amp; Tech</a>
+    <a href="#products">Key Items</a>
+    <!-- HIDDEN: Women's page temporarily removed — uncomment when photos are ready
+    <span style="width:1px;height:16px;background:var(--ink-faint);margin:0 4px;display:inline-block;vertical-align:middle;"></span>
+    <a href="womens.html">Women's</a>
+    -->
+    <a href="neckwear.html">Neckwear</a>
+    <a href="leather-goods.html">Leather Goods</a>
+  </div>
+  <button class="mobile-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-drawer-overlay"></div>
+<div class="mobile-drawer">
+  <div class="mobile-drawer-section">
+    <div class="mobile-drawer-label">On This Page</div>
+    <a href="#overview">Overview</a>
+    <a href="#narratives">Narratives</a>
+    <a href="#artisan">The Artisan</a>
+    <a href="#retro">Retro Sport</a>
+    <a href="#earth">Earth & Tech</a>
+    <a href="#products">Key Items</a>
+  </div>
+  <div class="mobile-drawer-section">
+    <div class="mobile-drawer-label">All Pages</div>
+    <a href="index.html" class="active">Men's Forecast</a>
+    <a href="leather-goods.html">Leather Goods</a>
+    <a href="neckwear.html">Neckwear</a>
+    <!-- HIDDEN: <a href="womens.html">Women's Forecast</a> -->
+  </div>
+</div>
+
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg-img" style="background-image: url('images/Hero-bg.jpg');"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Spring / Summer 2027</div>
+    <h1 class="hero-title">The Future of<br>Men's Craft</h1>
+    <p class="hero-subtitle">Three defining narratives shaping men's apparel and accessories for the season — where heritage craft meets bold expression.</p>
+    <a href="#narratives" class="hero-cta">
+      Explore Narratives
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- ═══ MARQUEE ═══ -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-item">Woven Leather <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Faded Paisley <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Flat-Top Cap <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Prep Stripes <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Power Tie <span class="marquee-dot"></span></div>
+    <div class="marquee-item">RFID Protection <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Luminous Blue <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Mushroom Leather <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Braided Belt <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Mini Buckles <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Packable Straw <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Meadowland Green <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Crossbody Bag <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Softorial <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Vintage Buckles <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Penny Loafer <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Boat Shoe <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Surreal Suburbia <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Protective Locks <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Gorpcore Luxe <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Woven Leather <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Faded Paisley <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Flat-Top Cap <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Prep Stripes <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Power Tie <span class="marquee-dot"></span></div>
+    <div class="marquee-item">RFID Protection <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Luminous Blue <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Mushroom Leather <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Braided Belt <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Mini Buckles <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Packable Straw <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Meadowland Green <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Crossbody Bag <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Softorial <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Vintage Buckles <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Penny Loafer <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Boat Shoe <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Surreal Suburbia <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Protective Locks <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Gorpcore Luxe <span class="marquee-dot"></span></div>
+  </div>
+</div>
+
+<!-- ═══ INTRO WITH FLOATING IMAGES ═══ -->
+<section class="intro-section" id="overview">
+  <!-- floating images that animate in from sides -->
+  <div class="intro-float-img intro-img-1 reveal-left">
+    <img src="images/intro-belt.jpg" alt="Leather belt detail">
+  </div>
+  <div class="intro-float-img intro-img-2 reveal-right">
+    <img src="images/intro-workshop.jpg" alt="Artisan leather workshop">
+  </div>
+  <div class="intro-float-img intro-img-3 reveal-left reveal-delay-2">
+    <img src="images/intro-tie.jpg" alt="Man with tie">
+  </div>
+  <div class="intro-float-img intro-img-4 reveal-right reveal-delay-2">
+    <img src="images/intro-goods.jpg" alt="Leather goods">
+  </div>
+
+  <div class="intro-text">
+    <div class="section-label reveal">Season Direction</div>
+    <p class="intro-body reveal reveal-delay-1">
+      Spring/Summer 2027 places renewed reverence on craftsmanship and intentional design. Across apparel and accessories, this translates to softorial tailoring, investment-worthy leather goods, the return of the statement tie, a breakout headwear moment, and hardware finishes from vintage patina to sandblasted matte — all bridging heritage with bold modernity.
+    </p>
+    <a href="#narratives" class="btn-pill reveal reveal-delay-2">
+      Three Narratives
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ═══ SEASON AT A GLANCE ═══ -->
+<section class="season-glance" id="season">
+  <div class="section-container">
+    <div class="section-label reveal">Season at a Glance</div>
+    <h2 class="section-title reveal reveal-delay-1">The macro palette<br>&amp; key directions</h2>
+    <p class="section-text reveal reveal-delay-2">Before diving into the three narratives, here's the big picture — the colors and principles that define S/S 2027 men's accessories across Dress, Refined Casual, and Casual.</p>
+    <div class="season-glance-grid">
+      <div class="reveal">
+        <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 16px;">Macro Color Palette</div>
+        <div class="palette-row">
+          <div class="palette-swatch"><div class="palette-dot" style="background:#7B8B7A;"></div><span class="palette-name">Sage Green</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#C4929B;"></div><span class="palette-name">Dusty Rose</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#8B5E3C;"></div><span class="palette-name">Warm Cognac</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#B8860B;"></div><span class="palette-name">Warm Amber</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#0E6E8C;"></div><span class="palette-name">Bold Teal</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#5C1A2A;"></div><span class="palette-name">Deep Burgundy</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#3B3654;"></div><span class="palette-name">Dark Plum</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#6E8892;"></div><span class="palette-name">Steel Teal</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#B8A0B8;"></div><span class="palette-name">Soft Lavender</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#2563EB;"></div><span class="palette-name">Luminous Blue</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#1B3A5C;"></div><span class="palette-name">Classic Navy</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#E85D3A;"></div><span class="palette-name">Energy Orange</span></div>
+        </div>
+      </div>
+      <div class="season-directions reveal reveal-delay-1">
+        <div class="season-dir-item" style="border-color: var(--artisan);">
+          <div class="season-dir-title">Softorial Tailoring</div>
+          <div class="season-dir-text">Unstructured cotton suits and relaxed linen blazers replace rigid tailoring. Wide-leg trousers at a higher rise mean belts are visible and essential. Accessories need to work with soft proportions.</div>
+        </div>
+        <div class="season-dir-item" style="border-color: var(--retro);">
+          <div class="season-dir-title">Wide Silhouettes Are Default</div>
+          <div class="season-dir-text">The wide-leg trouser dominates across all lifestyles — from relaxed chinos to pleated dress pants. Belt widths, wallet formats, and tie proportions all respond to these looser, more generous cuts.</div>
+        </div>
+        <div class="season-dir-item" style="border-color: var(--earth);">
+          <div class="season-dir-title">Denim Renaissance</div>
+          <div class="season-dir-text">Mineral-washed lightweight denim, sashiko-inspired craft, and sculpted forms drive a new denim moment. Belts, leather goods, and accessories must speak to this elevated casual narrative.</div>
+        </div>
+        <div class="season-dir-item" style="border-color: var(--accent-warm);">
+          <div class="season-dir-title">Headwear Renaissance</div>
+          <div class="season-dir-text">Statement hats are up 140% YoY. The flat-top baseball cap nods to skewed classics while packable straw hats lead travel-friendly styling. Brimless summer hats in crochet raffia evolve the docker beanie for warm weather.</div>
+        </div>
+        <div class="season-dir-item" style="border-color: var(--ink-muted);">
+          <div class="season-dir-title">Lifestyle Fluidity</div>
+          <div class="season-dir-text">The same accessory works across Dress, Refined Casual, and Casual. Design for versatility — one belt, three occasions. Ties are back (+73% TikTok), officewear surges (+131%), and bags shift from carry to style statement.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ IMAGE BREAK — Craftsmanship ═══ -->
+<div class="image-break reveal-scale">
+  <img src="images/break-craftsmanship.jpg" alt="Leather craftsmanship">
+  <div class="image-break-overlay">
+    <div class="image-break-text">A season defined by meaningful craft</div>
+  </div>
+</div>
+
+<!-- ═══ THREE NARRATIVES ═══ -->
+<section class="narratives-section" id="narratives">
+  <div class="section-container">
+    <div class="narratives-header">
+      <div class="section-label reveal">Three Narratives</div>
+      <h2 class="section-title reveal reveal-delay-1">Stories that shape<br>the season</h2>
+      <p class="section-text reveal reveal-delay-2" style="margin:0 auto;">Each narrative defines a distinct approach to color, material, hardware, and silhouette for men's accessories.</p>
+    </div>
+    <div class="narrative-cards">
+      <!-- THE ARTISAN -->
+      <div class="narrative-card reveal reveal-stagger" style="--i:0;">
+        <div class="card-image">
+          <img src="images/artisan-hero.jpg" alt="Artisan leather craftsmanship">
+          <div class="card-number">01 — The Artisan</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Relaxed Craft, Sun-Drenched Vibes</h3>
+          <p class="card-desc">NuBohème imperfections meet artisan weaving and textured leathers. From vacation-dinner belts to hand-dyed wallets — accessories built for the man in chinos and a linen shirt.</p>
+          <div class="card-tags">
+            <span class="card-tag">Woven Leather</span>
+            <span class="card-tag">Faded Paisley</span>
+            <span class="card-tag">Pebbled Leather</span>
+            <span class="card-tag">Vacation Dinner</span>
+          </div>
+          <a href="#artisan" class="card-link">
+            Explore narrative
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- RETRO SPORT -->
+      <div class="narrative-card reveal reveal-stagger" style="--i:1;">
+        <div class="card-image">
+          <img src="images/retro-hero.jpg" alt="Bold retro sport styling">
+          <div class="card-number">02 — Retro Sport</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">East Coast Prep Meets Bold Energy</h3>
+          <p class="card-desc">80s/90s nostalgia drives the Power Tie revival, Harbour Lines striping, and bold color-blocking. Utility meets heritage with RFID wallets and compression lock buckles.</p>
+          <div class="card-tags">
+            <span class="card-tag">Power Tie</span>
+            <span class="card-tag">Harbour Lines</span>
+            <span class="card-tag">Navy & Yellow</span>
+            <span class="card-tag">Compression Lock</span>
+          </div>
+          <a href="#retro" class="card-link">
+            Explore narrative
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- EARTH & TECH -->
+      <div class="narrative-card reveal reveal-stagger" style="--i:2;">
+        <div class="card-image">
+          <img src="images/earth-hero.jpg" alt="Natural earth and tech materials">
+          <div class="card-number">03 — Earth &amp; Tech</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Natural Colors, High-Performance Materials</h3>
+          <p class="card-desc">Geology meets logic — matte finishes, sandblasted textures, and mushroom leather. Where gorpcore meets luxury and fidlock buckles belong on a hiking trail and in a business class lounge.</p>
+          <div class="card-tags">
+            <span class="card-tag">Luminous Blue</span>
+            <span class="card-tag">Mushroom Leather</span>
+            <span class="card-tag">Sandblasted</span>
+            <span class="card-tag">Gorpcore Luxe</span>
+          </div>
+          <a href="#earth" class="card-link">
+            Explore narrative
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     THE ARTISAN — Deep Dive
+     ═══════════════════════════════════════════════ -->
+<section class="deepdive" id="artisan" style="background: var(--cream-light);">
+  <div class="deepdive-container">
+    <!-- Hero row: text + big image -->
+    <div class="deepdive-hero">
+      <div class="deepdive-hero-text">
+        <div class="section-label reveal" style="color: var(--artisan);">01 — The Artisan</div>
+        <h2 class="section-title reveal reveal-delay-1">Relaxed craft,<br>sun-drenched soul</h2>
+        <p class="section-text reveal reveal-delay-2">NuBohème imperfections define this narrative — woven belts, textured leathers, and vintage-finish hardware for the man who moves between a seaside dinner and weekend markets.</p>
+      </div>
+      <div class="deepdive-hero-img reveal-right">
+        <img src="images/artisan-hero.jpg" alt="Artisan leather crafting">
+      </div>
+    </div>
+
+    <!-- Image mosaic -->
+    <div class="image-mosaic">
+      <div class="mosaic-item reveal-left">
+        <img src="images/artisan-detail-1.jpg" alt="Woven leather belt detail">
+      </div>
+      <div class="mosaic-item reveal reveal-delay-1">
+        <img src="images/artisan-detail-2.jpg" alt="Faded paisley textile">
+      </div>
+      <div class="mosaic-item mosaic-tall reveal-right">
+        <img src="images/artisan-detail-3.jpg" alt="Hand-dyed leather goods" style="height:100%;">
+      </div>
+      <div class="mosaic-item reveal-left reveal-delay-2">
+        <img src="images/artisan-mosaic-1.jpg" alt="Suede belt with vintage buckle">
+      </div>
+      <div class="mosaic-item reveal reveal-delay-1">
+        <img src="images/artisan-mosaic-2.jpg" alt="Textured leather workshop">
+      </div>
+    </div>
+
+    <!-- Detail editorial rows -->
+    <div class="detail-editorial">
+      <div class="detail-row reveal">
+        <div class="detail-row-img">
+          <img src="images/artisan-colors.jpg" alt="Artisan color palette — burgundy leather, saffron accents, Mediterranean earth tones">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--artisan);">Key Colors</div>
+          <div class="detail-heading">Sage greens, dusty rose, warm cognac &amp; teal</div>
+          <div class="detail-text">The Ornate neckwear palette drives this narrative — sage grey-greens and dusty rose bring softness, while warm cognac and dark olive anchor in richness. Deep teal adds unexpected depth. These layer with existing Artisan staples like saffron and cinnamon to create a sun-drenched, bohemian world.</div>
+          <div class="color-swatches">
+            <div class="swatch"><div class="swatch-circle" style="background:#7B8B7A;"></div><span class="swatch-name">Sage Green</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#C4929B;"></div><span class="swatch-name">Dusty Rose</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#8B5E3C;"></div><span class="swatch-name">Warm Cognac</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#6B7C3F;"></div><span class="swatch-name">Dark Olive</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#3D5C52;"></div><span class="swatch-name">Deep Teal</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#F4A460;"></div><span class="swatch-name">Saffron</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#C17F3E;"></div><span class="swatch-name">Cinnamon</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#D2B48C;"></div><span class="swatch-name">Cape Wheat</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="detail-row reveal reveal-delay-1">
+        <div class="detail-row-img">
+          <img src="images/artisan-hardware.jpg" alt="Artisan hardware — vintage brass buckles, wood closures, hand-sculpted details">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--artisan);">Hardware &amp; Trims</div>
+          <div class="detail-heading">Vintage buckles, double-ring closures &amp; antique finishes</div>
+          <div class="detail-text">Vintage-finish buckles with hand-sculpted stamps and engravings anchor the belt story. Double-ring closures for braided belts give adjustable, relaxed proportion. Trending mini buckles scaled down for day-to-night appeal on narrower dress belts. Antique gold and burnished brass finishes with aged patina that looks lived-in from day one. Crafted custom hardware with visible tooling for wallets and leather goods.</div>
+          <div class="material-list">
+            <div class="material-item"><span class="material-dot" style="background:#CD853F;"></span>Hand-sculpted artisan buckles</div>
+            <div class="material-item"><span class="material-dot" style="background:#8B7355;"></span>Trending mini buckles in antique metallics</div>
+            <div class="material-item"><span class="material-dot" style="background:#A0522D;"></span>Double-ring closures for braided belts</div>
+            <div class="material-item"><span class="material-dot" style="background:#B8860B;"></span>Burnished brass &amp; aged patina finishes</div>
+          </div>
+        </div>
+      </div>
+      <div class="detail-row reveal reveal-delay-2">
+        <div class="detail-row-img">
+          <img src="images/artisan-materials.jpg" alt="Artisan materials — pebbled grain leather, hand-dyed suede, linen weaves">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--artisan);">Materials</div>
+          <div class="detail-heading">Textured, imperfect, sun-worn</div>
+          <div class="detail-text">Pebbled and tumbled-grain leathers in softer colorways. Hand-dyed and marbled finishes for wallets. LWG-certified veg-tanned leather that develops unique patina. Regenerative bast fibres — linen and hemp — for braided belts. Wrinkled suede and broken-in calf for belts that feel vintage from day one. Crafted natural straw weaves for headwear with artisan washed texture bands.</div>
+          <div class="material-list">
+            <div class="material-item"><span class="material-dot" style="background:#D2691E;"></span>Pebbled & tumbled grain leather</div>
+            <div class="material-item"><span class="material-dot" style="background:#BC8F8F;"></span>Hand-dyed &amp; marbled finishes</div>
+            <div class="material-item"><span class="material-dot" style="background:#BDB76B;"></span>Wrinkled suede &amp; broken-in calf</div>
+            <div class="material-item"><span class="material-dot" style="background:#8B7355;"></span>Regenerative linen, hemp &amp; crafted straw</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lifestyle Tiers -->
+    <div class="lifestyle-section">
+      <div class="lifestyle-section-title reveal" style="color: var(--artisan);">The Look — Styled by Lifestyle</div>
+      <div class="lifestyle-grid">
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:0;">
+          <div class="lifestyle-card-img"><img src="images/artisan-look-dress.jpg" alt="Artisan dress look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--artisan);">Dress — Modern</div>
+            <div class="lifestyle-tier-title">The Textured Suit</div>
+            <div class="lifestyle-apparel">Relaxed linen blazer, soft cotton trousers, open-collar shirt in muted stripes or ornate jacquard</div>
+            <div class="lifestyle-accessories">Pebbled leather belt in deep burgundy or navy (30mm) with antique buckle. Textured knit tie in faded paisley or nostalgic florals (7.5–8.5cm). Hand-dyed marbled cardholder. Crafted fancy weave Panama with leather band. Polished penny loafers.</div>
+          </div>
+        </div>
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:1;">
+          <div class="lifestyle-card-img"><img src="images/artisan-look-casual.jpg" alt="Artisan refined casual look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--artisan);">Refined Casual</div>
+            <div class="lifestyle-tier-title">The Vacation Dinner</div>
+            <div class="lifestyle-apparel">Cotton chinos, linen camp-collar shirt, unstructured blazer — the sweet spot for this narrative</div>
+            <div class="lifestyle-accessories">Braided belt with double-ring closure in antique metallics (35mm). Suede belt with vintage mini buckle. Hand-dyed marbled wallet. Travel-friendly packable straw hat with harbour-line stitched band. Boat shoes or fisherman sandals.</div>
+          </div>
+        </div>
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:2;">
+          <div class="lifestyle-card-img"><img src="images/artisan-look-workwear.jpg" alt="Artisan casual workwear look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--artisan);">Casual &amp; Workwear</div>
+            <div class="lifestyle-tier-title">Broken-In Heritage</div>
+            <div class="lifestyle-apparel">Washed carpenter pants, heritage flannel, barn jacket. Re-Workwear with aged appeal.</div>
+            <div class="lifestyle-accessories">Broken-in veg-tanned belt (35–40mm). Braided hemp-and-linen cord belt with elevated knots. Tooled wallet with stamped detail. Brimless summer hat in crochet raffia with adjustable turn-up. Heritage canvas sneakers or apron-toe boots.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Denim Callout -->
+    <div class="denim-callout reveal">
+      <div class="denim-callout-img reveal-left">
+        <img src="images/artisan-denim.jpg" alt="Mineral-washed denim with woven belt">
+      </div>
+      <div class="denim-callout-text">
+        <div class="denim-label" style="color: var(--artisan);">Denim Pairing</div>
+        <div class="denim-heading">Mineral-washed denim meets artisan craft</div>
+        <div class="denim-text">Lightweight denim (5–9oz) in mineral finishes and natural oxidation. Soft Serenity washes pair with woven leather belts and vintage buckles. Cultural Kinship denim with sashiko embroidery echoes the hand-tooled aesthetic. Wider fits, slightly cropped — belts at 35mm sit high and visible. Finish with toe-post sandals or heritage loafers.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ IMAGE BREAK — Energy ═══ -->
+<div class="image-break reveal-scale">
+  <img src="images/break-heritage.jpg" alt="Mountain landscape terrain">
+  <div class="image-break-overlay">
+    <div class="image-break-text">Energy meets heritage</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     RETRO SPORT — Deep Dive
+     ═══════════════════════════════════════════════ -->
+<section class="deepdive" id="retro" style="background: var(--cream);">
+  <div class="deepdive-container">
+    <div class="deepdive-hero">
+      <div class="deepdive-hero-img reveal-left">
+        <img src="images/retro-hero.jpg" alt="Bold retro menswear styling">
+      </div>
+      <div class="deepdive-hero-text">
+        <div class="section-label reveal" style="color: var(--retro);">02 — Retro Sport</div>
+        <h2 class="section-title reveal reveal-delay-1">East coast prep<br>meets bold energy</h2>
+        <p class="section-text reveal reveal-delay-2">80s/90s nostalgia collides with east coast prep heritage. The Power Tie is back, Harbour Lines bring graphic punch, and utility features like RFID protection and compression lock buckles add modern function.</p>
+      </div>
+    </div>
+
+    <div class="image-mosaic">
+      <div class="mosaic-item mosaic-tall reveal-left">
+        <img src="images/retro-detail-1.jpg" alt="Colorful webbing belts" style="height:100%;">
+      </div>
+      <div class="mosaic-item reveal reveal-delay-1">
+        <img src="images/retro-detail-2.jpg" alt="Statement buckle detail with antique finish">
+      </div>
+      <div class="mosaic-item reveal-right">
+        <img src="images/retro-detail-3.jpg" alt="Power tie with geometric print">
+      </div>
+      <div class="mosaic-item reveal-left reveal-delay-2">
+        <img src="images/retro-mosaic-1.jpg" alt="Canvas tote in navy and yellow">
+      </div>
+      <div class="mosaic-item reveal reveal-delay-1">
+        <img src="images/retro-mosaic-2.jpg" alt="RFID wallet detail">
+      </div>
+    </div>
+
+    <div class="detail-editorial">
+      <div class="detail-row reveal">
+        <div class="detail-row-img">
+          <img src="images/retro-colors.jpg" alt="Retro Sport color palette — bold orange, pop pink, prep navy and yellow">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--retro);">Key Colors</div>
+          <div class="detail-heading">Prep amber, bold teal &amp; deep burgundy</div>
+          <div class="detail-text">The Prep neckwear palette grounds this narrative — warm amber and bold teal lead the repp-stripe tie story, while deep burgundy and dark olive add classic east coast weight. Khaki gold connects to the chino. Energy Orange and Classic Navy carry over to inject 80s vibrancy alongside the prep foundation.</div>
+          <div class="color-swatches">
+            <div class="swatch"><div class="swatch-circle" style="background:#B8860B;"></div><span class="swatch-name">Warm Amber</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#0E6E8C;"></div><span class="swatch-name">Bold Teal</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#5C1A2A;"></div><span class="swatch-name">Deep Burgundy</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#3D4A2E;"></div><span class="swatch-name">Dark Olive</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#B5A642;"></div><span class="swatch-name">Khaki Gold</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#E85D3A;"></div><span class="swatch-name">Energy Orange</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#1B3A5C;"></div><span class="swatch-name">Classic Navy</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#8B1A1A;"></div><span class="swatch-name">Crimson</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="detail-row reveal reveal-delay-1">
+        <div class="detail-row-img">
+          <img src="images/retro-hardware.jpg" alt="Retro Sport hardware — statement buckles, compression locks, antique finishes">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--retro);">Hardware &amp; Trims</div>
+          <div class="detail-heading">Statement buckles, polished finishes &amp; smart tech</div>
+          <div class="detail-text">Black and gold pairing leads belt hardware — inspired by Art Deco and the opulent 1980s. Polished and antique-finish buckles with a mix of high-shine and matte textures. Compression lock closures for utility belts and webbing styles. Heritage engraved monogram buckles for the prep customer. RFID-blocking tech and air-tag compartments integrated into wallets.</div>
+          <div class="material-list">
+            <div class="material-item"><span class="material-dot" style="background:#FFD700;"></span>Black &amp; gold Art Deco belt buckles</div>
+            <div class="material-item"><span class="material-dot" style="background:#C0C0C0;"></span>Compression lock &amp; polished closures</div>
+            <div class="material-item"><span class="material-dot" style="background:#E85D3A;"></span>RFID-blocking &amp; air-tag wallet tech</div>
+            <div class="material-item"><span class="material-dot" style="background:#8B6914;"></span>Heritage engraved &amp; monogram buckles</div>
+          </div>
+        </div>
+      </div>
+      <div class="detail-row reveal reveal-delay-2">
+        <div class="detail-row-img">
+          <img src="images/retro-materials.jpg" alt="Retro Sport materials — striped webbing, bold canvas, cracked patent leather">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--retro);">Materials</div>
+          <div class="detail-heading">Webbing, canvas, cracked leather &amp; sartorial fabrics</div>
+          <div class="detail-text">Striped webbing belts with leather tabs and bold color-blocking. Canvas totes and messenger bags in navy and yellow with beltification closures. Weather-resistant recycled nylon for backpacks. Cracked leather and embossed textures for crossbody bags and briefcases. Canvas and denim for the flat-top cadet cap with harbour-line accents. Surreal Suburbia floral prints on ties.</div>
+          <div class="material-list">
+            <div class="material-item"><span class="material-dot" style="background:#8B6914;"></span>Striped webbing with leather tabs</div>
+            <div class="material-item"><span class="material-dot" style="background:#1B3A5C;"></span>Weather-resistant recycled nylon &amp; canvas</div>
+            <div class="material-item"><span class="material-dot" style="background:#4A7C59;"></span>Cracked leather &amp; embossed textures</div>
+            <div class="material-item"><span class="material-dot" style="background:#2D2D2D;"></span>Canvas &amp; denim for flat-top caps</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lifestyle Tiers -->
+    <div class="lifestyle-section">
+      <div class="lifestyle-section-title reveal" style="color: var(--retro);">The Look — Styled by Lifestyle</div>
+      <div class="lifestyle-grid">
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:0;">
+          <div class="lifestyle-card-img"><img src="images/retro-look-dress.jpg" alt="Retro sport dress look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--retro);">Dress — Statement</div>
+            <div class="lifestyle-tier-title">The Peacock</div>
+            <div class="lifestyle-apparel">Bold-shouldered cotton suit, contrast-stripe shirt, pleated wide-leg trousers. The "softorial" silhouette with 80s energy.</div>
+            <div class="lifestyle-accessories">Power Tie at 8.5cm in repp stripes, tartan plaids, or Surreal Suburbia florals. Black-and-gold buckle belt (30mm). Heritage engraved cardholder. Structured briefcase in embossed leather. Penny loafers or retro slip-on sneaker.</div>
+          </div>
+        </div>
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:1;">
+          <div class="lifestyle-card-img"><img src="images/retro-look-casual.jpg" alt="Retro sport refined casual look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--retro);">Refined Casual</div>
+            <div class="lifestyle-tier-title">The Hybrid Uniform</div>
+            <div class="lifestyle-apparel">Khaki chinos, Breton-stripe shirt, polo shirt or rugby top. The casual tailored look with prep-sport energy — office to home to the course.</div>
+            <div class="lifestyle-accessories">Striped webbing belt with leather tabs (35mm) in navy and yellow. Everyday tote with colour-block beltification closure. RFID slim wallet with air-tag compartment. Flat-top canvas baseball cap with harbour-line fabric. Boat shoes or deck shoes.</div>
+          </div>
+        </div>
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:2;">
+          <div class="lifestyle-card-img"><img src="images/retro-look-outdoor.jpg" alt="Retro sport outdoor utility look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--retro);">Casual &amp; Outdoor</div>
+            <div class="lifestyle-tier-title">Guardian Utility</div>
+            <div class="lifestyle-apparel">Cargo pants, half-zip pullover, four-pocket utility jacket. Functional outdoor gear with fashion sensibility.</div>
+            <div class="lifestyle-accessories">Webbing belt with compression lock closure (35mm). Hyperfunctional belt bag with multi-pocket and water-bottle pouch. RFID wallet with quick-access and air-tag slot. Guardian-design crossbody with anti-theft closures. Flat-top denim cap. Cleat-inspired retro sneakers.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ IMAGE BREAK — Business Meets Outdoors ═══ -->
+<div class="image-break reveal-scale">
+  <img src="images/break-terrain.jpg" alt="Warm vintage heritage">
+  <div class="image-break-overlay">
+    <div class="image-break-text">Where gorpcore meets the business class lounge</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     EARTH & TECH — Deep Dive
+     ═══════════════════════════════════════════════ -->
+<section class="deepdive" id="earth" style="background: var(--cream-light);">
+  <div class="deepdive-container">
+    <div class="deepdive-hero">
+      <div class="deepdive-hero-text">
+        <div class="section-label reveal" style="color: var(--earth);">03 — Earth &amp; Tech</div>
+        <h2 class="section-title reveal reveal-delay-1">Natural colors,<br>engineered craft</h2>
+        <p class="section-text reveal reveal-delay-2">Geology meets logic — where matte finishes, sandblasted textures, and bio-based innovation create accessories that work from the hiking trail to the business class lounge.</p>
+      </div>
+      <div class="deepdive-hero-img reveal-right">
+        <img src="images/earth-hero.jpg" alt="Natural landscape meets design">
+      </div>
+    </div>
+
+    <div class="image-mosaic">
+      <div class="mosaic-item reveal-left">
+        <img src="images/earth-detail-1.jpg" alt="Matte leather texture">
+      </div>
+      <div class="mosaic-item mosaic-tall reveal reveal-delay-1">
+        <img src="images/earth-detail-2.jpg" alt="Luminous blue accessories" style="height:100%;">
+      </div>
+      <div class="mosaic-item reveal-right">
+        <img src="images/earth-detail-3.jpg" alt="Earth-tone terrain">
+      </div>
+      <div class="mosaic-item reveal-left reveal-delay-2">
+        <img src="images/earth-mosaic-1.jpg" alt="Mushroom leather material">
+      </div>
+      <div class="mosaic-item reveal reveal-delay-1">
+        <img src="images/earth-mosaic-2.jpg" alt="Technical belt bag detail">
+      </div>
+    </div>
+
+    <div class="detail-editorial">
+      <div class="detail-row reveal">
+        <div class="detail-row-img">
+          <img src="images/earth-colors.jpg" alt="Earth & Tech color palette — Luminous Blue, meadow green, ginger and clay tones">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--earth);">Key Colors</div>
+          <div class="detail-heading">Dark plum, steel teal, dusty rose &amp; lavender</div>
+          <div class="detail-text">The Modern neckwear palette adds sophistication — dark plum-navy and steel teal bring quiet authority to ties and accessories, while dusty rose and soft lavender offer unexpected softness. These fold into existing Earth &amp; Tech staples like Luminous Blue, Meadowland Green, and Ginger Biscuit to create a palette that feels cool to the touch and contemporary.</div>
+          <div class="color-swatches">
+            <div class="swatch"><div class="swatch-circle" style="background:#3B3654;"></div><span class="swatch-name">Dark Plum</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#6E8892;"></div><span class="swatch-name">Steel Teal</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#7B6C3A;"></div><span class="swatch-name">Olive Khaki</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#B07478;"></div><span class="swatch-name">Dusty Rose</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#B8A0B8;"></div><span class="swatch-name">Soft Lavender</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#2563EB;"></div><span class="swatch-name">Luminous Blue</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#6DBE6E;"></div><span class="swatch-name">Meadowland Green</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#D4A574;"></div><span class="swatch-name">Ginger Biscuit</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="detail-row reveal reveal-delay-1">
+        <div class="detail-row-img">
+          <img src="images/earth-hardware.jpg" alt="Earth & Tech hardware — brushed silver buckles, bonded construction, agate enamel">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--earth);">Hardware &amp; Trims</div>
+          <div class="detail-heading">Minimal hardware, maximum function</div>
+          <div class="detail-text">Sandblasted textures and matte-finished buckles for a sleek, futuristic aesthetic. Brushed silver in clean geometric forms — the defining belt buckle for this narrative. Fidlock magnetic closures for utilitarian and technical belts. Matte black and old gold finishes with zero shine. Crafted natural trims in FSC-certified cork, bamboo, and wood for hat bands and strap details.</div>
+          <div class="material-list">
+            <div class="material-item"><span class="material-dot" style="background:#808080;"></span>Sandblasted matte belt buckles</div>
+            <div class="material-item"><span class="material-dot" style="background:#C0C0C0;"></span>Brushed silver geometric buckles</div>
+            <div class="material-item"><span class="material-dot" style="background:#2D2D2D;"></span>Matte black &amp; old gold finishes</div>
+            <div class="material-item"><span class="material-dot" style="background:#CD853F;"></span>Fidlock magnetic &amp; FSC-certified trims</div>
+          </div>
+        </div>
+      </div>
+      <div class="detail-row reveal reveal-delay-2">
+        <div class="detail-row-img">
+          <img src="images/earth-materials.jpg" alt="Earth & Tech materials — mushroom leather, hemp weave, recycled nylon texture">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--earth);">Materials</div>
+          <div class="detail-heading">Mushroom leather, hemp, bio-materials &amp; plant polymers</div>
+          <div class="detail-text">Rugged sustainable materials define this narrative. Mushroom leather and plant-polymer bio-alternatives from agro and food waste. Hemp and recycled nylon for technical belts and belt bags. Matte leather wallets with rubberized or "cool to the touch" finishes. Skinergy biotechnology grows material skins for innovative surfaces. Lightweight linen knit for packable baseball caps. PFAS-free waterproofing for weather-resistant bags.</div>
+          <div class="material-list">
+            <div class="material-item"><span class="material-dot" style="background:#8FBC8F;"></span>Mushroom leather &amp; plant-polymer bio-materials</div>
+            <div class="material-item"><span class="material-dot" style="background:#696969;"></span>Hemp, recycled nylon &amp; PFAS-free canvas</div>
+            <div class="material-item"><span class="material-dot" style="background:#D2B48C;"></span>Rubberized matte &amp; Skinergy surfaces</div>
+            <div class="material-item"><span class="material-dot" style="background:#A0522D;"></span>Lightweight linen knit for caps</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lifestyle Tiers -->
+    <div class="lifestyle-section">
+      <div class="lifestyle-section-title reveal" style="color: var(--earth);">The Look — Styled by Lifestyle</div>
+      <div class="lifestyle-grid">
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:0;">
+          <div class="lifestyle-card-img"><img src="images/earth-look-dress.jpg" alt="Earth tech dress look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--earth);">Dress — Modern Minimalist</div>
+            <div class="lifestyle-tier-title">Clean Lines, No Shine</div>
+            <div class="lifestyle-apparel">Matte-finish wool suit, collarless shirt, tapered technical trousers. Zero ornamentation.</div>
+            <div class="lifestyle-accessories">Sandblasted matte belt in Earthy Brown (25–30mm). Brushed silver geometric buckle. Matte rubberized cardholder. Softorial shoulder bag in smooth responsible leather. Minimal leather loafers or grandad sneaker in nuanced neutrals.</div>
+          </div>
+        </div>
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:1;">
+          <div class="lifestyle-card-img"><img src="images/earth-look-casual.jpg" alt="Earth tech refined casual look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--earth);">Refined Casual</div>
+            <div class="lifestyle-tier-title">Sophisticated Earth Tones</div>
+            <div class="lifestyle-apparel">Cotton chinos in Meadowland Green or clay, merino-wool tee, linen overshirt in terracotta</div>
+            <div class="lifestyle-accessories">Matte leather belt in Ginger Biscuit (35mm). Cool-touch rubberized wallet with modular pockets. Botanical neckerchief (50×50cm) in meadowlands florals. Lightweight linen packable baseball cap. Minimalist retro slip-on sneakers.</div>
+          </div>
+        </div>
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:2;">
+          <div class="lifestyle-card-img"><img src="images/earth-look-outdoor.jpg" alt="Earth tech gorpcore outdoor look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--earth);">Casual &amp; Outdoor</div>
+            <div class="lifestyle-tier-title">Gorpcore Meets Luxury</div>
+            <div class="lifestyle-apparel">Technical hiking pants, fleece zip-up, performance shacket. The North Face meets business class.</div>
+            <div class="lifestyle-accessories">Mushroom leather belt with fidlock buckle (35mm). Guardian-design crossbody in hemp-nylon with protective locks. Hyperfunctional backpack with expandable storage and hidden anti-theft pocket. Brimless summer hat in tightly woven UV-protective raffia. Laceless strappy sneakers or recovery slides.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ KEY PRODUCTS ═══ -->
+<section class="products-section" id="products">
+  <div class="section-container">
+    <div style="text-align:center; max-width:600px; margin:0 auto 64px;">
+      <div class="section-label reveal">Key Items</div>
+      <h2 class="section-title reveal reveal-delay-1">The essential categories</h2>
+      <p class="section-text reveal reveal-delay-2" style="margin:0 auto;">Across all three narratives, these core categories define the S/S 27 men's accessories story — from belts and ties to the breakout headwear moment.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal reveal-stagger" style="--i:0;">
+        <div class="product-img">
+          <img src="images/product-belts.jpg" alt="Leather belt collection">
+        </div>
+        <div class="product-info">
+          <div class="product-label">Belts</div>
+          <div class="product-name">The Classic Leather Belt</div>
+          <div class="product-detail">Core widths at 28–35mm for versatility across softorial suits, high-rise wide-leg trousers, and weekend wear. Higher trouser rises make belts more visible and more of a styling statement. Vintage-finish and mini buckles define The Artisan. Black-and-gold Art Deco buckles and protective locks bring Retro Sport energy. Sandblasted matte finishes and fidlock tech anchor Earth &amp; Tech. LWG-certified, veg-tanned, and mushroom leather sourcing. Sun-drenched fades on straps for resort appeal.</div>
+          <div class="product-specs"><span class="spec-tag">28–35mm Core</span><span class="spec-tag">Mini Buckles</span><span class="spec-tag">Veg-Tanned</span><span class="spec-tag">Art Deco Hardware</span><span class="spec-tag">Fidlock</span><span class="spec-tag">Mushroom Leather</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-stagger" style="--i:1;">
+        <div class="product-img">
+          <img src="images/product-wallets.jpg" alt="Leather wallet craftsmanship">
+        </div>
+        <div class="product-info">
+          <div class="product-label">Wallets &amp; Small Leather Goods</div>
+          <div class="product-name">From Artisan Craft to RFID Tech</div>
+          <div class="product-detail">The Artisan: hand-dyed bifold with marbled finish in veg-tan and vintage closure. Retro Sport: slim RFID-blocking cardholder with air-tag compartment and bold color panel. Earth &amp; Tech: matte rubberized phone wallet with modular pockets, cool to the touch. Tooled surfaces and personalised monogram details build character across all three stories.</div>
+          <div class="product-specs"><span class="spec-tag">Bifold</span><span class="spec-tag">Slim Cardholder</span><span class="spec-tag">Phone Wallet</span><span class="spec-tag">RFID + Air Tag</span><span class="spec-tag">Veg-Tanned</span><span class="spec-tag">Monogram</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-stagger" style="--i:2;">
+        <div class="product-img">
+          <img src="images/product-neckwear.jpg" alt="Neckwear collection">
+        </div>
+        <div class="product-info">
+          <div class="product-label">Neckwear &amp; Ties</div>
+          <div class="product-name">Three Directions: Modern, Ornate, Prep</div>
+          <div class="product-detail">Tie searches are up 73% on TikTok — and the season offers three clear directions. Modern: clean solids and subtle pinstripes in navy, teal, and burgundy for contemporary minimalism. Ornate: statement scarves draped over open collars, rich geometric jacquards, and bohemian foulards in sage, mauve, and rust. Prep: Power Tie at 7.5–8.5cm in repp stripes, tartan plaids, and Surreal Suburbia nostalgic florals. The lightweight rectangular scarf emerges as essential for off-season layering — foulards, paisley, statement florals, and washed indigo coastal patterns.</div>
+          <div class="product-specs"><span class="spec-tag">7.5–8.5cm Tie</span><span class="spec-tag">Knit Tie</span><span class="spec-tag">Lightweight Scarf</span><span class="spec-tag">Repp Stripe</span><span class="spec-tag">Surreal Suburbia</span><span class="spec-tag">+73% TikTok</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-stagger" style="--i:3;">
+        <div class="product-img">
+          <img src="images/product-braided.jpg" alt="Braided belt collection">
+        </div>
+        <div class="product-info">
+          <div class="product-label">Belts</div>
+          <div class="product-name">The Braided &amp; Fabric Belt</div>
+          <div class="product-detail">The braided belt creates Surprising Simplicity — adding colour and depth through interlacing. Classic proportions at 28–35mm with double-ring closures for adjustable lengths or trending mini buckles. Responsible Classic leathers, non-leather alternatives, and regenerative bast fibres (linen, hemp) in antique metallic hardware. Striped webbing with leather tabs for Retro Sport colour-blocking. Elevated knots as closure details.</div>
+          <div class="product-specs"><span class="spec-tag">28–35mm Core</span><span class="spec-tag">Braided</span><span class="spec-tag">Double Ring</span><span class="spec-tag">Mini Buckle</span><span class="spec-tag">Linen &amp; Hemp</span><span class="spec-tag">Elevated Knots</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-stagger" style="--i:4;">
+        <div class="product-img">
+          <img src="images/product-hats.jpg" alt="Men's hats collection">
+        </div>
+        <div class="product-info">
+          <div class="product-label">Headwear</div>
+          <div class="product-name">From Cadet Caps to Crafted Panamas</div>
+          <div class="product-detail">Statement hats up 140% YoY. The flat-top cadet cap (searches +31%) in canvas, twill, or denim with harbour-line accents and bold graphics leads the Retro Sport casual story. Cuence weave Panamas with artisan washed texture bands and fancy weave straw with leather or suede bands for The Artisan. Brimless summer hats in crochet raffia with UV protection evolve the docker beanie for warm weather. Lightweight linen-knit packable caps for Earth &amp; Tech. Travel-friendly is the key mandate — every hat should survive the suitcase.</div>
+          <div class="product-specs"><span class="spec-tag">Cadet Cap +31%</span><span class="spec-tag">Panama</span><span class="spec-tag">Brimless Raffia</span><span class="spec-tag">Linen Knit</span><span class="spec-tag">Packable</span><span class="spec-tag">+140% YoY</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-stagger" style="--i:5;">
+        <div class="product-img">
+          <img src="images/product-bags.jpg" alt="Men's bags collection">
+        </div>
+        <div class="product-info">
+          <div class="product-label">Bags</div>
+          <div class="product-name">Crossbody, Tote &amp; Guardian Design</div>
+          <div class="product-detail">The crossbody bag leads — structured east-west saddle design with protective locks and detachable straps. Everyday tote with beltification closures and colour-blocking in bold colour-block navy and yellow. Guardian-design features with cut-resistant straps and hidden pockets respond to safety-conscious demand (+105% TikTok). Hyperfunctional belt bags with multi-pocket and water-bottle pouch for active lifestyles. Briefcase revival for officewear resurgence (+146%).</div>
+          <div class="product-specs"><span class="spec-tag">Crossbody</span><span class="spec-tag">Tote</span><span class="spec-tag">Belt Bag</span><span class="spec-tag">Briefcase</span><span class="spec-tag">Guardian Design</span><span class="spec-tag">Protective Locks</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-stagger" style="--i:6;">
+        <div class="product-img">
+          <img src="images/product-footwear.jpg" alt="Men's footwear collection">
+        </div>
+        <div class="product-info">
+          <div class="product-label">Footwear</div>
+          <div class="product-name">Loafers, Boat Shoes &amp; Retro Sneakers</div>
+          <div class="product-detail">The penny loafer continues its dominance (+34% feed posts) with crafted natural raffia, braided features, and equestrian-inspired details. The boat shoe reverses its decline (+43% global searches) as New Prep and nautical trends drive renewed interest. The fisherman sandal rises with handcrafted stitching and hybrid sport-sandal construction. Retro slip-on sneakers with Y2K aesthetics in Luminous Blue or metallics. Recovery slides in bio-material moulded constructions (+114% barefoot searches).</div>
+          <div class="product-specs"><span class="spec-tag">Penny Loafer</span><span class="spec-tag">Boat Shoe</span><span class="spec-tag">Fisherman Sandal</span><span class="spec-tag">Retro Slip-On</span><span class="spec-tag">Recovery Slide</span><span class="spec-tag">Cleated Sneaker</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-stagger" style="--i:7;">
+        <div class="product-img">
+          <img src="images/product-apparel.jpg" alt="Key apparel silhouettes">
+        </div>
+        <div class="product-info">
+          <div class="product-label">Key Apparel Context</div>
+          <div class="product-name">Softorial Suits, Wide Trousers &amp; Open Collars</div>
+          <div class="product-detail">Accessories don't exist without apparel context. Softorial tailoring — unstructured cotton and linen blazers with relaxed shoulders — defines the dress tier and demands refined belts at 30mm. Wide-leg, higher-rise trousers across chinos, pleated dress pants, and cargo styles make belts visible and essential. Open-collar camp shirts and ornate jacquards create the backdrop for statement ties and draped scarves. Denim enters a mineral-washed renaissance with wider, slightly cropped fits. Performance shackets and four-pocket utility jackets bridge outdoor to office.</div>
+          <div class="product-specs"><span class="spec-tag">Softorial</span><span class="spec-tag">Wide-Leg Trouser</span><span class="spec-tag">Open Collar</span><span class="spec-tag">Mineral Denim</span><span class="spec-tag">Shacket</span><span class="spec-tag">Camp Shirt</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ KEY DIRECTIONS ═══ -->
+<section class="directions-section">
+  <div class="section-container">
+    <div class="section-label reveal">Key Takeaways</div>
+    <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">Design with intention</h2>
+    <div class="directions-grid">
+      <div class="direction-item reveal reveal-stagger" style="--i:0; border-color: var(--artisan);">
+        <div class="direction-name">Honor the Maker</div>
+        <div class="direction-text">Braided belts with double-ring closures and elevated knots. Hand-dyed marbled wallets in veg-tan. Crafted Panama weaves with artisan-washed bands. Ornate scarves draped over open collars. The Artisan puts imperfection and intentional craft center stage.</div>
+      </div>
+      <div class="direction-item reveal reveal-stagger" style="--i:1; border-color: var(--retro);">
+        <div class="direction-name">Lead with Energy</div>
+        <div class="direction-text">Ties are back (+73% TikTok) in three directions: Modern, Ornate, and Prep. The flat-top cadet cap rises (+31% searches). Guardian-design bags with protective locks meet officewear resurgence (+146%). Black-and-gold hardware and RFID tech with air-tag integration define smart utility.</div>
+      </div>
+      <div class="direction-item reveal reveal-stagger" style="--i:2; border-color: var(--earth);">
+        <div class="direction-name">Build for Terrain</div>
+        <div class="direction-text">Plant-polymer bio-materials, Skinergy surfaces, and FSC-certified natural trims. Brimless UV-protective raffia hats and packable linen caps. Hyperfunctional belt bags and guardian crossbodies. Recovery slides and strappy sneakers. Earth &amp; Tech bridges the trail to the lounge.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="images/raa logos/RAA_Blue.svg" alt="Randa Apparel & Accessories" class="footer-logo">
+      <div class="footer-text">&copy; 2026 Randa Apparel &amp; Accessories — S/S 27 Men's Accessories Trend Forecast</div>
+    </div>
+    <div class="footer-links">
+      <a href="#artisan">The Artisan</a>
+      <a href="#retro">Retro Sport</a>
+      <a href="#earth">Earth &amp; Tech</a>
+      <a href="#products">Key Items</a>
+      <!-- HIDDEN: <a href="womens.html">Women's Forecast</a> -->
+      <a href="neckwear.html">Neckwear</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ JAVASCRIPT ═══ -->
+<script>
+// Nav scroll
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// Scroll reveal (IntersectionObserver)
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => observer.observe(el));
+
+// Smooth anchor scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+    }
+  });
+});
+
+// Subtle parallax on floating images
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  document.querySelectorAll('.intro-float-img').forEach((img, i) => {
+    const speed = 0.03 + (i * 0.015);
+    const offset = (scrolled - img.offsetTop + window.innerHeight) * speed;
+    img.style.transform = `translateY(${offset}px)`;
+  });
+}, { passive: true });
+
+// ═══ MOBILE NAV ═══
+(function() {
+  const hamburger = document.querySelector('.mobile-hamburger');
+  const drawer = document.querySelector('.mobile-drawer');
+  const overlay = document.querySelector('.mobile-drawer-overlay');
+  if (!hamburger || !drawer || !overlay) return;
+
+  let scrollPos = 0;
+
+  function openDrawer() {
+    scrollPos = window.scrollY;
+    hamburger.classList.add('open');
+    drawer.classList.add('open');
+    overlay.classList.add('open');
+    document.body.classList.add('drawer-open');
+    document.body.style.top = `-${scrollPos}px`;
+  }
+  function closeDrawer() {
+    hamburger.classList.remove('open');
+    drawer.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.classList.remove('drawer-open');
+    document.body.style.top = '';
+    window.scrollTo(0, scrollPos);
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (drawer.classList.contains('open')) closeDrawer();
+    else openDrawer();
+  });
+  overlay.addEventListener('click', closeDrawer);
+
+  // Close drawer on link click
+  drawer.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      closeDrawer();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

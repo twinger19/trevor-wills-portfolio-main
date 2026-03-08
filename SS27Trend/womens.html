@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>S/S 27 — Women's Accessories Trend Forecast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════
+   RESET & BASE — Light, Warm, Editorial
+   ═══════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #F5EDE3;
+  color: #2C2418;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+:root {
+  --cream: #F5EDE3;
+  --cream-dark: #EDE3D5;
+  --cream-light: #FAF6F0;
+  --ink: #2C2418;
+  --ink-light: #5C5042;
+  --ink-muted: #8A7E70;
+  --ink-faint: #B8AFA4;
+  --accent-warm: #C9A87C;
+  --accent-sage: #8B9E7E;
+  --desert: #B86834;
+  --prep: #C41E3A;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+  --mono: 'DM Mono', 'SF Mono', monospace;
+}
+
+/* ═══════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════ */
+nav {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 1000;
+  padding: 0 56px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(245,237,227,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(44,36,24,0.06);
+  transition: all 0.4s ease;
+}
+nav.scrolled { background: rgba(245,237,227,0.95); }
+.nav-brand { display: flex; align-items: center; gap: 16px; }
+.nav-logo {
+  height: 18px;
+  width: auto;
+  opacity: 0.45;
+  transition: opacity 0.3s;
+}
+.nav-logo:hover { opacity: 0.7; }
+.nav-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--ink-faint);
+  margin: 0 2px;
+}
+.nav-brand-name {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--ink);
+}
+.nav-season {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-muted);
+  letter-spacing: 0.06em;
+}
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-muted);
+  letter-spacing: 0.03em;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--ink); }
+
+/* ═══════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 48px 80px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(170deg, #E8D5C0 0%, #F0DCC8 30%, #F5EDE3 70%, #EDE3D5 100%);
+}
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  background: url('images/womens/hero-bg.jpg') center/cover;
+  opacity: 0.12;
+  mix-blend-mode: multiply;
+}
+.hero-content {
+  position: relative; z-index: 1;
+  max-width: 900px;
+}
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 40px;
+  opacity: 0; transform: translateY(20px);
+  animation: fadeUp 0.8s 0.3s ease forwards;
+}
+.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(56px, 9vw, 120px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 36px;
+  opacity: 0; transform: translateY(30px);
+  animation: fadeUp 1s 0.5s ease forwards;
+}
+.hero-subtitle {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 400;
+  color: var(--ink-light);
+  max-width: 560px;
+  margin: 0 auto 48px;
+  line-height: 1.65;
+  opacity: 0; transform: translateY(20px);
+  animation: fadeUp 0.8s 0.7s ease forwards;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 36px;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  color: var(--ink);
+  transition: all 0.35s ease;
+  opacity: 0; transform: translateY(20px);
+  animation: fadeUp 0.8s 0.9s ease forwards;
+}
+.hero-cta:hover { background: var(--ink); color: var(--cream); }
+.hero-cta svg { width: 18px; height: 18px; transition: transform 0.3s; }
+.hero-cta:hover svg { transform: translateX(4px); }
+.hero-scroll {
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ink-faint);
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  opacity: 0; animation: fadeUp 0.6s 1.3s ease forwards;
+}
+.scroll-line { width: 1px; height: 48px; background: linear-gradient(to bottom, var(--ink-faint), transparent); animation: scrollPulse 2.5s ease-in-out infinite; }
+
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes scrollPulse { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+/* ═══════════════════════════════════════
+   SHARED SECTION STYLES
+   ═══════════════════════════════════════ */
+section { padding: 140px 56px; position: relative; }
+.section-container { max-width: 1200px; margin: 0 auto; }
+.section-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 24px;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(40px, 5.5vw, 72px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 28px;
+}
+.section-text {
+  font-size: 17px;
+  color: var(--ink-light);
+  max-width: 520px;
+  line-height: 1.8;
+}
+.btn-pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em;
+  border: 1.5px solid var(--ink-faint); border-radius: 999px;
+  color: var(--ink); transition: all 0.35s ease; margin-top: 32px;
+}
+.btn-pill:hover { border-color: var(--ink); background: var(--ink); color: var(--cream); }
+.btn-pill svg { width: 16px; height: 16px; }
+
+/* ═══════════════════════════════════════
+   IMAGE COMPONENTS
+   ═══════════════════════════════════════ */
+.img-frame {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+.img-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-frame:hover img { transform: scale(1.04); }
+.img-caption {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 12px;
+}
+
+/* ═══════════════════════════════════════
+   INTRO / ABOUT SECTION with floating images
+   ═══════════════════════════════════════ */
+.intro-section {
+  padding: 160px 56px 180px;
+  position: relative;
+  overflow: hidden;
+  background: var(--cream-light);
+}
+.intro-text {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+.intro-text .section-label { margin-bottom: 20px; }
+.intro-body {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.intro-float-img {
+  position: absolute;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 50px rgba(44,36,24,0.12);
+}
+.intro-float-img img { width: 100%; height: 100%; object-fit: cover; }
+.intro-img-1 { width: 260px; height: 340px; top: 80px; left: 4%; }
+.intro-img-2 { width: 220px; height: 300px; top: 60px; right: 5%; }
+.intro-img-3 { width: 200px; height: 260px; bottom: 60px; left: 8%; }
+.intro-img-4 { width: 240px; height: 320px; bottom: 40px; right: 4%; }
+
+/* ═══════════════════════════════════════
+   MARQUEE
+   ═══════════════════════════════════════ */
+.marquee-section {
+  padding: 28px 0; overflow: hidden;
+  border-top: 1px solid rgba(44,36,24,0.08);
+  border-bottom: 1px solid rgba(44,36,24,0.08);
+  background: var(--cream);
+}
+.marquee-track { display: flex; animation: marquee 35s linear infinite; width: max-content; }
+.marquee-item {
+  padding: 0 40px;
+  font-family: var(--mono); font-size: 12px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-faint); white-space: nowrap;
+  display: flex; align-items: center; gap: 40px;
+}
+.marquee-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--ink-faint); }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* ═══════════════════════════════════════
+   NARRATIVE CARDS — Large image-led (2 cards)
+   ═══════════════════════════════════════ */
+.narratives-section { background: var(--cream); padding-bottom: 80px; }
+.narratives-header { text-align: center; max-width: 600px; margin: 0 auto 80px; }
+.narrative-cards { display: grid; grid-template-columns: repeat(2,1fr); gap: 36px; max-width: 1000px; margin: 0 auto; }
+.narrative-card {
+  border-radius: 20px; overflow: hidden;
+  background: var(--cream-light);
+  border: 1px solid rgba(44,36,24,0.06);
+  transition: all 0.5s cubic-bezier(0.16,1,0.3,1);
+  cursor: pointer;
+}
+.narrative-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(44,36,24,0.12); }
+.card-image { height: 400px; overflow: hidden; position: relative; }
+.card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s ease; }
+.narrative-card:hover .card-image img { transform: scale(1.06); }
+.card-image .card-number {
+  position: absolute; top: 20px; left: 24px;
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.1em; color: white;
+  background: rgba(0,0,0,0.3); backdrop-filter: blur(8px);
+  padding: 6px 14px; border-radius: 999px;
+}
+.card-body { padding: 32px; }
+.card-title {
+  font-family: var(--serif); font-size: 28px; font-weight: 500;
+  font-style: italic; line-height: 1.2; margin-bottom: 12px; color: var(--ink);
+}
+.card-desc { font-size: 14px; color: var(--ink-light); line-height: 1.7; margin-bottom: 20px; }
+.card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.card-tag {
+  padding: 5px 12px; font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.04em; border-radius: 999px;
+  background: rgba(44,36,24,0.04); border: 1px solid rgba(44,36,24,0.08);
+  color: var(--ink-muted);
+}
+.card-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 12px; color: var(--ink);
+  transition: gap 0.3s ease;
+}
+.card-link:hover { gap: 14px; }
+.card-link svg { width: 14px; height: 14px; }
+
+/* ═══════════════════════════════════════
+   DEEP DIVE — Editorial spreads
+   ═══════════════════════════════════════ */
+.deepdive { padding: 160px 56px; position: relative; overflow: hidden; }
+.deepdive-container { max-width: 1200px; margin: 0 auto; }
+.deepdive-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-bottom: 100px; }
+.deepdive-hero-text {}
+.deepdive-hero-img { border-radius: 20px; overflow: hidden; height: 520px; }
+.deepdive-hero-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Image mosaic grid */
+.image-mosaic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 80px 0;
+}
+.mosaic-item { border-radius: 16px; overflow: hidden; }
+.mosaic-tall { grid-row: span 2; }
+.mosaic-item img { width: 100%; height: 100%; object-fit: cover; min-height: 240px; transition: transform 0.8s ease; }
+.mosaic-item:hover img { transform: scale(1.05); }
+
+/* Detail editorial rows */
+.detail-editorial { display: flex; flex-direction: column; gap: 48px; }
+.detail-row {
+  display: flex; gap: 48px; align-items: stretch;
+  background: var(--cream-light); border-radius: 20px;
+  border: 1px solid rgba(44,36,24,0.06);
+  overflow: hidden; transition: all 0.4s ease;
+}
+.detail-row:hover { box-shadow: 0 12px 40px rgba(44,36,24,0.08); }
+.detail-row:nth-child(even) { flex-direction: row-reverse; }
+.detail-row-img {
+  flex: 0 0 42%; position: relative; overflow: hidden;
+  min-height: 320px; background: rgba(44,36,24,0.04);
+}
+.detail-row-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.detail-row:hover .detail-row-img img { transform: scale(1.04); }
+.detail-row-content {
+  flex: 1; padding: 40px 44px; display: flex;
+  flex-direction: column; justify-content: center;
+}
+.detail-label {
+  font-family: var(--mono); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;
+}
+.detail-heading {
+  font-family: var(--serif); font-size: 24px; font-weight: 500;
+  font-style: italic; margin-bottom: 14px; line-height: 1.3; color: var(--ink);
+}
+.detail-text { font-size: 14px; color: var(--ink-light); line-height: 1.75; }
+@media (max-width: 768px) {
+  .detail-row, .detail-row:nth-child(even) { flex-direction: column; }
+  .detail-row-img { flex: none; min-height: 220px; }
+  .detail-row-content { padding: 28px 24px; }
+}
+
+/* Color swatches */
+.color-swatches { display: flex; gap: 14px; margin-top: 20px; flex-wrap: wrap; }
+.swatch { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.swatch-circle {
+  width: 52px; height: 52px; border-radius: 50%;
+  border: 3px solid rgba(44,36,24,0.08); transition: transform 0.3s; cursor: pointer;
+}
+.swatch-circle:hover { transform: scale(1.15); }
+.swatch-name { font-family: var(--mono); font-size: 9px; color: var(--ink-muted); letter-spacing: 0.04em; text-align: center; max-width: 64px; }
+
+/* Material list */
+.material-list { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+.material-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; background: rgba(44,36,24,0.03);
+  border-radius: 12px; font-size: 13px; font-weight: 500;
+  border: 1px solid rgba(44,36,24,0.05); transition: all 0.3s;
+}
+.material-item:hover { background: rgba(44,36,24,0.06); }
+.material-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+/* ═══════════════════════════════════════
+   FULL-WIDTH IMAGE BREAK
+   ═══════════════════════════════════════ */
+.image-break {
+  width: 100%; height: 60vh; min-height: 400px;
+  overflow: hidden; position: relative;
+}
+.image-break img { width: 100%; height: 100%; object-fit: cover; }
+.image-break-overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(44,36,24,0.25);
+}
+.image-break-text {
+  font-family: var(--serif); font-size: clamp(36px,5vw,64px);
+  font-weight: 300; font-style: italic; color: white;
+  text-align: center; max-width: 600px;
+}
+
+/* ═══════════════════════════════════════
+   KEY PRODUCTS — Image-led cards
+   ═══════════════════════════════════════ */
+.products-section { background: var(--cream-light); }
+.products-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 28px; margin-top: 64px; }
+.product-card {
+  border-radius: 20px; overflow: hidden;
+  background: var(--cream); border: 1px solid rgba(44,36,24,0.06);
+  transition: all 0.5s ease;
+}
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(44,36,24,0.1); }
+.product-img { height: 320px; overflow: hidden; }
+.product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+.product-card:hover .product-img img { transform: scale(1.05); }
+.product-info { padding: 28px; }
+.product-label {
+  font-family: var(--mono); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-muted); margin-bottom: 8px;
+}
+.product-name {
+  font-family: var(--serif); font-size: 24px; font-weight: 500;
+  font-style: italic; margin-bottom: 10px; color: var(--ink);
+}
+.product-detail { font-size: 14px; color: var(--ink-light); line-height: 1.7; }
+
+/* ═══════════════════════════════════════
+   PRODUCT SPECS
+   ═══════════════════════════════════════ */
+.product-specs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.spec-tag { padding: 4px 10px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; border-radius: 999px; background: rgba(44,36,24,0.04); border: 1px solid rgba(44,36,24,0.1); color: var(--ink-muted); }
+
+/* ═══════════════════════════════════════
+   DIRECTIONS / TAKEAWAYS
+   ═══════════════════════════════════════ */
+.directions-section { background: var(--cream-dark); text-align: center; }
+.directions-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 48px; margin-top: 72px; text-align: left; max-width: 900px; margin-left: auto; margin-right: auto; }
+.direction-item { padding-left: 24px; border-left: 3px solid var(--ink-faint); }
+.direction-name {
+  font-family: var(--serif); font-size: 22px; font-weight: 500;
+  font-style: italic; margin-bottom: 12px; color: var(--ink);
+}
+.direction-text { font-size: 14px; color: var(--ink-light); line-height: 1.75; }
+
+/* ═══════════════════════════════════════
+   SEASON AT A GLANCE
+   ═══════════════════════════════════════ */
+.season-glance { background: var(--cream-dark); }
+.season-glance-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 60px; }
+.palette-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.palette-swatch { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.palette-dot { width: 44px; height: 44px; border-radius: 50%; border: 2px solid rgba(44,36,24,0.08); transition: transform 0.3s; }
+.palette-dot:hover { transform: scale(1.15); }
+.palette-name { font-family: var(--mono); font-size: 8px; color: var(--ink-muted); letter-spacing: 0.04em; text-align: center; max-width: 56px; }
+.season-directions { display: flex; flex-direction: column; gap: 20px; }
+.season-dir-item { padding-left: 20px; border-left: 2px solid var(--ink-faint); }
+.season-dir-title { font-family: var(--serif); font-size: 18px; font-weight: 500; font-style: italic; margin-bottom: 4px; color: var(--ink); }
+.season-dir-text { font-size: 13px; color: var(--ink-light); line-height: 1.7; }
+
+/* ═══════════════════════════════════════
+   LIFESTYLE TIERS
+   ═══════════════════════════════════════ */
+.lifestyle-section { margin-top: 80px; }
+.lifestyle-section-title { font-family: var(--mono); font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 28px; }
+.lifestyle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.lifestyle-card { border-radius: 20px; overflow: hidden; background: var(--cream); border: 1px solid rgba(44,36,24,0.06); transition: all 0.4s ease; }
+.lifestyle-card:hover { box-shadow: 0 12px 40px rgba(44,36,24,0.08); transform: translateY(-3px); }
+.lifestyle-card-img { height: 220px; overflow: hidden; }
+.lifestyle-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+.lifestyle-card:hover .lifestyle-card-img img { transform: scale(1.05); }
+.lifestyle-card-body { padding: 24px; }
+.lifestyle-tier-label { font-family: var(--mono); font-size: 9px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+.lifestyle-tier-title { font-family: var(--serif); font-size: 20px; font-weight: 500; font-style: italic; line-height: 1.2; margin-bottom: 8px; color: var(--ink); }
+.lifestyle-apparel { font-size: 12px; color: var(--ink-muted); line-height: 1.6; margin-bottom: 10px; font-style: italic; }
+.lifestyle-accessories { font-size: 13px; color: var(--ink-light); line-height: 1.65; }
+
+/* ═══════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════ */
+footer {
+  padding: 56px; border-top: 1px solid rgba(44,36,24,0.08);
+  background: var(--cream);
+}
+.footer-content {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-text { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); }
+.footer-logo {
+  height: 16px;
+  width: auto;
+  opacity: 0.35;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer-links { display: flex; gap: 28px; }
+.footer-links a { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); transition: color 0.3s; }
+.footer-links a:hover { color: var(--ink); }
+
+/* ═══════════════════════════════════════
+   SCROLL ANIMATIONS
+   ═══════════════════════════════════════ */
+.reveal { opacity: 0; transform: translateY(50px); transition: all 1s cubic-bezier(0.16,1,0.3,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-left { opacity: 0; transform: translateX(-80px); transition: all 1.1s cubic-bezier(0.16,1,0.3,1); }
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+.reveal-right { opacity: 0; transform: translateX(80px); transition: all 1.1s cubic-bezier(0.16,1,0.3,1); }
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+.reveal-scale { opacity: 0; transform: scale(0.92); transition: all 1s cubic-bezier(0.16,1,0.3,1); }
+.reveal-scale.visible { opacity: 1; transform: scale(1); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-stagger { transition-delay: calc(var(--i,0) * 0.15s); }
+
+/* ═══════════════════════════════════════
+   IMAGE PLACEHOLDER STYLING
+   ═══════════════════════════════════════ */
+.img-placeholder {
+  background: var(--cream-dark);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink-faint);
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .narrative-cards { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+  .deepdive-hero { grid-template-columns: 1fr; }
+  .products-grid { grid-template-columns: 1fr; }
+  .directions-grid { grid-template-columns: 1fr; }
+  .image-mosaic { grid-template-columns: 1fr 1fr; }
+  .intro-float-img { display: none; }
+  .season-glance-grid { grid-template-columns: 1fr; }
+  .lifestyle-grid { grid-template-columns: 1fr; max-width: 400px; }
+}
+@media (max-width: 768px) {
+  nav { padding: 0 24px; }
+  section, .deepdive { padding: 80px 24px; }
+  .hero { padding: 100px 24px 60px; }
+  .nav-links { display: none; }
+  .image-mosaic { grid-template-columns: 1fr; }
+  .footer-content { flex-direction: column; gap: 20px; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; }
+}
+
+/* ═══ MOBILE NAV — Hamburger + Drawer ═══ */
+.mobile-hamburger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1002;
+  padding: 10px;
+  -webkit-tap-highlight-color: transparent;
+}
+.mobile-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+  margin: 5px auto;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.mobile-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.mobile-hamburger.open span:nth-child(2) { opacity: 0; }
+.mobile-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-drawer-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(44,36,24,0.3);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.mobile-drawer-overlay.open { opacity: 1; }
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  max-width: 80vw;
+  height: 100%;
+  background: var(--cream-light, #FAF6F0);
+  z-index: 1001;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: env(safe-area-inset-top, 20px) 28px calc(env(safe-area-inset-bottom, 20px) + 20px) 28px;
+  padding-top: calc(env(safe-area-inset-top, 20px) + 80px);
+  box-shadow: -4px 0 24px rgba(0,0,0,0.08);
+}
+.mobile-drawer.open { transform: translateX(0); }
+
+.mobile-drawer-section {
+  margin-bottom: 24px;
+}
+.mobile-drawer-label {
+  font-family: var(--mono, 'DM Mono', monospace);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint, #B8AFA4);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(44,36,24,0.06);
+}
+.mobile-drawer a {
+  display: block;
+  font-family: var(--sans, 'DM Sans', sans-serif);
+  font-size: 15px;
+  color: var(--ink-light, #5C5042);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(44,36,24,0.04);
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.2s;
+}
+.mobile-drawer a:last-child { border-bottom: none; }
+.mobile-drawer a.active {
+  color: var(--ink, #2C2418);
+  font-weight: 600;
+}
+.mobile-drawer a:active { color: var(--ink, #2C2418); }
+
+/* ═══ SAFARI & MOBILE OPTIMIZATIONS ═══ */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  padding-top: env(safe-area-inset-top, 0);
+}
+@supports (padding: env(safe-area-inset-bottom)) {
+  .page-footer, footer {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 48px);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-hamburger { display: block; }
+  .mobile-drawer-overlay { display: block; pointer-events: none; }
+  .mobile-drawer-overlay.open { pointer-events: auto; }
+
+  /* Prevent body scroll when drawer is open */
+  body.drawer-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="mainNav">
+  <div class="nav-brand">
+    <img src="images/raa logos/RAA_Blue.svg" alt="Randa Apparel & Accessories" class="nav-logo">
+    <span class="nav-divider"></span>
+    <span class="nav-brand-name">S/S 27</span>
+    <span class="nav-season">Women's Accessories Forecast</span>
+  </div>
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#narratives">Narratives</a>
+    <a href="#desert">Desert Bazar</a>
+    <a href="#prep">Play It Proper</a>
+    <a href="#products">Key Items</a>
+    <span style="width:1px;height:16px;background:var(--ink-faint);margin:0 4px;display:inline-block;vertical-align:middle;"></span>
+    <a href="index.html">Men's</a>
+    <a href="neckwear.html">Neckwear</a>
+    <a href="leather-goods.html">Leather Goods</a>
+  </div>
+  <button class="mobile-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-drawer-overlay"></div>
+<div class="mobile-drawer">
+  <div class="mobile-drawer-section">
+    <div class="mobile-drawer-label">On This Page</div>
+    <a href="#overview">Overview</a>
+    <a href="#narratives">Narratives</a>
+    <a href="#desert">Desert Bazar</a>
+    <a href="#prep">Play It Proper</a>
+    <a href="#products">Key Items</a>
+  </div>
+  <div class="mobile-drawer-section">
+    <div class="mobile-drawer-label">All Pages</div>
+    <a href="index.html">Men's Forecast</a>
+    <a href="leather-goods.html">Leather Goods</a>
+    <a href="neckwear.html">Neckwear</a>
+    <a href="womens.html" class="active">Women's Forecast</a>
+  </div>
+</div>
+
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg-img" style="background-image: url('images/womens/hero-bg.jpg');"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Spring / Summer 2027</div>
+    <h1 class="hero-title">The Art of<br>Her Accessories</h1>
+    <p class="hero-subtitle">Two defining narratives shaping belts, handbags, and leather goods — where bohemian craft meets coastal polish.</p>
+    <a href="#narratives" class="hero-cta">
+      Explore Narratives
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- ═══ MARQUEE ═══ -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-item">Woven Trims <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Hammered Hardware <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Desert Bazar <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Prep Stripes <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Eclectic Metals <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Pebble Leather <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Coastal Prep <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Artisan Buckles <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Color Blocking <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Wet Sand <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Crisp Buckles <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Eucalyptus <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Rope Ties <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Whipstitching <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Crimson Pop <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Ice Blue <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Woven Trims <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Hammered Hardware <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Desert Bazar <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Prep Stripes <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Eclectic Metals <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Pebble Leather <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Coastal Prep <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Artisan Buckles <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Color Blocking <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Wet Sand <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Crisp Buckles <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Eucalyptus <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Rope Ties <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Whipstitching <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Crimson Pop <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Ice Blue <span class="marquee-dot"></span></div>
+  </div>
+</div>
+
+<!-- ═══ INTRO WITH FLOATING IMAGES ═══ -->
+<section class="intro-section" id="overview">
+  <div class="intro-float-img intro-img-1 reveal-left">
+    <img src="images/womens/intro-belt.jpg" alt="Women's leather belt detail">
+  </div>
+  <div class="intro-float-img intro-img-2 reveal-right">
+    <img src="images/womens/intro-handbag.jpg" alt="Artisan leather handbag">
+  </div>
+  <div class="intro-float-img intro-img-3 reveal-left reveal-delay-2">
+    <img src="images/womens/intro-accessories.jpg" alt="Eclectic metallic accessories">
+  </div>
+  <div class="intro-float-img intro-img-4 reveal-right reveal-delay-2">
+    <img src="images/womens/intro-prep.jpg" alt="Polished preppy styling">
+  </div>
+
+  <div class="intro-text">
+    <div class="section-label reveal">Season Direction</div>
+    <p class="intro-body reveal reveal-delay-1">
+      Spring/Summer 2027 celebrates the duality of free-spirited artisan craft and polished coastal confidence. For women's accessories, this translates to textural earthy pieces, eclectic hardware, and fresh prep-inspired refinement.
+    </p>
+    <a href="#narratives" class="btn-pill reveal reveal-delay-2">
+      Two Narratives
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ═══ SEASON AT A GLANCE ═══ -->
+<section class="season-glance" id="season">
+  <div class="section-container">
+    <div class="section-label reveal">Season at a Glance</div>
+    <h2 class="section-title reveal reveal-delay-1">The macro palette<br>&amp; key directions</h2>
+    <p class="section-text reveal reveal-delay-2">Before diving into the two narratives, here's the big picture — the colors and principles that define S/S 2027 women's accessories.</p>
+    <div class="season-glance-grid">
+      <div class="reveal">
+        <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 16px;">Macro Color Palette</div>
+        <div class="palette-row">
+          <div class="palette-swatch"><div class="palette-dot" style="background:#B09B6E;"></div><span class="palette-name">Wet Sand</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#8FA87E;"></div><span class="palette-name">Eucalyptus</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#B86834;"></div><span class="palette-name">Ginger Biscuit</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#C41E3A;"></div><span class="palette-name">Crimson</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#C8B998;"></div><span class="palette-name">Classic Beige</span></div>
+          <div class="palette-swatch"><div class="palette-dot" style="background:#B8D1E0;"></div><span class="palette-name">Ice Blue</span></div>
+        </div>
+      </div>
+      <div class="season-directions reveal reveal-delay-1">
+        <div class="season-dir-item" style="border-color: var(--desert);">
+          <div class="season-dir-title">Artisan Craftsmanship</div>
+          <div class="season-dir-text">Handcrafted aesthetics with a boho edge. Natural textures, eclectic metallic accents, and accessories that feel collected over time — tactile, grounded, and sun-drenched.</div>
+        </div>
+        <div class="season-dir-item" style="border-color: var(--prep);">
+          <div class="season-dir-title">Polished Prep Revival</div>
+          <div class="season-dir-text">Clean, classic, and modern-preppy with a light seaside freshness. Refined hardware, crisp silhouettes, and coastal color pops that blend tradition with playful energy.</div>
+        </div>
+        <div class="season-dir-item" style="border-color: var(--ink-muted);">
+          <div class="season-dir-title">Lifestyle Fluidity</div>
+          <div class="season-dir-text">The same accessory works across occasions — weekend market to resort dinner, campus to coastal brunch. Design for versatility with pieces that transition effortlessly.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ IMAGE BREAK — Craftsmanship ═══ -->
+<div class="image-break reveal-scale">
+  <img src="images/womens/break-desert.jpg" alt="Desert-inspired bohemian styling">
+  <div class="image-break-overlay">
+    <div class="image-break-text">Where wanderlust meets craft</div>
+  </div>
+</div>
+
+<!-- ═══ TWO NARRATIVES ═══ -->
+<section class="narratives-section" id="narratives">
+  <div class="section-container">
+    <div class="narratives-header">
+      <div class="section-label reveal">Two Narratives</div>
+      <h2 class="section-title reveal reveal-delay-1">Stories that shape<br>the season</h2>
+      <p class="section-text reveal reveal-delay-2" style="margin:0 auto;">Each narrative defines a distinct approach to color, material, hardware, and silhouette for women's accessories.</p>
+    </div>
+    <div class="narrative-cards">
+      <!-- DESERT BAZAR -->
+      <div class="narrative-card reveal reveal-stagger" style="--i:0;">
+        <div class="card-image">
+          <img src="images/womens/desert-hero.jpg" alt="Desert Bazar bohemian accessories">
+          <div class="card-number">01 — Desert Bazar</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Earthy, Artisanal &amp; Globally Inspired</h3>
+          <p class="card-desc">Bohemian craft meets natural elements and eclectic metals. Handcrafted aesthetics with woven trims, hammered hardware, and sun-drenched earth tones — for the woman who dresses with wanderlust.</p>
+          <div class="card-tags">
+            <span class="card-tag">Woven Trims</span>
+            <span class="card-tag">Hammered Hardware</span>
+            <span class="card-tag">Pebble Leather</span>
+            <span class="card-tag">Whipstitching</span>
+          </div>
+          <a href="#desert" class="card-link">
+            Explore narrative
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- PLAY IT PROPER -->
+      <div class="narrative-card reveal reveal-stagger" style="--i:1;">
+        <div class="card-image">
+          <img src="images/womens/prep-hero.jpg" alt="Play It Proper coastal prep styling">
+          <div class="card-number">02 — Play It Proper</div>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Coastal Prep Meets Playful Polish</h3>
+          <p class="card-desc">Coastal infused, polished and playful with prep influence. Crisp buckles, rope-tie details, and bold pops of crimson and ice blue — modern preppy with a light seaside freshness.</p>
+          <div class="card-tags">
+            <span class="card-tag">Crisp Buckles</span>
+            <span class="card-tag">Rope Ties</span>
+            <span class="card-tag">Crimson</span>
+            <span class="card-tag">Color Blocking</span>
+          </div>
+          <a href="#prep" class="card-link">
+            Explore narrative
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     DESERT BAZAR — Deep Dive
+     ═══════════════════════════════════════════════ -->
+<section class="deepdive" id="desert" style="background: var(--cream-light);">
+  <div class="deepdive-container">
+    <!-- Hero row: text + big image -->
+    <div class="deepdive-hero">
+      <div class="deepdive-hero-text">
+        <div class="section-label reveal" style="color: var(--desert);">01 — Desert Bazar</div>
+        <h2 class="section-title reveal reveal-delay-1">Bohemian craft,<br>sun-drenched soul</h2>
+        <p class="section-text reveal reveal-delay-2">Handcrafted aesthetics with a boho edge — woven belts, pebble leather goods, and eclectic metallic accents for the woman who gravitates toward pieces that feel crafted, textural, and lived-in.</p>
+      </div>
+      <div class="deepdive-hero-img reveal-right">
+        <img src="images/womens/desert-hero.jpg" alt="Desert Bazar accessories styling">
+      </div>
+    </div>
+
+    <!-- Image mosaic -->
+    <div class="image-mosaic">
+      <div class="mosaic-item reveal-left">
+        <img src="images/womens/desert-detail-1.jpg" alt="Woven belt with hammered buckle">
+      </div>
+      <div class="mosaic-item reveal reveal-delay-1">
+        <img src="images/womens/desert-detail-2.jpg" alt="Artisanal whipstitched leather">
+      </div>
+      <div class="mosaic-item mosaic-tall reveal-right">
+        <img src="images/womens/desert-detail-3.jpg" alt="Eclectic metallic accessories" style="height:100%;">
+      </div>
+      <div class="mosaic-item reveal-left reveal-delay-2">
+        <img src="images/womens/desert-mosaic-1.jpg" alt="Suede and canvas textures">
+      </div>
+      <div class="mosaic-item reveal reveal-delay-1">
+        <img src="images/womens/desert-mosaic-2.jpg" alt="Earth-toned leather goods">
+      </div>
+    </div>
+
+    <!-- Detail editorial rows -->
+    <div class="detail-editorial">
+      <div class="detail-row reveal">
+        <div class="detail-row-img">
+          <img src="images/womens/desert-colors.jpg" alt="Desert Bazar color palette — warm sand, eucalyptus green, ginger orange-brown">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--desert);">Key Colors</div>
+          <div class="detail-heading">Wet sand, eucalyptus &amp; ginger biscuit</div>
+          <div class="detail-text">Warm, grounded neutrals in Wet Sand anchor the palette. Eucalyptus brings a muted green with a natural, organic feel. Ginger Biscuit adds soft, sun-baked orange-brown warmth. Earth-toned layering with sun-washed neutrals and warm coppery highlights through accessories.</div>
+          <div class="color-swatches">
+            <div class="swatch"><div class="swatch-circle" style="background:#B09B6E;"></div><span class="swatch-name">Wet Sand</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#8FA87E;"></div><span class="swatch-name">Eucalyptus</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#B86834;"></div><span class="swatch-name">Ginger Biscuit</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#C8A882;"></div><span class="swatch-name">Warm Copper</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#D4C5A9;"></div><span class="swatch-name">Sun-Washed</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="detail-row reveal reveal-delay-1">
+        <div class="detail-row-img">
+          <img src="images/womens/desert-hardware.jpg" alt="Desert Bazar hardware — bronzed rings, hammered buckles, antiqued details">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--desert);">Hardware &amp; Trims</div>
+          <div class="detail-heading">Eclectic metals, hammered &amp; antiqued</div>
+          <div class="detail-text">Eclectic metallic accents define this narrative — bronzed rings, hammered hardware, and antiqued details. Double-ring closures and artisan buckles with hand-sculpted stamps. Subtle texture mixing across suede, canvas, and woven trims.</div>
+          <div class="material-list">
+            <div class="material-item"><span class="material-dot" style="background:#CD853F;"></span>Bronzed rings &amp; hammered hardware</div>
+            <div class="material-item"><span class="material-dot" style="background:#8B7355;"></span>Antiqued &amp; burnished finishes</div>
+            <div class="material-item"><span class="material-dot" style="background:#A0522D;"></span>Double-ring artisan closures</div>
+            <div class="material-item"><span class="material-dot" style="background:#B8860B;"></span>Hand-sculpted stamps &amp; engravings</div>
+          </div>
+        </div>
+      </div>
+      <div class="detail-row reveal reveal-delay-2">
+        <div class="detail-row-img">
+          <img src="images/womens/desert-materials.jpg" alt="Desert Bazar materials — linen, raw silk, suede, pebble leather">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--desert);">Materials</div>
+          <div class="detail-heading">Natural fibers, pebble leather &amp; woven textures</div>
+          <div class="detail-text">Natural fibers like linen, cotton voile, and raw silk form the foundation. Handcrafted details — braids, whipstitching, and artisanal appliqué add depth. Pebble leather accessories pair with suede and canvas. Subtle texture mixing for a tactile, globally-inspired feel.</div>
+          <div class="material-list">
+            <div class="material-item"><span class="material-dot" style="background:#D2691E;"></span>Pebble leather &amp; wrinkled suede</div>
+            <div class="material-item"><span class="material-dot" style="background:#BC8F8F;"></span>Whipstitching &amp; artisanal appliqué</div>
+            <div class="material-item"><span class="material-dot" style="background:#BDB76B;"></span>Linen, cotton voile &amp; raw silk</div>
+            <div class="material-item"><span class="material-dot" style="background:#8B7355;"></span>Woven trims &amp; canvas textures</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lifestyle Tiers -->
+    <div class="lifestyle-section">
+      <div class="lifestyle-section-title reveal" style="color: var(--desert);">The Look — Styled by Occasion</div>
+      <div class="lifestyle-grid">
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:0;">
+          <div class="lifestyle-card-img"><img src="images/womens/desert-look-elevated.jpg" alt="Desert Bazar elevated look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--desert);">Elevated — Dress</div>
+            <div class="lifestyle-tier-title">The Resort Dinner</div>
+            <div class="lifestyle-apparel">Flowy caftan, tiered dress, or relaxed maxi skirt with a softly draped linen blazer</div>
+            <div class="lifestyle-accessories">Structured artisan belt in Wet Sand with hammered buckle (25mm). Pebble leather clutch with whipstitched edge. Bronzed ring-detail sandals. Oversized woven tote.</div>
+          </div>
+        </div>
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:1;">
+          <div class="lifestyle-card-img"><img src="images/womens/desert-look-casual.jpg" alt="Desert Bazar casual look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--desert);">Refined Casual</div>
+            <div class="lifestyle-tier-title">The Weekend Market</div>
+            <div class="lifestyle-apparel">Softly draped trousers in linen blends, crochet cardigan layered over a cotton voile top</div>
+            <div class="lifestyle-accessories">Woven belt with double-ring closure in Ginger Biscuit (30mm). Suede crossbody with antiqued hardware. Layered bronzed bangles. Canvas espadrilles.</div>
+          </div>
+        </div>
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:2;">
+          <div class="lifestyle-card-img"><img src="images/womens/desert-look-boho.jpg" alt="Desert Bazar boho look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--desert);">Casual &amp; Boho</div>
+            <div class="lifestyle-tier-title">Collected Over Time</div>
+            <div class="lifestyle-apparel">Open-weave sweater, raw-edged vest, relaxed denim with easy layering</div>
+            <div class="lifestyle-accessories">Cord belt with vintage brass closure. Canvas and suede bucket bag. Stamped leather wrap bracelet. Slide sandals in Eucalyptus.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ IMAGE BREAK — Coastal ═══ -->
+<div class="image-break reveal-scale">
+  <img src="images/womens/break-coastal.jpg" alt="Coastal-inspired preppy styling">
+  <div class="image-break-overlay">
+    <div class="image-break-text">Classic charm, coastal polish</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PLAY IT PROPER — Deep Dive
+     ═══════════════════════════════════════════════ -->
+<section class="deepdive" id="prep" style="background: var(--cream);">
+  <div class="deepdive-container">
+    <div class="deepdive-hero">
+      <div class="deepdive-hero-img reveal-left">
+        <img src="images/womens/prep-hero.jpg" alt="Modern preppy women's styling">
+      </div>
+      <div class="deepdive-hero-text">
+        <div class="section-label reveal" style="color: var(--prep);">02 — Play It Proper</div>
+        <h2 class="section-title reveal reveal-delay-1">Coastal prep,<br>playful polish</h2>
+        <p class="section-text reveal reveal-delay-2">Fresh, crisp, modern-preppy style blending coastal ease with tailored structure. Sporty-prep staples meet polished accessories — where classic tradition is refreshed with color, charm, and seaside sophistication.</p>
+      </div>
+    </div>
+
+    <div class="image-mosaic">
+      <div class="mosaic-item mosaic-tall reveal-left">
+        <img src="images/womens/prep-detail-1.jpg" alt="Striped belt with polished buckle" style="height:100%;">
+      </div>
+      <div class="mosaic-item reveal reveal-delay-1">
+        <img src="images/womens/prep-detail-2.jpg" alt="Crisp hardware detail">
+      </div>
+      <div class="mosaic-item reveal-right">
+        <img src="images/womens/prep-detail-3.jpg" alt="Color-blocked accessories">
+      </div>
+      <div class="mosaic-item reveal-left reveal-delay-2">
+        <img src="images/womens/prep-mosaic-1.jpg" alt="Rope-tie detail handbag">
+      </div>
+      <div class="mosaic-item reveal reveal-delay-1">
+        <img src="images/womens/prep-mosaic-2.jpg" alt="Classic beige leather goods">
+      </div>
+    </div>
+
+    <div class="detail-editorial">
+      <div class="detail-row reveal">
+        <div class="detail-row-img">
+          <img src="images/womens/prep-colors.jpg" alt="Play It Proper color palette — crimson, classic beige, ice blue">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--prep);">Key Colors</div>
+          <div class="detail-heading">Crimson, classic beige &amp; ice blue</div>
+          <div class="detail-text">Crimson delivers bold, classic red — strong hits for preppy energy. Classic Beige provides a clean and timeless neutral base. Ice Blue brings cool, coastal crispness. Strong color blocking pairs crimson and navy for impact, while powder blues nod to the seaside.</div>
+          <div class="color-swatches">
+            <div class="swatch"><div class="swatch-circle" style="background:#C41E3A;"></div><span class="swatch-name">Crimson</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#C8B998;"></div><span class="swatch-name">Classic Beige</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#B8D1E0;"></div><span class="swatch-name">Ice Blue</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#1B3A5C;"></div><span class="swatch-name">Navy</span></div>
+            <div class="swatch"><div class="swatch-circle" style="background:#FFFFFF; border: 2px solid #ccc;"></div><span class="swatch-name">Bright White</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="detail-row reveal reveal-delay-1">
+        <div class="detail-row-img">
+          <img src="images/womens/prep-hardware.jpg" alt="Play It Proper hardware — shiny silvers, crisp buckles, minimalistic finishes">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--prep);">Hardware &amp; Trims</div>
+          <div class="detail-heading">Clean, refined &amp; minimalistic</div>
+          <div class="detail-text">Hardware stays clean and refined — shiny silvers, crisp buckles, and minimalistic finishes. Contrast piping adds structure and visual interest. Rope-tie details and subtle nautical cues bring a coastal sensibility without overwhelming the polished aesthetic.</div>
+          <div class="material-list">
+            <div class="material-item"><span class="material-dot" style="background:#C0C0C0;"></span>Shiny silver crisp buckles</div>
+            <div class="material-item"><span class="material-dot" style="background:#FFD700;"></span>Polished gold minimalistic finishes</div>
+            <div class="material-item"><span class="material-dot" style="background:#C41E3A;"></span>Contrast piping &amp; color-block trims</div>
+            <div class="material-item"><span class="material-dot" style="background:#D2B48C;"></span>Rope-tie &amp; nautical-cue details</div>
+          </div>
+        </div>
+      </div>
+      <div class="detail-row reveal reveal-delay-2">
+        <div class="detail-row-img">
+          <img src="images/womens/prep-materials.jpg" alt="Play It Proper materials — polished cotton, poplin, lightweight twill">
+        </div>
+        <div class="detail-row-content">
+          <div class="detail-label" style="color: var(--prep);">Materials</div>
+          <div class="detail-heading">Polished cottons, poplin &amp; performance blends</div>
+          <div class="detail-text">Polished cottons, poplin, and lightweight twill create the crisp foundation. Performance-inspired blends add modern functionality. Subtle stripes and color blocking amplify the playful attitude. Clean, structured materials that hold shape while maintaining a breezy, coastal ease.</div>
+          <div class="material-list">
+            <div class="material-item"><span class="material-dot" style="background:#D2691E;"></span>Polished cotton &amp; crisp poplin</div>
+            <div class="material-item"><span class="material-dot" style="background:#BC8F8F;"></span>Lightweight twill &amp; structured canvas</div>
+            <div class="material-item"><span class="material-dot" style="background:#1B3A5C;"></span>Subtle stripes &amp; prep patterns</div>
+            <div class="material-item"><span class="material-dot" style="background:#8B7355;"></span>Performance-inspired blends</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lifestyle Tiers -->
+    <div class="lifestyle-section">
+      <div class="lifestyle-section-title reveal" style="color: var(--prep);">The Look — Styled by Occasion</div>
+      <div class="lifestyle-grid">
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:0;">
+          <div class="lifestyle-card-img"><img src="images/womens/prep-look-polished.jpg" alt="Play It Proper polished look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--prep);">Polished — Dress</div>
+            <div class="lifestyle-tier-title">The Club Classic</div>
+            <div class="lifestyle-apparel">A-line or shift dress, cropped anorak over a crisp blazer, pleated midi skirt with polished polo</div>
+            <div class="lifestyle-accessories">Crisp leather belt in Classic Beige with silver buckle (20mm). Structured crossbody in Crimson with contrast piping. Silver-tone chain bracelet. Polished loafers or ballet flats.</div>
+          </div>
+        </div>
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:1;">
+          <div class="lifestyle-card-img"><img src="images/womens/prep-look-casual.jpg" alt="Play It Proper casual look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--prep);">Refined Casual</div>
+            <div class="lifestyle-tier-title">The Coastal Brunch</div>
+            <div class="lifestyle-apparel">Tailored shorts with a Breton-stripe top, preppy sweater with a playful skirt, blazer over a tank</div>
+            <div class="lifestyle-accessories">Striped webbing belt with crisp buckle (25mm). Canvas tote in navy and white with rope handles. Color-blocked cardholder in Ice Blue and Crimson. White leather sneakers.</div>
+          </div>
+        </div>
+        <div class="lifestyle-card reveal reveal-stagger" style="--i:2;">
+          <div class="lifestyle-card-img"><img src="images/womens/prep-look-sport.jpg" alt="Play It Proper sporty look"></div>
+          <div class="lifestyle-card-body">
+            <div class="lifestyle-tier-label" style="color: var(--prep);">Sport &amp; Active</div>
+            <div class="lifestyle-tier-title">The Modern Athlete</div>
+            <div class="lifestyle-apparel">Structured skort, performance polo, varsity-influenced topper, clean chinos</div>
+            <div class="lifestyle-accessories">Woven elastic belt in color-block red and navy (25mm). Lightweight nylon crossbody. Waterproof pouch in Ice Blue. Athletic slide sandals with crisp white sole.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ KEY PRODUCTS ═══ -->
+<section class="products-section" id="products">
+  <div class="section-container">
+    <div style="text-align:center; max-width:600px; margin:0 auto 64px;">
+      <div class="section-label reveal">Key Items</div>
+      <h2 class="section-title reveal reveal-delay-1">The essential four</h2>
+      <p class="section-text reveal reveal-delay-2" style="margin:0 auto;">Across both narratives, these core categories define the S/S 27 women's accessories story.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal reveal-stagger" style="--i:0;">
+        <div class="product-img">
+          <img src="images/womens/product-belts.jpg" alt="Women's belt collection">
+        </div>
+        <div class="product-info">
+          <div class="product-label">Belts</div>
+          <div class="product-name">The Statement Belt</div>
+          <div class="product-detail">Core widths at 20–30mm across both narratives. Desert Bazar features woven belts with hammered hardware, double-ring closures, and pebble leather in Wet Sand and Ginger Biscuit. Play It Proper brings crisp polished buckles, color-blocked webbing, and striped details in Crimson, Navy, and Ice Blue. Structured artisan belts balance flowy silhouettes.</div>
+          <div class="product-specs"><span class="spec-tag">20–30mm Core</span><span class="spec-tag">Woven</span><span class="spec-tag">Pebble Leather</span><span class="spec-tag">Hammered Buckle</span><span class="spec-tag">Crisp Silver</span><span class="spec-tag">Webbing</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-stagger" style="--i:1;">
+        <div class="product-img">
+          <img src="images/womens/product-handbags.jpg" alt="Women's handbag collection">
+        </div>
+        <div class="product-info">
+          <div class="product-label">Handbags &amp; Totes</div>
+          <div class="product-name">From Artisan Woven to Coastal Canvas</div>
+          <div class="product-detail">Desert Bazar: oversized woven totes, suede crossbodies with antiqued hardware, and pebble leather clutches with whipstitched edges. Play It Proper: structured crossbodies in Crimson with contrast piping, canvas totes in navy and white with rope handles, and color-blocked cardholders. Pieces that transition from market to dinner.</div>
+          <div class="product-specs"><span class="spec-tag">Woven Tote</span><span class="spec-tag">Suede Crossbody</span><span class="spec-tag">Structured Bag</span><span class="spec-tag">Canvas Tote</span><span class="spec-tag">Clutch</span><span class="spec-tag">Cardholder</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-stagger" style="--i:2;">
+        <div class="product-img">
+          <img src="images/womens/product-slg.jpg" alt="Women's small leather goods">
+        </div>
+        <div class="product-info">
+          <div class="product-label">Small Leather Goods</div>
+          <div class="product-name">Texture Meets Color</div>
+          <div class="product-detail">Desert Bazar wallets in hand-dyed pebble leather with whipstitched detail and bronzed hardware. Play It Proper cardholders in color-blocked Crimson and Ice Blue with clean silver zips. Pouches and wristlets that bridge both worlds — artisan imperfection meets polished structure.</div>
+          <div class="product-specs"><span class="spec-tag">Pebble Wallet</span><span class="spec-tag">Color-Block Card</span><span class="spec-tag">Whipstitched</span><span class="spec-tag">Wristlet</span><span class="spec-tag">Pouch</span></div>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-stagger" style="--i:3;">
+        <div class="product-img">
+          <img src="images/womens/product-accessories.jpg" alt="Women's fashion accessories">
+        </div>
+        <div class="product-info">
+          <div class="product-label">Fashion Accessories</div>
+          <div class="product-name">The Finishing Touch</div>
+          <div class="product-detail">Layered bronzed bangles, stamped leather wrap bracelets, and cord details for Desert Bazar. Silver-tone chain bracelets, rope-handle details, and preppy charm accessories for Play It Proper. Hair accessories, scarves, and layering pieces that bring the narrative to life across every outfit.</div>
+          <div class="product-specs"><span class="spec-tag">Bangles</span><span class="spec-tag">Wrap Bracelet</span><span class="spec-tag">Chain Bracelet</span><span class="spec-tag">Scarf</span><span class="spec-tag">Hair Accessories</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ KEY DIRECTIONS ═══ -->
+<section class="directions-section">
+  <div class="section-container">
+    <div class="section-label reveal">Key Takeaways</div>
+    <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">Design with intention</h2>
+    <div class="directions-grid">
+      <div class="direction-item reveal reveal-stagger" style="--i:0; border-color: var(--desert);">
+        <div class="direction-name">Embrace the Handmade</div>
+        <div class="direction-text">Woven trims, hammered hardware, pebble leather textures — Desert Bazar puts craftsmanship and natural imperfection center stage. Accessories that feel collected over time, tactile, grounded, and sun-drenched with global wanderlust.</div>
+      </div>
+      <div class="direction-item reveal reveal-stagger" style="--i:1; border-color: var(--prep);">
+        <div class="direction-name">Polish with Personality</div>
+        <div class="direction-text">Crisp buckles, color-blocked webbing, and bold crimson pops. Play It Proper brings coastal charm and modern preppy confidence — clean lines refreshed with playful color and light seaside sophistication.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="images/raa logos/RAA_Blue.svg" alt="Randa Apparel & Accessories" class="footer-logo">
+      <div class="footer-text">&copy; 2026 Randa Apparel &amp; Accessories — S/S 27 Women's Accessories Trend Forecast</div>
+    </div>
+    <div class="footer-links">
+      <a href="#desert">Desert Bazar</a>
+      <a href="#prep">Play It Proper</a>
+      <a href="#products">Key Items</a>
+      <a href="index.html">Men's Forecast</a>
+      <a href="neckwear.html">Neckwear</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ JAVASCRIPT ═══ -->
+<script>
+// Nav scroll
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// Scroll reveal (IntersectionObserver)
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => observer.observe(el));
+
+// Smooth anchor scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+    }
+  });
+});
+
+// Subtle parallax on floating images
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  document.querySelectorAll('.intro-float-img').forEach((img, i) => {
+    const speed = 0.03 + (i * 0.015);
+    const offset = (scrolled - img.offsetTop + window.innerHeight) * speed;
+    img.style.transform = `translateY(${offset}px)`;
+  });
+}, { passive: true });
+
+// ═══ MOBILE NAV ═══
+(function() {
+  const hamburger = document.querySelector('.mobile-hamburger');
+  const drawer = document.querySelector('.mobile-drawer');
+  const overlay = document.querySelector('.mobile-drawer-overlay');
+  if (!hamburger || !drawer || !overlay) return;
+
+  let scrollPos = 0;
+
+  function openDrawer() {
+    scrollPos = window.scrollY;
+    hamburger.classList.add('open');
+    drawer.classList.add('open');
+    overlay.classList.add('open');
+    document.body.classList.add('drawer-open');
+    document.body.style.top = `-${scrollPos}px`;
+  }
+  function closeDrawer() {
+    hamburger.classList.remove('open');
+    drawer.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.classList.remove('drawer-open');
+    document.body.style.top = '';
+    window.scrollTo(0, scrollPos);
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (drawer.classList.contains('open')) closeDrawer();
+    else openDrawer();
+  });
+  overlay.addEventListener('click', closeDrawer);
+
+  // Close drawer on link click
+  drawer.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      closeDrawer();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

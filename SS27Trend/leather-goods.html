@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>S/S 27 — Men's Leather Goods: Belts & Wallets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #F5EDE3;
+  color: #2C2418;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+:root {
+  --cream: #F5EDE3;
+  --cream-dark: #EDE3D5;
+  --cream-light: #FAF6F0;
+  --ink: #2C2418;
+  --ink-light: #5C5042;
+  --ink-muted: #8A7E70;
+  --ink-faint: #B8AFA4;
+  --accent-warm: #C9A87C;
+  --dress: #8B3A4A;
+  --casual: #D4613A;
+  --workwear: #3B6FA0;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+  --mono: 'DM Mono', 'SF Mono', monospace;
+}
+
+/* ═══ NAVIGATION ═══ */
+nav {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 1000;
+  padding: 0 56px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(245,237,227,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(44,36,24,0.06);
+  transition: all 0.4s ease;
+}
+nav.scrolled { background: rgba(245,237,227,0.95); }
+.nav-brand { display: flex; align-items: center; gap: 16px; }
+.nav-logo {
+  height: 18px;
+  width: auto;
+  opacity: 0.45;
+  transition: opacity 0.3s;
+}
+.nav-logo:hover { opacity: 0.7; }
+.nav-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--ink-faint);
+  margin: 0 2px;
+}
+.nav-brand-name {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--ink);
+}
+.nav-season {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-muted);
+  letter-spacing: 0.06em;
+}
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-muted);
+  letter-spacing: 0.03em;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--ink); }
+
+/* ═══ PAGE HEADER ═══ */
+.page-header {
+  text-align: center;
+  padding: 112px 40px 48px;
+}
+.page-header .label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+}
+.page-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.page-header .subtitle {
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--ink-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.header-rule {
+  width: 60px;
+  height: 1px;
+  background: var(--accent-warm);
+  margin: 32px auto 0;
+}
+
+/* ═══ STAT BAR ═══ */
+.stat-bar {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  padding: 32px 40px;
+  flex-wrap: wrap;
+}
+.stat-item { text-align: center; }
+.stat-number {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.1;
+}
+.stat-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 4px;
+}
+
+/* ═══ TREND SECTION ═══ */
+.trend-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 40px;
+}
+.trend-section + .trend-section {
+  border-top: 1px solid rgba(44,36,24,0.08);
+}
+
+.trend-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+.trend-badge {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+.trend-header-text { flex: 1; }
+.trend-name {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+.trend-narrative-link {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+}
+.trend-narrative-link span {
+  border-bottom: 1px solid var(--ink-faint);
+  padding-bottom: 1px;
+}
+.trend-description {
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--ink-light);
+  line-height: 1.75;
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+/* ═══ MOOD GRID — BASE ═══ */
+.mood-grid {
+  display: grid;
+  gap: 5px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.mood-grid .mg {
+  overflow: hidden;
+  background: var(--cream-dark);
+  position: relative;
+  border-radius: 16px;
+}
+.mood-grid .mg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.mood-grid .mg:hover img { transform: scale(1.03); }
+
+.mood-grid--dress {
+  grid-template-columns: 2fr 1.5fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  aspect-ratio: 16 / 9;
+}
+.mood-grid--dress .mg-1 { grid-column: 1; grid-row: 1 / 4; }
+.mood-grid--dress .mg-2 { grid-column: 2; grid-row: 1 / 3; }
+.mood-grid--dress .mg-3 { grid-column: 3; grid-row: 1; }
+.mood-grid--dress .mg-4 { grid-column: 4; grid-row: 1; }
+.mood-grid--dress .mg-5 { grid-column: 3; grid-row: 2; }
+.mood-grid--dress .mg-6 { grid-column: 4; grid-row: 2; }
+.mood-grid--dress .mg-7 { grid-column: 2; grid-row: 3; }
+.mood-grid--dress .mg-8 { grid-column: 3 / 5; grid-row: 3; }
+
+.mood-grid--refined {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  aspect-ratio: 16 / 10;
+}
+.mood-grid--refined .mg-1 { grid-column: 1; grid-row: 1; }
+.mood-grid--refined .mg-2 { grid-column: 2; grid-row: 1; }
+.mood-grid--refined .mg-3 { grid-column: 3; grid-row: 1 / 3; }
+.mood-grid--refined .mg-4 { grid-column: 1; grid-row: 2; }
+.mood-grid--refined .mg-5 { grid-column: 2; grid-row: 2; }
+.mood-grid--refined .mg-6 { grid-column: 1 / 3; grid-row: 3; }
+.mood-grid--refined .mg-7 { grid-column: 3; grid-row: 3; }
+.mood-grid--refined .mg-8 { display: none; }
+
+.mood-grid--workwear {
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  aspect-ratio: 16 / 10;
+}
+.mood-grid--workwear .mg-1 { grid-column: 1; grid-row: 1; }
+.mood-grid--workwear .mg-2 { grid-column: 2; grid-row: 1; }
+.mood-grid--workwear .mg-3 { grid-column: 3; grid-row: 1 / 4; }
+.mood-grid--workwear .mg-4 { grid-column: 1; grid-row: 2; }
+.mood-grid--workwear .mg-5 { grid-column: 2; grid-row: 2; }
+.mood-grid--workwear .mg-6 { grid-column: 1; grid-row: 3; }
+.mood-grid--workwear .mg-7 { grid-column: 2; grid-row: 3; }
+.mood-grid--workwear .mg-8 { display: none; }
+
+/* ═══ COLORS + DETAILS ═══ */
+.trend-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.color-palette {
+  background: var(--cream-light);
+  border-radius: 8px;
+  padding: 28px;
+}
+.palette-title {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 20px;
+}
+.swatches { display: flex; gap: 12px; flex-wrap: wrap; }
+.swatch { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.swatch-circle {
+  width: 52px; height: 52px; border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.8);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.swatch-name {
+  font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.04em;
+  color: var(--ink-muted); text-align: center; max-width: 64px; line-height: 1.3;
+}
+.key-details { display: flex; flex-direction: column; gap: 16px; }
+.detail-card {
+  background: var(--cream-light); border-radius: 8px;
+  padding: 20px 24px; border-left: 3px solid var(--ink-faint);
+}
+.detail-label {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-muted); margin-bottom: 6px;
+}
+.detail-text {
+  font-family: var(--sans); font-size: 13.5px;
+  color: var(--ink-light); line-height: 1.6;
+}
+
+/* ═══ PERFORMANCE DATA PANEL ═══ */
+.perf-panel {
+  margin-top: 40px;
+  background: var(--cream-light);
+  border-radius: 10px;
+  padding: 32px;
+  border: 1px solid rgba(44,36,24,0.06);
+  overflow: visible;
+}
+.perf-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.perf-panel-icon {
+  width: 32px; height: 32px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); font-size: 13px; font-weight: 700; color: white;
+}
+.perf-panel-title {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink-muted);
+}
+.perf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.perf-item {
+  background: white;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  overflow: visible;
+  position: relative;
+}
+.perf-item--full { grid-column: 1 / -1; }
+.perf-item-img {
+  flex: 0 0 100px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--cream-dark);
+  align-self: center;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.3s ease,
+              z-index 0s;
+}
+.perf-item-img img {
+  width: 100%;
+  height: 100%;
+  min-height: 80px;
+  object-fit: cover;
+  display: block;
+}
+.perf-item-img:hover {
+  transform: scale(2);
+  z-index: 200;
+  box-shadow: 0 12px 40px rgba(44,36,24,0.28), 0 0 0 2px rgba(255,255,255,0.95);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.perf-item-text { flex: 1; min-width: 0; }
+.perf-metric {
+  font-family: var(--serif); font-size: 28px; font-weight: 700;
+  color: var(--ink); line-height: 1; margin-bottom: 4px;
+}
+.perf-metric-sm {
+  font-family: var(--serif); font-size: 22px; font-weight: 600;
+  color: var(--ink); line-height: 1; margin-bottom: 4px;
+}
+.perf-label {
+  font-family: var(--sans); font-size: 12px; font-weight: 600;
+  color: var(--ink-light); line-height: 1.4; margin-bottom: 2px;
+}
+.perf-context {
+  font-family: var(--sans); font-size: 11px;
+  color: var(--ink-muted); line-height: 1.4;
+}
+.perf-badge {
+  display: inline-block; font-family: var(--mono); font-size: 9px;
+  letter-spacing: 0.04em; padding: 2px 8px; border-radius: 100px;
+  font-weight: 600; margin-top: 4px;
+}
+.perf-badge--up { background: rgba(76,140,74,0.12); color: #3D7A3B; }
+.perf-badge--down { background: rgba(180,60,60,0.1); color: #A04040; }
+
+/* ═══ CALLOUT TAGS ═══ */
+.callout-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 32px; }
+.callout-tag {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em;
+  padding: 6px 14px; border-radius: 100px;
+  border: 1px solid rgba(44,36,24,0.12);
+  color: var(--ink-light); background: var(--cream-light);
+}
+
+/* ═══ WGSN CALLOUT ═══ */
+.wgsn-callout {
+  max-width: 1200px; margin: 0 auto; padding: 56px 40px;
+  border-top: 1px solid rgba(44,36,24,0.08);
+  border-bottom: 1px solid rgba(44,36,24,0.08);
+}
+.wgsn-callout-inner {
+  background: var(--cream-light); border-radius: 12px; padding: 48px;
+  display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: center;
+}
+.wgsn-source {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-faint);
+  writing-mode: vertical-lr; transform: rotate(180deg); white-space: nowrap;
+}
+.wgsn-stat-row { display: flex; gap: 48px; margin-bottom: 28px; flex-wrap: wrap; }
+.wgsn-stat { text-align: left; }
+.wgsn-stat-number {
+  font-family: var(--serif); font-size: 40px; font-weight: 600;
+  color: var(--ink); line-height: 1;
+}
+.wgsn-stat-label {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--ink-muted); margin-top: 6px;
+}
+.wgsn-insight {
+  font-family: var(--serif); font-size: clamp(18px, 2vw, 22px);
+  font-weight: 400; font-style: italic; color: var(--ink-light);
+  line-height: 1.6; max-width: 640px;
+}
+.wgsn-insight-tag {
+  display: inline-block; font-family: var(--mono); font-size: 9px;
+  letter-spacing: 0.08em; text-transform: uppercase; color: white;
+  padding: 4px 10px; border-radius: 100px; margin-bottom: 12px;
+}
+
+/* ═══ NARRATIVE TIE ═══ */
+.narrative-tie {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px;
+  padding-top: 20px; border-top: 1px solid rgba(44,36,24,0.06);
+}
+.narrative-pill {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.05em;
+  padding: 5px 14px; border-radius: 100px; color: white;
+  display: flex; align-items: center; gap: 6px;
+}
+.narrative-pill .arrow { font-size: 8px; opacity: 0.7; }
+
+/* ═══ FOOTER ═══ */
+.page-footer { text-align: center; padding: 48px 40px; border-top: 1px solid rgba(44,36,24,0.08); }
+.page-footer p { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--ink-faint); text-transform: uppercase; }
+.footer-logo { height: 16px; width: auto; opacity: 0.35; margin: 0 auto 12px; }
+.footer-links { display: flex; justify-content: center; gap: 24px; margin-top: 12px; }
+.back-link {
+  display: inline-block; font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.04em; color: var(--ink-muted);
+  border-bottom: 1px solid var(--ink-faint); padding-bottom: 2px; transition: color 0.3s;
+}
+.back-link:hover { color: var(--ink); }
+
+/* ═══ ACCENTS ═══ */
+.trend-section--dress .trend-badge { background: var(--dress); }
+.trend-section--dress .detail-card { border-left-color: var(--dress); }
+.trend-section--refined .trend-badge { background: var(--casual); }
+.trend-section--refined .detail-card { border-left-color: var(--casual); }
+.trend-section--workwear .trend-badge { background: var(--workwear); }
+.trend-section--workwear .detail-card { border-left-color: var(--workwear); }
+
+/* ═══ SCROLL REVEAL ═══ */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 1024px) {
+  .nav-links { gap: 20px; }
+}
+@media (max-width: 768px) {
+  nav { padding: 0 24px; height: 60px; }
+  .nav-links { display: none; }
+  .nav-season { display: none; }
+  .trend-details { grid-template-columns: 1fr; }
+  .stat-bar { gap: 28px; }
+  .trend-header { flex-direction: column; gap: 16px; }
+  .trend-section { padding: 48px 24px; }
+  .page-header { padding: 80px 24px 32px; }
+  .swatches { gap: 10px; }
+  .swatch-circle { width: 44px; height: 44px; }
+  .mood-grid {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto !important;
+    aspect-ratio: auto !important;
+  }
+  .mood-grid .mg { min-height: 140px; }
+  .mood-grid .mg-1 { grid-column: 1 !important; grid-row: 1 !important; }
+  .mood-grid .mg-2 { grid-column: 2 !important; grid-row: 1 !important; }
+  .mood-grid .mg-3 { grid-column: 1 !important; grid-row: 2 !important; }
+  .mood-grid .mg-4 { grid-column: 2 !important; grid-row: 2 !important; }
+  .mood-grid .mg-5 { grid-column: 1 !important; grid-row: 3 !important; }
+  .mood-grid .mg-6 { grid-column: 2 !important; grid-row: 3 !important; }
+  .mood-grid .mg-7 { grid-column: 1 / -1 !important; grid-row: 4 !important; max-height: 200px; }
+  .mood-grid .mg-8 { grid-column: 1 / -1 !important; grid-row: 5 !important; max-height: 200px; }
+  .perf-grid { grid-template-columns: 1fr; }
+  .perf-item--full { grid-column: 1; }
+  .perf-item { gap: 12px; }
+  .perf-item-img { flex: 0 0 72px; }
+  .perf-item-img img { min-height: 64px; }
+  .perf-item-img:hover { transform: none; box-shadow: none; z-index: 1; }
+  .wgsn-callout-inner { grid-template-columns: 1fr; padding: 32px 24px; }
+  .wgsn-source { writing-mode: horizontal-tb; transform: none; }
+  .wgsn-stat-row { gap: 28px; }
+  .wgsn-callout { padding: 40px 24px; }
+}
+
+/* ═══ STICKY MOBILE NAV BAR — now hidden, replaced by <nav> ═══ */
+.mobile-nav-bar {
+  display: none !important;
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 1000;
+  height: 56px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(245,237,227,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(44,36,24,0.06);
+}
+.mobile-nav-bar .nav-title {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--ink);
+}
+@media (max-width: 768px) {
+  .mobile-nav-bar { display: flex; }
+  .page-header { padding-top: 80px; }
+}
+
+/* ═══ MOBILE NAV — Hamburger + Drawer ═══ */
+.mobile-hamburger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1002;
+  padding: 10px;
+  -webkit-tap-highlight-color: transparent;
+}
+.mobile-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+  margin: 5px auto;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.mobile-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.mobile-hamburger.open span:nth-child(2) { opacity: 0; }
+.mobile-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-drawer-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(44,36,24,0.3);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.mobile-drawer-overlay.open { opacity: 1; }
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  max-width: 80vw;
+  height: 100%;
+  background: var(--cream-light, #FAF6F0);
+  z-index: 1001;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: env(safe-area-inset-top, 20px) 28px calc(env(safe-area-inset-bottom, 20px) + 20px) 28px;
+  padding-top: calc(env(safe-area-inset-top, 20px) + 80px);
+  box-shadow: -4px 0 24px rgba(0,0,0,0.08);
+}
+.mobile-drawer.open { transform: translateX(0); }
+
+.mobile-drawer-section {
+  margin-bottom: 24px;
+}
+.mobile-drawer-label {
+  font-family: var(--mono, 'DM Mono', monospace);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint, #B8AFA4);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(44,36,24,0.06);
+}
+.mobile-drawer a {
+  display: block;
+  font-family: var(--sans, 'DM Sans', sans-serif);
+  font-size: 15px;
+  color: var(--ink-light, #5C5042);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(44,36,24,0.04);
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.2s;
+}
+.mobile-drawer a:last-child { border-bottom: none; }
+.mobile-drawer a.active {
+  color: var(--ink, #2C2418);
+  font-weight: 600;
+}
+.mobile-drawer a:active { color: var(--ink, #2C2418); }
+
+/* ═══ SAFARI & MOBILE OPTIMIZATIONS ═══ */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  padding-top: env(safe-area-inset-top, 0);
+}
+@supports (padding: env(safe-area-inset-bottom)) {
+  .page-footer, footer {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 48px);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-hamburger { display: block; }
+  .mobile-drawer-overlay { display: block; pointer-events: none; }
+  .mobile-drawer-overlay.open { pointer-events: auto; }
+
+  /* Prevent body scroll when drawer is open */
+  body.drawer-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="mainNav">
+  <div class="nav-brand">
+    <img src="images/raa logos/RAA_Blue.svg" alt="Randa Apparel & Accessories" class="nav-logo">
+    <span class="nav-divider"></span>
+    <span class="nav-brand-name">S/S 27</span>
+    <span class="nav-season">Men's Leather Goods</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Men's Forecast</a>
+    <a href="neckwear.html">Neckwear</a>
+    <!-- HIDDEN: Women's page temporarily removed
+    <span style="width:1px;height:16px;background:var(--ink-faint);margin:0 4px;display:inline-block;vertical-align:middle;"></span>
+    <a href="womens.html">Women's</a>
+    -->
+  </div>
+  <button class="mobile-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-drawer-overlay"></div>
+<div class="mobile-drawer">
+  <div class="mobile-drawer-section">
+    <div class="mobile-drawer-label">On This Page</div>
+    <a href="#dress">Dress</a>
+    <a href="#refined-casual">Refined Casual</a>
+    <a href="#casual-workwear">Casual & Workwear</a>
+  </div>
+  <div class="mobile-drawer-section">
+    <div class="mobile-drawer-label">All Pages</div>
+    <a href="index.html">Men's Forecast</a>
+    <a href="leather-goods.html" class="active">Leather Goods</a>
+    <a href="neckwear.html">Neckwear</a>
+    <!-- HIDDEN: <a href="womens.html">Women's Forecast</a> -->
+  </div>
+</div>
+
+
+<!-- ═══ PAGE HEADER ═══ -->
+<header class="page-header reveal">
+  <div class="label">Randa Apparel &amp; Accessories &nbsp;&bull;&nbsp; Spring / Summer 2027</div>
+  <h1>Men's Leather Goods</h1>
+  <p class="subtitle">Belts and wallets for S/S 27 — organized by lifestyle from refined dress to casual &amp; workwear. Each direction draws from the season's three narratives: The Artisan, Retro Sport, and Earth &amp; Tech.</p>
+  <div class="header-rule"></div>
+</header>
+
+<!-- ═══ STAT BAR ═══ -->
+<div class="stat-bar reveal">
+  <div class="stat-item">
+    <div class="stat-number">+38%</div>
+    <div class="stat-label">#ClassicBelt on WGSN YoY</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">+146%</div>
+    <div class="stat-label">Officewear Resurgence</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">28–35mm</div>
+    <div class="stat-label">Core Belt Width</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">3</div>
+    <div class="stat-label">Lifestyle Directions</div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     1. DRESS
+     ═══════════════════════════════════════ -->
+<section class="trend-section trend-section--dress" id="dress">
+  <div class="trend-header reveal">
+    <div class="trend-badge">D</div>
+    <div class="trend-header-text">
+      <h2 class="trend-name">Dress</h2>
+      <div class="trend-narrative-link">Anchored by &rarr; <span>Kintentional (The Artisan)</span></div>
+    </div>
+  </div>
+
+  <p class="trend-description reveal">Polished, refined, and crafted for the modern office. Dress leather goods centre on investment-quality belts and structured wallets designed to pair with softorial suits, double-breasted blazers, and high-rise tailored trousers. Hardware is understated — antique metallics and refined branding buckles replace flashy logos. Responsible Classic leathers in deep neutrals project quiet authority.</p>
+
+  <div class="mood-grid mood-grid--dress reveal">
+    <div class="mg mg-1"><img src="images/lg-dress-1.jpg" alt="Dress — tailored suiting with refined leather belt"></div>
+    <div class="mg mg-2"><img src="images/lg-dress-2.jpg" alt="Dress — classic dress belt close-up on dark trousers"></div>
+    <div class="mg mg-3"><img src="images/lg-dress-3.jpg" alt="Dress — antique metallic buckle hardware detail"></div>
+    <div class="mg mg-4"><img src="images/lg-dress-4.jpg" alt="Dress — structured bifold wallet in dark cognac"></div>
+    <div class="mg mg-5"><img src="images/lg-dress-5.jpg" alt="Dress — double-breasted suiting with belt styling"></div>
+    <div class="mg mg-6"><img src="images/lg-dress-6.jpg" alt="Dress — embossed leather texture detail"></div>
+    <div class="mg mg-7"><img src="images/lg-dress-7.jpg" alt="Dress — slim card holder in deep burgundy"></div>
+    <div class="mg mg-8"><img src="images/lg-dress-8.jpg" alt="Dress — premium leather material and edge finish"></div>
+  </div>
+
+  <div class="trend-details reveal">
+    <div class="color-palette">
+      <div class="palette-title">Color Palette — Dress Leathers</div>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#1A1A1A;"></div>
+          <div class="swatch-name">Jet Black</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#5C3A21;"></div>
+          <div class="swatch-name">Dark Cognac</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#5C1A2A;"></div>
+          <div class="swatch-name">Deep Burgundy</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#2B3D2B;"></div>
+          <div class="swatch-name">Forest Green</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#3B3654;"></div>
+          <div class="swatch-name">Dark Plum</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="key-details">
+      <div class="detail-card">
+        <div class="detail-label">Belts — Dress</div>
+        <div class="detail-text">Classic 28–32mm width scaled for high-rise tailored trousers. Responsible Classic leather with cracked leather effects and embossed textures. Refined branding hardware in antique gold or silver finishes. Minimal visible stitching — clean edges for softorial suiting.</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-label">Wallets — Dress</div>
+        <div class="detail-text">Sleek, structured bifold and card-holder silhouettes. Premium leather with RFID-blocking capability. Minimal hardware — colour depth and material quality carry the story. Deep jewel tones and neutrals with subtle tonal embossing.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DRESS PERFORMANCE DATA ── -->
+  <div class="perf-panel reveal">
+    <div class="perf-panel-header">
+      <div class="perf-panel-icon" style="background: var(--dress);">D</div>
+      <div class="perf-panel-title">Dress Belt — Performance Snapshot</div>
+    </div>
+    <div class="perf-grid">
+      <div class="perf-item">
+        <div class="perf-item-img"><img src="images/lg-perf-dress-1.jpg" alt="Dress belt — black leather close-up"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric">60%</div>
+          <div class="perf-label">Black dominates dress business</div>
+          <div class="perf-context">4.8% sell-through — the anchor colour for dress leather</div>
+        </div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-item-img"><img src="images/lg-perf-dress-2.jpg" alt="Dress belt — compression closure"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric">15%</div>
+          <div class="perf-label">Compression &amp; Track Lock closures</div>
+          <div class="perf-context">Both significantly outperform average (5.8% and 5.4% ST vs 4.6% avg)</div>
+          <div class="perf-badge perf-badge--up">Outperforming</div>
+        </div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-item-img"><img src="images/lg-perf-dress-3.jpg" alt="Dress belt — 35-38mm width on trousers"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric-sm">35–38mm</div>
+          <div class="perf-label">Key width — significantly outperforming</div>
+          <div class="perf-context">4.9% ST vs 4.6% avg. The modern dress width for high-rise trousers.</div>
+          <div class="perf-badge perf-badge--up">Outperforming</div>
+        </div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-item-img"><img src="images/lg-perf-dress-4.jpg" alt="Dress belt — blackout buckle finish"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric-sm">Blackout</div>
+          <div class="perf-label">Buckle finish leading hardware</div>
+          <div class="perf-context">5.4% ST vs 4.6% avg. Nickel (4.3%) and gold tone (3.5%) underperform.</div>
+          <div class="perf-badge perf-badge--up">Outperforming</div>
+        </div>
+      </div>
+      <div class="perf-item perf-item--full">
+        <div class="perf-item-img"><img src="images/lg-perf-dress-5.jpg" alt="Dress belt — reversible black/cognac"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric-sm">Reversible</div>
+          <div class="perf-label">Reversible styles outperform in dress</div>
+          <div class="perf-context">4.7% ST vs 4.6% avg — slight edge. Dual-colour (black/brown) remains a core value proposition for the dress customer.</div>
+          <div class="perf-badge perf-badge--up">Outperforming</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="narrative-tie reveal">
+    <div class="narrative-pill" style="background: var(--dress);">The Artisan <span class="arrow">&rarr;</span> Refined Craft</div>
+    <div class="narrative-pill" style="background: var(--workwear);">Earth &amp; Tech <span class="arrow">&rarr;</span> Quiet Luxury</div>
+  </div>
+
+  <div class="callout-row reveal">
+    <span class="callout-tag">#QuietLuxury</span>
+    <span class="callout-tag">#SoftorialSuiting</span>
+    <span class="callout-tag">#InvestmentLeather</span>
+    <span class="callout-tag">Antique Hardware</span>
+    <span class="callout-tag">Embossed Texture</span>
+    <span class="callout-tag">RFID Blocking</span>
+    <span class="callout-tag">28–32mm Width</span>
+  </div>
+</section>
+
+
+<!-- ═══ WGSN DATA CALLOUT 1 ═══ -->
+<div class="wgsn-callout reveal">
+  <div class="wgsn-callout-inner">
+    <div class="wgsn-source">WGSN Insight</div>
+    <div class="wgsn-content">
+      <div class="wgsn-insight-tag" style="background: var(--dress);">Kintentional</div>
+      <div class="wgsn-insight">"Develop intricate, refined designs in premium materials with darker color palettes." The Kintentional narrative prioritizes intentional craftsmanship and investment-worthy construction — driving demand for heritage leathers, antique metallic hardware, and cracked leather effects that age with character.</div>
+      <div class="wgsn-stat-row" style="margin-top: 24px;">
+        <div class="wgsn-stat">
+          <div class="wgsn-stat-number">+38.4%</div>
+          <div class="wgsn-stat-label">#ClassicBelt YoY on WGSN Fashion Feed</div>
+        </div>
+        <div class="wgsn-stat">
+          <div class="wgsn-stat-number">+146%</div>
+          <div class="wgsn-stat-label">Officewear Resurgence (TikTok)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     2. REFINED CASUAL
+     ═══════════════════════════════════════ -->
+<section class="trend-section trend-section--refined" id="refined-casual">
+  <div class="trend-header reveal">
+    <div class="trend-badge">RC</div>
+    <div class="trend-header-text">
+      <h2 class="trend-name">Refined Casual</h2>
+      <div class="trend-narrative-link">Energized by &rarr; <span>Empowered Play (Retro Sport)</span></div>
+    </div>
+  </div>
+
+  <p class="trend-description reveal">Relaxed but intentional — bridging office and weekend. Refined casual leather goods embrace braided construction, double-ring closures, and versatile widths that work with chinos, linen trousers, and mineral-washed denim. Colour moves from strict neutrals into warm amber, teal, and khaki gold. Wallets are practical, portable, and finished with natural materials. This is the vacation-dinner belt and the everyday carry wallet.</p>
+
+  <div class="mood-grid mood-grid--refined reveal">
+    <div class="mg mg-1"><img src="images/lg-casual-1.jpg" alt="Refined Casual — chinos and linen shirt with braided belt"></div>
+    <div class="mg mg-2"><img src="images/lg-casual-2.jpg" alt="Refined Casual — braided leather belt close-up"></div>
+    <div class="mg mg-3"><img src="images/lg-casual-3.jpg" alt="Refined Casual — double-ring closure belt detail"></div>
+    <div class="mg mg-4"><img src="images/lg-casual-4.jpg" alt="Refined Casual — everyday carry wallet in warm cognac"></div>
+    <div class="mg mg-5"><img src="images/lg-casual-5.jpg" alt="Refined Casual — woven leather texture pattern"></div>
+    <div class="mg mg-6"><img src="images/lg-casual-6.jpg" alt="Refined Casual — belt and wallet flat lay with natural materials"></div>
+    <div class="mg mg-7"><img src="images/lg-casual-7.jpg" alt="Refined Casual — weekend outfit with casual belt styling"></div>
+  </div>
+
+  <div class="trend-details reveal">
+    <div class="color-palette">
+      <div class="palette-title">Color Palette — Refined Casual Leathers</div>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#8B5E3C;"></div>
+          <div class="swatch-name">Warm Cognac</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#B8860B;"></div>
+          <div class="swatch-name">Khaki Gold</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#0E6E8C;"></div>
+          <div class="swatch-name">Bold Teal</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#C4929B;"></div>
+          <div class="swatch-name">Dusty Rose</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#6B7C3F;"></div>
+          <div class="swatch-name">Olive</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="key-details">
+      <div class="detail-card">
+        <div class="detail-label">Belts — Refined Casual</div>
+        <div class="detail-text">Braided features in Responsible Classic leather and natural fibre alternatives (linen, hemp). Double-ring closures and mini buckles for adjustable fit. Classic colorways with experimental bold combinations. 30–35mm widths bridging dress and casual trouser silhouettes.</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-label">Wallets — Refined Casual</div>
+        <div class="detail-text">Practical multi-pocket designs in flexible, portable constructions. Natural materials with leather accents — earthtone palette with pops of colour through hardware or stitching. Casual braiding or woven details. Travel-friendly dimensions with modular pocket systems.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DRESS CASUAL PERFORMANCE DATA ── -->
+  <div class="perf-panel reveal">
+    <div class="perf-panel-header">
+      <div class="perf-panel-icon" style="background: var(--casual);">RC</div>
+      <div class="perf-panel-title">Dress Casual Belt — Performance Snapshot</div>
+    </div>
+    <div class="perf-grid">
+      <div class="perf-item">
+        <div class="perf-item-img"><img src="images/lg-perf-casual-1.jpg" alt="Refined casual — fabric belt construction"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric">87%</div>
+          <div class="perf-label">Manmade &amp; fabric constructions</div>
+          <div class="perf-context">Manmade: 4.2% ST vs 3.8% avg. Fabric: 4.1% ST vs 3.8% avg. Both outperform.</div>
+          <div class="perf-badge perf-badge--up">Outperforming</div>
+        </div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-item-img"><img src="images/lg-perf-casual-2.jpg" alt="Refined casual — black belt on chinos"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric">51%</div>
+          <div class="perf-label">Black — still #1 in dress casual</div>
+          <div class="perf-context">Black leads unit sales. Tan underperforms at 2.5% ST — opportunity to push warm neutrals instead.</div>
+        </div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-item-img"><img src="images/lg-perf-casual-3.jpg" alt="Refined casual — track lock belt"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric-sm">5.5% ST</div>
+          <div class="perf-label">Track Lock closure — top performer</div>
+          <div class="perf-context">Significantly outperforms 3.8% avg. Compression also strong at 5.2% ST.</div>
+          <div class="perf-badge perf-badge--up">Outperforming</div>
+        </div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-item-img"><img src="images/lg-perf-casual-4.jpg" alt="Refined casual — narrow width on chinos"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric-sm">&le;32mm</div>
+          <div class="perf-label">Narrow widths outperforming</div>
+          <div class="perf-context">4.2% ST vs 3.8% avg. Narrower widths align with the relaxed, modern silhouette.</div>
+          <div class="perf-badge perf-badge--up">Outperforming</div>
+        </div>
+      </div>
+      <div class="perf-item perf-item--full">
+        <div class="perf-item-img"><img src="images/lg-perf-casual-5.jpg" alt="Refined casual — reversible dual-colour"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric-sm">Reversible</div>
+          <div class="perf-label">Reversible outperforms in dress casual</div>
+          <div class="perf-context">4.2% ST vs 3.8% avg — versatile dual-colour styles resonate with the bridge customer between office and weekend.</div>
+          <div class="perf-badge perf-badge--up">Outperforming</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="narrative-tie reveal">
+    <div class="narrative-pill" style="background: var(--casual);">Retro Sport <span class="arrow">&rarr;</span> Bold Energy</div>
+    <div class="narrative-pill" style="background: var(--dress);">The Artisan <span class="arrow">&rarr;</span> Vacation Craft</div>
+  </div>
+
+  <div class="callout-row reveal">
+    <span class="callout-tag">#BraidedBelt</span>
+    <span class="callout-tag">#DoubleRing</span>
+    <span class="callout-tag">#EverydayCarry</span>
+    <span class="callout-tag">#NaturalFibres</span>
+    <span class="callout-tag">Mini Buckle</span>
+    <span class="callout-tag">Elevated Knot</span>
+    <span class="callout-tag">Hemp &amp; Linen Blend</span>
+    <span class="callout-tag">Modular Pockets</span>
+  </div>
+</section>
+
+
+<!-- ═══ WGSN DATA CALLOUT 2 ═══ -->
+<div class="wgsn-callout reveal">
+  <div class="wgsn-callout-inner">
+    <div class="wgsn-source">WGSN Insight</div>
+    <div class="wgsn-content">
+      <div class="wgsn-stat-row">
+        <div class="wgsn-stat">
+          <div class="wgsn-stat-number">+131%</div>
+          <div class="wgsn-stat-label">"Officewear" on TikTok YoY</div>
+        </div>
+        <div class="wgsn-stat">
+          <div class="wgsn-stat-number">+73%</div>
+          <div class="wgsn-stat-label">"Ties" on TikTok YoY</div>
+        </div>
+      </div>
+      <div class="wgsn-insight-tag" style="background: var(--casual);">Empowered Play</div>
+      <div class="wgsn-insight">The return to office dressing is fueling renewed interest in the full accessories wardrobe. Empowered Play applies bold, saturated colour and enamel-detailed hardware to leather goods — glazed finishes, marbled buckles, and contrast colour blocking are challenging the neutral-only belt. Wallets get pops of jewel-tone lining and statement edge paint.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     3. CASUAL & WORKWEAR
+     ═══════════════════════════════════════ -->
+<section class="trend-section trend-section--workwear" id="casual-workwear">
+  <div class="trend-header reveal">
+    <div class="trend-badge">CW</div>
+    <div class="trend-header-text">
+      <h2 class="trend-name">Casual &amp; Workwear</h2>
+      <div class="trend-narrative-link">Grounded by &rarr; <span>Geo Logic (Earth &amp; Tech)</span></div>
+    </div>
+  </div>
+
+  <p class="trend-description reveal">Built for terrain and daily use. Casual &amp; workwear leather goods channel utility-first design — burnished metal buckles with intentional patina, stamped and tooled leather with aged character, and durable construction that stands up to outdoor pursuits. Geo Logic's earth-inspired palette drives finishes from iron-oxide rust to beeswax-treated natural dyes. Belts are structured for heavy use; wallets are reinforced with functional compartments and weather-resistant closures.</p>
+
+  <div class="mood-grid mood-grid--workwear reveal">
+    <div class="mg mg-1"><img src="images/lg-work-1.jpg" alt="Casual & Workwear — rugged utility outfit with heavy belt"></div>
+    <div class="mg mg-2"><img src="images/lg-work-2.jpg" alt="Casual & Workwear — burnished brass buckle close-up"></div>
+    <div class="mg mg-3"><img src="images/lg-work-3.jpg" alt="Casual & Workwear — tooled and stamped leather belt detail"></div>
+    <div class="mg mg-4"><img src="images/lg-work-4.jpg" alt="Casual & Workwear — durable wallet with snap closure"></div>
+    <div class="mg mg-5"><img src="images/lg-work-5.jpg" alt="Casual & Workwear — aged patina leather texture"></div>
+    <div class="mg mg-6"><img src="images/lg-work-6.jpg" alt="Casual & Workwear — workwear belt and goods flat lay"></div>
+    <div class="mg mg-7"><img src="images/lg-work-7.jpg" alt="Casual & Workwear — outdoor lifestyle with utility belt"></div>
+  </div>
+
+  <div class="trend-details reveal">
+    <div class="color-palette">
+      <div class="palette-title">Color Palette — Casual &amp; Workwear Leathers</div>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#8B4513;"></div>
+          <div class="swatch-name">Rust</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#7B8B7A;"></div>
+          <div class="swatch-name">Sage</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#A0845C;"></div>
+          <div class="swatch-name">Ochre</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#6B5B4F;"></div>
+          <div class="swatch-name">Weathered Bronze</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-circle" style="background:#3D5C52;"></div>
+          <div class="swatch-name">Deep Teal</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="key-details">
+      <div class="detail-card">
+        <div class="detail-label">Belts — Casual &amp; Workwear</div>
+        <div class="detail-text">Constructed for heavy use with low-impact metal hardware — brass, copper, zinc alloy. GRS recycled materials for sustainable updates. Aged-character finishes: burnished, oxidized, iron-oxide patina. Stamped, tooled, and engraved details. 32–35mm widths. Functional D-ring and snap closures.</div>
+      </div>
+      <div class="detail-card">
+        <div class="detail-label">Wallets — Casual &amp; Workwear</div>
+        <div class="detail-text">Structured, protective construction in durable leather with workwear patina. Multiple compartments for on-the-go organization. GRS recycled leather and low-impact PU options. Reinforced edge details and utilitarian snap closures. Beeswax-treated finishes that develop rich, natural patina over time.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CASUAL & WORKWEAR PERFORMANCE DATA ── -->
+  <div class="perf-panel reveal">
+    <div class="perf-panel-header">
+      <div class="perf-panel-icon" style="background: var(--workwear);">CW</div>
+      <div class="perf-panel-title">Casual Belt — Performance Snapshot</div>
+    </div>
+    <div class="perf-grid">
+      <div class="perf-item">
+        <div class="perf-item-img"><img src="images/lg-perf-work-1.jpg" alt="Casual belt — brown leather on denim"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric">Brown/Tan</div>
+          <div class="perf-label">Brown &amp; tan drive the casual business</div>
+          <div class="perf-context">4.7% ST vs 4.3% avg — leather in warm earth tones is the clear winner here.</div>
+          <div class="perf-badge perf-badge--up">Outperforming</div>
+        </div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-item-img"><img src="images/lg-perf-work-2.jpg" alt="Casual belt — fully adjustable closure"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric-sm">5.0% ST</div>
+          <div class="perf-label">Fully adjustable — top closure type</div>
+          <div class="perf-context">Significantly outperforms 4.3% avg. Versatile fit for casual and workwear pants.</div>
+          <div class="perf-badge perf-badge--up">Outperforming</div>
+        </div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-item-img"><img src="images/lg-perf-work-3.jpg" alt="Casual belt — 35-38mm standard width"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric">86%</div>
+          <div class="perf-label">Standard 35–38mm width</div>
+          <div class="perf-context">Dominates casual. Wider belts (&gt;38mm) also outperform at 4.6% ST vs 4.3% avg.</div>
+        </div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-item-img"><img src="images/lg-perf-work-4.jpg" alt="Casual belt — black hardware finish"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric-sm">Black HW</div>
+          <div class="perf-label">Black hardware leads casual</div>
+          <div class="perf-context">4.8% ST vs 4.3% avg. Nickel-tone also solid at 4.5% ST. Both outperform.</div>
+          <div class="perf-badge perf-badge--up">Outperforming</div>
+        </div>
+      </div>
+      <div class="perf-item perf-item--full">
+        <div class="perf-item-img"><img src="images/lg-perf-work-5.jpg" alt="Casual belt — non-reversible brown"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric-sm">Non-Reversible</div>
+          <div class="perf-label">Non-reversible outperforms in casual</div>
+          <div class="perf-context">4.5% ST vs 4.3% avg. The casual customer values a dedicated colour over versatility — commit to brown/tan.</div>
+          <div class="perf-badge perf-badge--up">Outperforming</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── COLUMBIA BRAND CALLOUT ── -->
+  <div class="perf-panel reveal" style="margin-top: 20px; border-left: 3px solid var(--workwear);">
+    <div class="perf-panel-header">
+      <div class="perf-panel-icon" style="background: var(--workwear);">C</div>
+      <div class="perf-panel-title">Columbia — Casual Workwear Highlights</div>
+    </div>
+    <div class="perf-grid">
+      <div class="perf-item">
+        <div class="perf-item-img"><img src="images/lg-perf-columbia-1.jpg" alt="Columbia — wide casual belt"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric-sm">78%</div>
+          <div class="perf-label">Wider belts (38mm+) dominate units</div>
+          <div class="perf-context">The Columbia customer skews toward substantial widths for outdoor and workwear use.</div>
+        </div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-item-img"><img src="images/lg-perf-columbia-2.jpg" alt="Columbia — non-reversible belt"></div>
+        <div class="perf-item-text">
+          <div class="perf-metric-sm">Non-Rev</div>
+          <div class="perf-label">Non-reversible outperforms</div>
+          <div class="perf-context">4.4% ST vs 4.2% avg. Dedicated colour commitment over flip versatility.</div>
+          <div class="perf-badge perf-badge--up">Outperforming</div>
+        </div>
+      </div>
+      <div class="perf-item perf-item--full">
+        <div class="perf-item-img"><img src="images/lg-perf-columbia-3.jpg" alt="Columbia — lace braid and stretch belts"></div>
+        <div class="perf-item-text">
+          <div class="perf-label">Top sellers: black casual non-stretch leather, stretch &amp; lace braid styles</div>
+          <div class="perf-context">These constructions are significantly outperforming within the Columbia casual assortment.</div>
+          <div class="perf-badge perf-badge--up">Outperforming</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="narrative-tie reveal">
+    <div class="narrative-pill" style="background: var(--workwear);">Earth &amp; Tech <span class="arrow">&rarr;</span> Geological Patina</div>
+    <div class="narrative-pill" style="background: var(--dress);">The Artisan <span class="arrow">&rarr;</span> Heritage Craft</div>
+  </div>
+
+  <div class="callout-row reveal">
+    <span class="callout-tag">#UtilityBelt</span>
+    <span class="callout-tag">#AgedPatina</span>
+    <span class="callout-tag">#GeoLogic</span>
+    <span class="callout-tag">#GRSRecycled</span>
+    <span class="callout-tag">Burnished Hardware</span>
+    <span class="callout-tag">Tooled Leather</span>
+    <span class="callout-tag">Beeswax Finish</span>
+    <span class="callout-tag">Iron-Oxide Patina</span>
+  </div>
+</section>
+
+
+<!-- ═══ WGSN DATA CALLOUT 3 ═══ -->
+<div class="wgsn-callout reveal">
+  <div class="wgsn-callout-inner">
+    <div class="wgsn-source">WGSN Insight</div>
+    <div class="wgsn-content">
+      <div class="wgsn-insight-tag" style="background: var(--workwear);">Geo Logic — Materials</div>
+      <div class="wgsn-insight">Natural origins define S/S 27 leather goods. Geo Logic replicates erosion and oxidation patterns found in nature — beeswax finishes and natural dyes create sunlight-exposed leather with rich patina. Burnished metal hardware in iron oxide tones develops a reddish-brown rust patina over time, while stamped, tooled, and engraved leather patches reference geological strata.</div>
+      <div class="wgsn-stat-row" style="margin-top: 24px;">
+        <div class="wgsn-stat">
+          <div class="wgsn-stat-number">LWG</div>
+          <div class="wgsn-stat-label">Certified Leather &amp; Suede</div>
+        </div>
+        <div class="wgsn-stat">
+          <div class="wgsn-stat-number">GRS</div>
+          <div class="wgsn-stat-label">Recycled Materials Standard</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="page-footer">
+  <img src="images/raa logos/RAA_Blue.svg" alt="Randa Apparel &amp; Accessories" class="footer-logo">
+  <p>S/S 27 Men's Leather Goods &nbsp;&bull;&nbsp; Randa Apparel &amp; Accessories</p>
+  <div class="footer-links">
+    <a href="index.html" class="back-link">&larr; Back to Men's Forecast</a>
+    <a href="neckwear.html" class="back-link">Neckwear &rarr;</a>
+  </div>
+</footer>
+
+
+<!-- ═══ SCROLL REVEAL JS ═══ -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
+});
+
+// ═══ NAV SCROLL EFFECT ═══
+(function() {
+  const nav = document.getElementById('mainNav');
+  if (!nav) return;
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+})();
+
+// ═══ MOBILE NAV ═══
+(function() {
+  const hamburger = document.querySelector('.mobile-hamburger');
+  const drawer = document.querySelector('.mobile-drawer');
+  const overlay = document.querySelector('.mobile-drawer-overlay');
+  if (!hamburger || !drawer || !overlay) return;
+
+  let scrollPos = 0;
+
+  function openDrawer() {
+    scrollPos = window.scrollY;
+    hamburger.classList.add('open');
+    drawer.classList.add('open');
+    overlay.classList.add('open');
+    document.body.classList.add('drawer-open');
+    document.body.style.top = `-${scrollPos}px`;
+  }
+  function closeDrawer() {
+    hamburger.classList.remove('open');
+    drawer.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.classList.remove('drawer-open');
+    document.body.style.top = '';
+    window.scrollTo(0, scrollPos);
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (drawer.classList.contains('open')) closeDrawer();
+    else openDrawer();
+  });
+  overlay.addEventListener('click', closeDrawer);
+
+  // Close drawer on link click
+  drawer.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      closeDrawer();
+    });
+  });
+})();
+</script>
+</body>
+</html>
