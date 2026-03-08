@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How I used AI-powered tools to build an interactive S/S 27 trend forecast presentation — from concept to polished, multi-page experience — in a fraction of the traditional timeline.">
+    <title>AI-Powered Trend Presentation - Trevor Wills</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI-Powered Trend Presentation - Trevor Wills">
+    <meta property="og:description" content="Leveraging AI to transform seasonal trend direction into an interactive digital experience — a case study in emerging creative technology.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="SS27Trend/images/Hero-bg.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPRT6Q0JSR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CPRT6Q0JSR');
+    </script>
+
+    <style>
+        /* === Site Showcase: Browser Frame with Embedded iframe === */
+        .site-showcase {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+        }
+
+        .site-showcase-label {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .site-showcase-label span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #cc6d47;
+            font-weight: 600;
+        }
+
+        .site-showcase-label h3 {
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .browser-frame {
+            background: #1a1a1a;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25), 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .browser-toolbar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            background: #2a2a2a;
+            border-bottom: 1px solid #3a3a3a;
+        }
+
+        .browser-dots {
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .browser-dots span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .browser-dots span:nth-child(1) { background: #ff5f57; }
+        .browser-dots span:nth-child(2) { background: #febc2e; }
+        .browser-dots span:nth-child(3) { background: #28c840; }
+
+        .browser-url {
+            flex: 1;
+            background: #3a3a3a;
+            border-radius: 6px;
+            padding: 0.5rem 1rem;
+            color: #aaa;
+            font-size: 0.8rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .browser-url svg {
+            width: 12px;
+            height: 12px;
+            flex-shrink: 0;
+        }
+
+        .browser-iframe-container {
+            position: relative;
+            width: 100%;
+            height: 75vh;
+            background: #fff;
+        }
+
+        .browser-iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        .browser-iframe-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, rgba(26, 26, 26, 0.9));
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 1.25rem;
+            pointer-events: none;
+        }
+
+        .browser-iframe-overlay a {
+            pointer-events: all;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.25rem;
+            background: rgba(204, 109, 71, 0.9);
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .browser-iframe-overlay a:hover {
+            background: #cc6d47;
+            transform: translateY(-2px);
+        }
+
+        .browser-iframe-overlay a svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* === Page Tabs for Switching Between Embedded Pages === */
+        .page-tabs {
+            display: flex;
+            gap: 0;
+            background: #2a2a2a;
+            padding: 0 1.5rem;
+            border-top: 1px solid #3a3a3a;
+        }
+
+        .page-tab {
+            padding: 0.75rem 1.25rem;
+            color: #888;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            background: none;
+            transition: all 0.3s;
+            position: relative;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .page-tab:hover {
+            color: #ccc;
+        }
+
+        .page-tab.active {
+            color: #fff;
+        }
+
+        .page-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #cc6d47;
+        }
+
+        /* === Process Timeline === */
+        .process-timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 6rem 3rem;
+        }
+
+        .process-timeline h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 4rem;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .timeline-step {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+            align-items: start;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #f9f7f4;
+            border: 2px solid #cc6d47;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #cc6d47;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+        }
+
+        .step-content p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+        }
+
+        .step-tag {
+            display: inline-block;
+            margin-top: 0.75rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.35rem 0.75rem;
+            background: #f9f7f4;
+            border: 1px solid #e8e5e1;
+            border-radius: 4px;
+            color: #6a6a6a;
+            font-weight: 500;
+        }
+
+        /* === Before / After Comparison === */
+        .comparison-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 3rem;
+        }
+
+        .comparison-section h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            letter-spacing: -0.02em;
+            text-align: center;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .comparison-card {
+            background: #f9f7f4;
+            border-radius: 16px;
+            padding: 2.5rem;
+            border: 1px solid #e8e5e1;
+        }
+
+        .comparison-card.highlight {
+            background: #1a1a1a;
+            border-color: #333;
+        }
+
+        .comparison-card h3 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #999;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .comparison-card.highlight h3 {
+            color: #cc6d47;
+        }
+
+        .comparison-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comparison-card li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e8e5e1;
+            color: #4a4a4a;
+        }
+
+        .comparison-card.highlight li {
+            color: #ddd;
+            border-bottom-color: #333;
+        }
+
+        .comparison-card li:last-child {
+            border-bottom: none;
+        }
+
+        /* === Responsive for showcase === */
+        @media (max-width: 768px) {
+            .browser-iframe-container {
+                height: 50vh;
+            }
+
+            .site-showcase {
+                padding: 2rem 1rem;
+            }
+
+            .browser-toolbar {
+                padding: 0.75rem 1rem;
+            }
+
+            .page-tabs {
+                padding: 0 0.5rem;
+                overflow-x: auto;
+            }
+
+            .page-tab {
+                padding: 0.6rem 0.75rem;
+                font-size: 0.7rem;
+                white-space: nowrap;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-step {
+                grid-template-columns: 50px 1fr;
+                gap: 1.25rem;
+            }
+
+            .step-number {
+                width: 44px;
+                height: 44px;
+                font-size: 1rem;
+            }
+
+            .process-timeline h2,
+            .comparison-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="nav-brand">Trevor Wills</a>
+            <button class="nav-hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="index.html#work">Work</a>
+                    <div class="dropdown-content">
+                        <a href="case-study-heritage-brands.html">Creative Direction for Heritage Brands</a>
+                        <a href="case-study-seasonal-trend-development.html">Seasonal Trend Development</a>
+                        <a href="case-study-digital-product-creation.html">Pioneering Digital Product Creation</a>
+                        <a href="case-study-damen-hastings.html">Building a Vertical Brand</a>
+                        <a href="case-study-walmart-assessment.html">Strategic Brand Assessment for Walmart</a>
+                        <a href="case-study-ai-trend-presentation.html">AI-Powered Trend Presentation</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="cs-hero" style="background-image: url('SS27Trend/images/Hero-bg.jpg');">
+        <div class="hero-content">
+            <h1>AI-Powered Trend Presentation</h1>
+            <p class="subtitle">How I used Claude Cowork AI to build an interactive S/S 27 trend forecast — from concept to launch</p>
+        </div>
+    </div>
+
+    <!-- Project Meta -->
+    <div class="project-meta">
+        <div class="meta-item">
+            <h3>Role</h3>
+            <p>Creative Director, AI Prompt Strategist</p>
+        </div>
+        <div class="meta-item">
+            <h3>Tools</h3>
+            <p>Claude Cowork AI, HTML/CSS, Creative Direction</p>
+        </div>
+        <div class="meta-item">
+            <h3>Timeline</h3>
+            <p>Concept to Launch in Days, Not Weeks</p>
+        </div>
+        <div class="meta-item">
+            <h3>Deliverable</h3>
+            <p>Multi-Page Interactive Trend Forecast</p>
+        </div>
+    </div>
+
+    <!-- The Opportunity -->
+    <div class="text-block">
+        <h2>The Opportunity</h2>
+        <p>
+            Seasonal trend presentations are the backbone of how creative directors communicate vision
+            to design teams, merchandisers, and retail partners. Traditionally, building these requires
+            weeks of production — coordinating with graphic designers, iterating on layouts, and
+            assembling static PDFs or slide decks that can feel flat compared to the richness of the
+            trends themselves.
+        </p>
+        <p>
+            I saw an opportunity to rethink this entirely. What if I could use AI as a creative
+            collaborator to build something more ambitious — an interactive, web-based trend
+            experience — while dramatically compressing the timeline?
+        </p>
+    </div>
+
+    <!-- ====== EMBEDDED SITE SHOWCASE ====== -->
+    <div class="site-showcase">
+        <div class="site-showcase-label">
+            <span>Live Preview</span>
+            <h3>The S/S 27 Trend Forecast — Built with AI</h3>
+        </div>
+        <div class="browser-frame">
+            <div class="browser-toolbar">
+                <div class="browser-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="browser-url">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                    <span id="url-display">ss27trend.netlify.app</span>
+                </div>
+            </div>
+            <div class="page-tabs">
+                <button class="page-tab active" onclick="switchPage('SS27Trend/index.html', this, 'ss27trend.netlify.app')">Trend Overview</button>
+                <button class="page-tab" onclick="switchPage('SS27Trend/leather-goods.html', this, 'ss27trend.netlify.app/leather-goods')">Leather Goods</button>
+                <button class="page-tab" onclick="switchPage('SS27Trend/neckwear.html', this, 'ss27trend.netlify.app/neckwear')">Neckwear</button>
+            </div>
+            <div class="browser-iframe-container">
+                <iframe id="trend-preview" src="SS27Trend/index.html" title="S/S 27 Trend Forecast Preview" loading="lazy"></iframe>
+                <div class="browser-iframe-overlay">
+                    <a href="SS27Trend/index.html" target="_blank">
+                        Open Full Site
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Approach -->
+    <div class="text-block">
+        <h2>AI as Creative Partner</h2>
+        <p>
+            I used Claude Cowork — Anthropic's AI desktop tool — as my primary development partner.
+            But this wasn't about handing off creative decisions to a machine. I brought 15+ years
+            of trend forecasting expertise, brand strategy knowledge, and a clear creative vision.
+            The AI brought the ability to rapidly prototype, code, and iterate on the technical execution.
+        </p>
+        <p>
+            Think of it like directing a production — I was still the creative director making every
+            aesthetic and strategic call. The AI functioned like an incredibly fast, tireless production
+            team that could translate my direction into polished output in real time.
+        </p>
+    </div>
+
+    <!-- Split Image — trend imagery from the site -->
+    <div class="split-layout">
+        <div class="split-half">
+            <img src="SS27Trend/images/artisan-hero.jpg" alt="Artisan Craft trend direction">
+        </div>
+        <div class="split-half">
+            <img src="SS27Trend/images/earth-hero.jpg" alt="Earth Elements trend direction">
+        </div>
+    </div>
+
+    <!-- Process Timeline -->
+    <div class="process-timeline">
+        <h2>The Process</h2>
+
+        <div class="timeline-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h3>Strategic Foundation</h3>
+                <p>
+                    Started where I always start: with trend research. Drawing on market analysis,
+                    competitive shopping, and cultural signal-reading, I developed the S/S 27 direction.
+                    Three core themes emerged — Retro Revival, Earth Elements, and Artisan Craft —
+                    each with distinct color palettes, material stories, and mood directions.
+                </p>
+                <span class="step-tag">My Expertise</span>
+            </div>
+        </div>
+
+        <div class="timeline-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3>Directing the AI Build</h3>
+                <p>
+                    With the creative strategy defined, I began working with Claude Cowork to translate
+                    the trend direction into an interactive web experience. This meant art-directing every
+                    detail: typography, color systems, image layouts, animation timing, and the editorial
+                    rhythm of each page.
+                </p>
+                <span class="step-tag">AI Collaboration</span>
+            </div>
+        </div>
+
+        <div class="timeline-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3>Iterative Refinement</h3>
+                <p>
+                    The real power showed in the iteration speed. Where a traditional layout revision
+                    might take a day of back-and-forth, I could review, redirect, and see updated
+                    results in minutes — pushing the quality higher than I might have under normal
+                    time constraints.
+                </p>
+                <span class="step-tag">AI Acceleration</span>
+            </div>
+        </div>
+
+        <div class="timeline-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <h3>Multi-Page Expansion</h3>
+                <p>
+                    What started as a single trend overview grew into a full multi-page experience
+                    with dedicated sections for leather goods, neckwear, and women's accessories.
+                    Each page maintained the cohesive editorial voice while adapting to category-specific
+                    content.
+                </p>
+                <span class="step-tag">Scalable Output</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Width Image -->
+    <div class="image-fullscreen">
+        <img src="SS27Trend/images/retro-mosaic-1.jpg" alt="Retro Revival trend direction mosaic">
+    </div>
+
+    <!-- Before / After Comparison -->
+    <div class="comparison-section">
+        <h2>What AI Changed — and What It Didn't</h2>
+        <div class="comparison-grid">
+            <div class="comparison-card">
+                <h3>Traditional Approach</h3>
+                <ul>
+                    <li>Weeks of production timeline</li>
+                    <li>Static PDF or slide deck output</li>
+                    <li>Coordinate with designers and developers</li>
+                    <li>Limited iterations due to time</li>
+                    <li>Flat layouts that can't capture trend energy</li>
+                </ul>
+            </div>
+            <div class="comparison-card highlight">
+                <h3>AI-Powered Approach</h3>
+                <ul>
+                    <li>Days from concept to launch</li>
+                    <li>Interactive, responsive web experience</li>
+                    <li>Direct creative-to-code workflow</li>
+                    <li>Rapid iteration in real time</li>
+                    <li>Immersive editorial storytelling</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offset Images — more from the trend site -->
+    <div class="offset-images">
+        <div class="offset-pair">
+            <img src="SS27Trend/images/artisan-materials.jpg" alt="Artisan Craft materials direction">
+            <img src="SS27Trend/images/earth-colors.jpg" alt="Earth Elements color palette">
+        </div>
+        <div class="offset-pair">
+            <img src="SS27Trend/images/retro-look-casual.jpg" alt="Retro Revival casual styling">
+            <img src="SS27Trend/images/artisan-hardware.jpg" alt="Artisan hardware details">
+        </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-showcase">
+        <div class="stats-grid">
+            <div class="stat-large">
+                <div class="number">4</div>
+                <div class="label">Interactive Pages Built</div>
+            </div>
+            <div class="stat-large">
+                <div class="number">3</div>
+                <div class="label">Trend Themes Developed</div>
+            </div>
+            <div class="stat-large">
+                <div class="number">10x</div>
+                <div class="label">Faster Than Traditional Production</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result -->
+    <div class="text-block">
+        <h2>The Result</h2>
+        <p>
+            The finished S/S 27 Trend Forecast is a fully interactive, multi-page web experience that
+            showcases seasonal direction across men's and women's accessories — with curated imagery,
+            detailed color and material narratives, and an editorial design language that reflects the
+            sophistication of the trends themselves.
+        </p>
+        <p>
+            More importantly, this project demonstrates a new model for how creative directors can
+            leverage AI tools — not to replace creative expertise, but to amplify it. The ability to
+            go from strategic concept to polished, interactive deliverable without a traditional
+            production pipeline opens up possibilities for faster go-to-market, richer client
+            presentations, and more ambitious creative output.
+        </p>
+    </div>
+
+    <!-- Closing Quote -->
+    <div class="quote-hero">
+        <p>
+            AI doesn't replace creative vision — it removes the bottleneck between having the idea
+            and showing the world what it looks like.
+        </p>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="if(event.target === this) closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox"></button>
+        <div class="lightbox-content">
+            <button class="lightbox-arrow left" onclick="event.stopPropagation(); lightboxNavigate(-1)">
+                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+            <img id="lightbox-img" class="lightbox-image" src="" alt="">
+            <button class="lightbox-arrow right" onclick="event.stopPropagation(); lightboxNavigate(1)">
+                <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Trevor Wills. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Switch iframe page via tabs
+        function switchPage(src, tabEl, urlText) {
+            document.getElementById('trend-preview').src = src;
+            document.getElementById('url-display').textContent = urlText;
+            document.querySelectorAll('.page-tab').forEach(t => t.classList.remove('active'));
+            tabEl.classList.add('active');
+        }
+    </script>
+</body>
+</html>
