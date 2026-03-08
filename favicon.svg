@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="48" fill="none" stroke="#cc6d47" stroke-width="2"/>
+  <circle cx="50" cy="50" r="50" fill="none" stroke="#cc6d47" stroke-width="0.5" opacity="0.5"/>
+  <text x="50" y="62" font-family="serif" font-size="48" font-weight="bold" fill="#cc6d47" text-anchor="middle" letter-spacing="-2">TW</text>
+</svg>

@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Direction for Global Brands - Trevor Wills</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fefdfb;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(254, 253, 251, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 3rem;
+            z-index: 1000;
+            border-bottom: 1px solid #e8e5e1;
+        }
+
+        nav .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #cc6d47;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .hero {
+            height: 70vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            padding: 0 3rem 4rem;
+            margin-top: 73px;
+            position: relative;
+            border-radius: 0 0 24px 24px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 100%);
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 400;
+        }
+
+        .project-meta {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            margin-top: -4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .meta-item h3 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #cc6d47;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .meta-item p {
+            font-size: 1.125rem;
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .content-section h3 {
+            font-size: 1.75rem;
+            margin: 2.5rem 0 1rem;
+            color: #1a1a1a;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .content-section p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #4a4a4a;
+        }
+
+        .content-section ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .content-section li {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 0.75rem;
+            color: #4a4a4a;
+        }
+
+        .content-section strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .highlight-box {
+            background: #f9f7f4;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            border: 1px solid #e8e5e1;
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+            color: #cc6d47;
+        }
+
+        .image-full {
+            width: 100%;
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .image-full img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .quote-block {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 3rem;
+            background: #f9f7f4;
+            border-radius: 16px;
+            border-left: 4px solid #cc6d47;
+        }
+
+        .quote-block p {
+            font-size: 1.5rem;
+            font-style: italic;
+            line-height: 1.6;
+            color: #1a1a1a;
+        }
+
+        .quote-block cite {
+            display: block;
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-style: normal;
+            color: #6a6a6a;
+        }
+
+        /* Case Study Link Styles */
+        .case-study-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #cc6d47;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid #cc6d47;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .case-study-link:hover {
+            background: #cc6d47;
+            color: white;
+            transform: translateX(4px);
+        }
+
+        .case-study-link svg {
+            transition: transform 0.3s;
+        }
+
+        .case-study-link:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding: 0 4rem;
+        }
+
+        .carousel-image {
+            flex-shrink: 0;
+            border-radius: 12px;
+            object-fit: contain;
+            transition: all 0.3s ease;
+            background: #f9f7f4;
+        }
+
+        .carousel-image.side {
+            width: 25%;
+            height: 197px;
+            opacity: 0.4;
+            filter: blur(2px);
+        }
+
+        .carousel-image.center {
+            width: 50%;
+            height: 394px;
+            opacity: 1;
+            filter: none;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #e8e5e1;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-arrow:hover {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .carousel-arrow.left {
+            left: 1rem;
+        }
+
+        .carousel-arrow.right {
+            right: 1rem;
+        }
+
+        .carousel-arrow svg {
+            width: 24px;
+            height: 24px;
+            fill: #1a1a1a;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #d0ccc7;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .carousel-dot.active {
+            background: #cc6d47;
+            width: 30px;
+            border-radius: 5px;
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10000;
+            transition: all 0.3s;
+        }
+
+        .lightbox-arrow:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .lightbox-arrow.left {
+            left: 2rem;
+        }
+
+        .lightbox-arrow.right {
+            right: 2rem;
+        }
+
+        .lightbox-arrow svg {
+            width: 30px;
+            height: 30px;
+            fill: #1a1a1a;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 10001;
+        }
+
+        .lightbox-close:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .lightbox-close::before,
+        .lightbox-close::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background: #1a1a1a;
+        }
+
+        .lightbox-close::before {
+            transform: rotate(45deg);
+        }
+
+        .lightbox-close::after {
+            transform: rotate(-45deg);
+        }
+
+        .lightbox-counter {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0.75rem 1.5rem;
+            border-radius: 20px;
+            color: #1a1a1a;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 6rem;
+        }
+
+        footer .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .project-meta {
+                grid-template-columns: 1fr;
+                margin-top: -2rem;
+            }
+
+            .two-column,
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav .nav-links {
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" style="font-weight: 600;">Trevor Wills</a>
+            <div class="nav-links">
+                <a href="index.html#work">Work</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero" style="background-image: url('images/heritage-brands/hero2.jpg');">
+        <div class="hero-content">
+            <h1>Creative Direction for Global Brands</h1>
+            <p class="subtitle">Leading the complete seasonal design process-from trend research to final photography-for 7+ iconic brands</p>
+        </div>
+    </div>
+
+    <div class="project-meta">
+        <div class="meta-item">
+            <h3>Role</h3>
+            <p>Design Director, Creative Lead</p>
+        </div>
+        <div class="meta-item">
+            <h3>Brands</h3>
+            <p>Levi's, Calvin Klein, Tommy Hilfiger, +4</p>
+        </div>
+        <div class="meta-item">
+            <h3>Team</h3>
+            <p>Associate to Senior Level Designers, Cross-Functional Partners</p>
+        </div>
+        <div class="meta-item">
+            <h3>Impact</h3>
+            <p>Bi-annual Seasonal Collections</p>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <h2>Overview</h2>
+        <p>
+            Managing seasonal creative direction for 7+ global heritage brands requires balancing distinct brand identities 
+            with cohesive design strategy. Each brand - from Levi's rugged Americana to Calvin Klein's minimalist sophistication - 
+            demands authentic expression while maintaining production efficiencies across our portfolio.
+        </p>
+        <p>
+            As Design Director, I lead the end-to-end creative process: collaborating with brand partners on seasonal direction, 
+            guiding design teams through concept development, and ensuring every accessory - from belts to wallets - tells the 
+            right story for each brand while aligning with broader market trends.
+        </p>
+        <p>
+            I take pride in managing and developing a talented design team, helping build their careers from associate to senior 
+            level while partnering with cross-functional leaders across merchandising, product development, and operations to 
+            drive company-wide seasonal strategy.
+        </p>
+
+        <div class="highlight-box">
+            <h3>Leadership Impact</h3>
+            <ul>
+                <li>Directs bi-annual seasonal collections across 7+ heritage brands</li>
+                <li>Partnered with senior leadership across departments to develop and execute company-wide seasonal strategy</li>
+                <li>Mentored designers into senior leadership roles with expanded responsibilities</li>
+                <li>Established design review processes that improved approval efficiency and reduced revision cycles</li>
+                <li>Led weekly cross-functional meetings aligning design, merchandising, and production teams</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="image-grid" style="max-width: 1400px; margin: 0 auto; padding: 0 3rem;">
+        <img src="images/heritage-brands/campaign-01.jpg" alt="Heritage brands campaign imagery">
+        <img src="images/heritage-brands/campaign-02.jpg" alt="Seasonal product photography">
+    </div>
+
+    <section class="content-section" style="text-align: center;">
+        <h2 style="margin-bottom: 2rem;">My Approach</h2>
+        <p style="max-width: 900px; margin: 0 auto; font-size: 1.125rem; line-height: 1.8;">
+            Leading creative direction for heritage brands means honoring decades of brand equity while staying ahead of market 
+            trends. I balance strategic brand partnerships with hands-on design leadership - guiding teams through weekly critiques, 
+            establishing systematic processes, and ensuring each brand's unique DNA shines through in every seasonal collection. 
+            Below are key phases of the seasonal development process that bring these collections to life.
+        </p>
+    </section>
+
+    <section class="content-section" style="max-width: 1400px; padding: 4rem 3rem 6rem;">
+        
+        <!-- Process Step 1: Trend Development -->
+        <div style="margin-bottom: 6rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                <div style="background: #cc6d47; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 600; flex-shrink: 0;">1</div>
+                <h3 style="margin: 0; font-size: 2rem; color: #1a1a1a;">Trend Development</h3>
+            </div>
+            <p style="font-size: 1.125rem; line-height: 1.8; color: #4a4a4a; margin-bottom: 2rem;">
+                I lead the seasonal trend research process, synthesizing global market insights, competitive analysis, and brand-specific 
+                direction into cohesive trend boards. Working closely with our design team and brand partners, we identify the key themes, 
+                colors, materials, and styles that will drive each brand's seasonal story. This strategic foundation ensures our creative 
+                direction aligns with both market opportunities and brand DNA.
+            </p>
+            
+            <!-- Carousel 1 -->
+            <div class="carousel-container" data-carousel="1">
+                <div class="carousel-arrow left" onclick="moveCarousel(1, -1)">
+                    <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                </div>
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/trend-01.jpg" class="carousel-image center" alt="Trend board development">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/trend-02.jpg" class="carousel-image center" alt="Trend research process">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/trend-03.jpg" class="carousel-image center" alt="Color and material trends">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/trend-04.jpg" class="carousel-image center" alt="Market insights">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/trend-05.jpg" class="carousel-image center" alt="Brand alignment">
+                    </div>
+                </div>
+                <div class="carousel-arrow right" onclick="moveCarousel(1, 1)">
+                    <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                </div>
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide(1, 0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(1, 1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(1, 2)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(1, 3)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(1, 4)"></span>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="case-study-seasonal-trend-development.html" class="case-study-link">
+                    <span>Explore the complete seasonal trend development process</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Process Step 2: Design Development -->
+        <div style="margin-bottom: 6rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                <div style="background: #cc6d47; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 600; flex-shrink: 0;">2</div>
+                <h3 style="margin: 0; font-size: 2rem; color: #1a1a1a;">Design Development</h3>
+            </div>
+            <p style="font-size: 1.125rem; line-height: 1.8; color: #4a4a4a; margin-bottom: 2rem;">
+                With trend direction established, I guide the design team through concept development. This phase involves translating 
+                seasonal trends into specific product designs tailored to each brand's aesthetic and customer expectations. I conduct 
+                regular design reviews, provide creative direction, and mentor designers to push their work while ensuring commercial 
+                viability. The result: a curated collection of concepts ready for brand partner review.
+            </p>
+            
+            <!-- Carousel 2 -->
+            <div class="carousel-container" data-carousel="2">
+                <div class="carousel-arrow left" onclick="moveCarousel(2, -1)">
+                    <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                </div>
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/design-01.jpg" class="carousel-image center" alt="Design sketches and concepts">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/design-02.jpg" class="carousel-image center" alt="Design review process">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/design-03.jpg" class="carousel-image center" alt="Concept refinement">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/design-04.jpg" class="carousel-image center" alt="Design team collaboration">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/design-05.jpg" class="carousel-image center" alt="Brand-specific designs">
+                    </div>
+                </div>
+                <div class="carousel-arrow right" onclick="moveCarousel(2, 1)">
+                    <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                </div>
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide(2, 0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(2, 1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(2, 2)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(2, 3)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(2, 4)"></span>
+                </div>
+            </div>
+            <p style="text-align: center; font-size: 0.9rem; color: #6a6a6a; margin-top: 1rem; font-style: italic;">
+                Representative design examples across multiple heritage brands
+            </p>
+        </div>
+
+        <!-- Process Step 3: Tech Packs & Sample Development -->
+        <div style="margin-bottom: 6rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                <div style="background: #cc6d47; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 600; flex-shrink: 0;">3</div>
+                <h3 style="margin: 0; font-size: 2rem; color: #1a1a1a;">Tech Packs & Sample Development</h3>
+            </div>
+            <p style="font-size: 1.125rem; line-height: 1.8; color: #4a4a4a; margin-bottom: 2rem;">
+                Once designs are approved, I oversee the technical development phase. This includes creating detailed technical drawings, 
+                developing materials and hardware specifications, and managing the process through our PLM system. I partner with product 
+                development teams to ensure samples meet quality standards while staying within cost targets. This phase requires balancing 
+                creative vision with manufacturing realities across multiple factories and brand specifications.
+            </p>
+            
+            <!-- Carousel 3 -->
+            <div class="carousel-container" data-carousel="3">
+                <div class="carousel-arrow left" onclick="moveCarousel(3, -1)">
+                    <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                </div>
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/techpack-01.jpg" class="carousel-image center" alt="Technical drawings and specifications">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/techpack-02.jpg" class="carousel-image center" alt="Material development">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/techpack-03.jpg" class="carousel-image center" alt="Hardware specifications">
+                    </div>
+                </div>
+                <div class="carousel-arrow right" onclick="moveCarousel(3, 1)">
+                    <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                </div>
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide(3, 0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(3, 1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(3, 2)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Process Step 4: Sample Review & Linebook Creation -->
+        <div style="margin-bottom: 6rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                <div style="background: #cc6d47; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 600; flex-shrink: 0;">4</div>
+                <h3 style="margin: 0; font-size: 2rem; color: #1a1a1a;">Sample Review & Linebook Creation</h3>
+            </div>
+            <p style="font-size: 1.125rem; line-height: 1.8; color: #4a4a4a; margin-bottom: 2rem;">
+                I lead comprehensive sample reviews at key milestones (midpoint and line finals) to evaluate product quality, brand alignment, 
+                and commercial potential. Working with photography teams, I art direct product photography sessions that showcase each piece 
+                in the best light. These images become the foundation for linebooks presented to brand partners for final approval. This 
+                phase requires keen attention to detail and the ability to make tough editing decisions to strengthen the final assortment.
+            </p>
+            
+            <!-- Carousel 4 -->
+            <div class="carousel-container" data-carousel="4">
+                <div class="carousel-arrow left" onclick="moveCarousel(4, -1)">
+                    <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                </div>
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/sample-01.jpg" class="carousel-image center" alt="Sample review sessions">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/sample-02.jpg" class="carousel-image center" alt="Product photography">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/sample-03.jpg" class="carousel-image center" alt="Linebook layouts">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/sample-04.jpg" class="carousel-image center" alt="Quality evaluation">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/sample-05.jpg" class="carousel-image center" alt="Brand partner presentation">
+                    </div>
+                </div>
+                <div class="carousel-arrow right" onclick="moveCarousel(4, 1)">
+                    <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                </div>
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide(4, 0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(4, 1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(4, 2)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(4, 3)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(4, 4)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Process Step 5: Seasonal Photography Campaign -->
+        <div style="margin-bottom: 0;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                <div style="background: #cc6d47; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 600; flex-shrink: 0;">5</div>
+                <h3 style="margin: 0; font-size: 2rem; color: #1a1a1a;">Seasonal Photography Campaign</h3>
+            </div>
+            <p style="font-size: 1.125rem; line-height: 1.8; color: #4a4a4a; margin-bottom: 2rem;">
+                The final phase brings everything together. I direct global seasonal photography campaigns, partnering with teams across 
+                merchandising, marketing, and operations to create compelling imagery for management presentations and showroom displays. 
+                This involves location scouting, talent selection, shot planning, and on-set creative direction to ensure the final campaign 
+                authentically represents each brand's seasonal story. These assets become the visual foundation for buy meetings and retail 
+                presentations that drive millions in orders.
+            </p>
+            
+            <!-- Carousel 5 -->
+            <div class="carousel-container" data-carousel="5">
+                <div class="carousel-arrow left" onclick="moveCarousel(5, -1)">
+                    <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                </div>
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/campaign-01.jpg" class="carousel-image center" alt="Seasonal campaign photography">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/campaign-02.jpg" class="carousel-image center" alt="Campaign creative direction">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/campaign-03.jpg" class="carousel-image center" alt="On-location shoot">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/campaign-04.jpg" class="carousel-image center" alt="Showroom presentations">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/campaign-05.jpg" class="carousel-image center" alt="Final campaign assets">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/heritage-brands/campaign-06.jpg" class="carousel-image center" alt="Campaign photography">
+                    </div>
+                </div>
+                <div class="carousel-arrow right" onclick="moveCarousel(5, 1)">
+                    <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                </div>
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide(5, 0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(5, 1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(5, 2)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(5, 3)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(5, 4)"></span>
+                    <span class="carousel-dot" onclick="goToSlide(5, 5)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Lessons Learned</h2>
+        <p style="margin-bottom: 2rem;">
+            At the end of each season or major project, I find it essential to step back and conduct an honest critique 
+            of our process. This reflection with the team helps us identify what worked well and what could be improved 
+            for the next cycle - ensuring every collection becomes an opportunity for continuous growth and refinement.
+        </p>
+
+        <div class="highlight-box">
+            <h3>Key Takeaways</h3>
+            <ul>
+                <li><strong>Brand authenticity requires deep listening.</strong> The best work comes from understanding what makes each brand unique</li>
+                <li><strong>Process enables creativity.</strong> Clear workflows free designers to focus on craft rather than logistics</li>
+                <li><strong>Mentorship multiplies impact.</strong> Investing in designer growth creates compounding returns</li>
+                <li><strong>Collaboration beats control.</strong> The best solutions emerge from genuine partnership with brand teams</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()"></button>
+        <button class="lightbox-arrow left" onclick="lightboxNavigate(-1)">
+            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" class="lightbox-image" src="" alt="">
+        </div>
+        <button class="lightbox-arrow right" onclick="lightboxNavigate(1)">
+            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </button>
+        <div class="lightbox-counter">
+            <span id="lightbox-current">1</span> / <span id="lightbox-total">5</span>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Trevor Wills. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel functionality
+        const carouselStates = {
+            1: 0, 2: 0, 3: 0, 4: 0, 5: 0
+        };
+
+        function moveCarousel(carouselId, direction) {
+            const container = document.querySelector(`[data-carousel="${carouselId}"]`);
+            const wrapper = container.querySelector('.carousel-wrapper');
+            const slides = wrapper.querySelectorAll('.carousel-slide');
+            const totalSlides = slides.length;
+            
+            carouselStates[carouselId] += direction;
+            
+            // Loop around
+            if (carouselStates[carouselId] < 0) {
+                carouselStates[carouselId] = totalSlides - 1;
+            } else if (carouselStates[carouselId] >= totalSlides) {
+                carouselStates[carouselId] = 0;
+            }
+            
+            updateCarousel(carouselId);
+        }
+
+        function goToSlide(carouselId, slideIndex) {
+            carouselStates[carouselId] = slideIndex;
+            updateCarousel(carouselId);
+        }
+
+        function updateCarousel(carouselId) {
+            const container = document.querySelector(`[data-carousel="${carouselId}"]`);
+            const wrapper = container.querySelector('.carousel-wrapper');
+            const dots = container.querySelectorAll('.carousel-dot');
+            const currentSlide = carouselStates[carouselId];
+            
+            // Move carousel
+            wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Optional: Auto-advance carousels every 5 seconds
+        // Uncomment if you want auto-play
+        // setInterval(() => {
+        //     for (let i = 1; i <= 5; i++) {
+        //         moveCarousel(i, 1);
+        //     }
+        // }, 5000);
+
+        // Lightbox functionality
+        let currentLightboxCarousel = 1;
+        let lightboxImages = [];
+
+        function openLightbox(carouselId, imageIndex) {
+            currentLightboxCarousel = carouselId;
+            
+            // Get all images from this carousel
+            const container = document.querySelector(`[data-carousel="${carouselId}"]`);
+            const slides = container.querySelectorAll('.carousel-slide img');
+            lightboxImages = Array.from(slides).map(img => ({
+                src: img.src,
+                alt: img.alt
+            }));
+            
+            // Show lightbox
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            lightboxImg.src = lightboxImages[imageIndex].src;
+            lightboxImg.alt = lightboxImages[imageIndex].alt;
+            
+            // Update counter
+            document.getElementById('lightbox-current').textContent = imageIndex + 1;
+            document.getElementById('lightbox-total').textContent = lightboxImages.length;
+            
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            
+            // Store current index
+            lightbox.dataset.currentIndex = imageIndex;
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+
+        function lightboxNavigate(direction) {
+            const lightbox = document.getElementById('lightbox');
+            let currentIndex = parseInt(lightbox.dataset.currentIndex);
+            
+            currentIndex += direction;
+            
+            // Loop around
+            if (currentIndex < 0) {
+                currentIndex = lightboxImages.length - 1;
+            } else if (currentIndex >= lightboxImages.length) {
+                currentIndex = 0;
+            }
+            
+            // Update image
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = lightboxImages[currentIndex].src;
+            lightboxImg.alt = lightboxImages[currentIndex].alt;
+            
+            // Update counter
+            document.getElementById('lightbox-current').textContent = currentIndex + 1;
+            
+            // Store new index
+            lightbox.dataset.currentIndex = currentIndex;
+        }
+
+        // Close lightbox on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                if (document.getElementById('lightbox').classList.contains('active')) {
+                    lightboxNavigate(-1);
+                }
+            } else if (e.key === 'ArrowRight') {
+                if (document.getElementById('lightbox').classList.contains('active')) {
+                    lightboxNavigate(1);
+                }
+            }
+        });
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') {
+                closeLightbox();
+            }
+        });
+
+        // Make all carousel images clickable
+        document.addEventListener('DOMContentLoaded', () => {
+            for (let carouselId = 1; carouselId <= 5; carouselId++) {
+                const container = document.querySelector(`[data-carousel="${carouselId}"]`);
+                const slides = container.querySelectorAll('.carousel-slide img');
+                
+                slides.forEach((img, index) => {
+                    img.style.cursor = 'pointer';
+                    img.addEventListener('click', () => {
+                        openLightbox(carouselId, index);
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
