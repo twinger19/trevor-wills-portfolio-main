@@ -28,6 +28,55 @@
     </script>
 
     <style>
+        /* === Minimal Hero === */
+        .cs-hero-minimal {
+            margin-top: 73px;
+            padding: 8rem 3rem 6rem;
+            background: #1a1a1a;
+            text-align: center;
+        }
+
+        .cs-hero-minimal .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cs-hero-minimal .hero-eyebrow {
+            display: inline-block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #cc6d47;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .cs-hero-minimal h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .cs-hero-minimal .subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .cs-hero-minimal {
+                padding: 5rem 1.5rem 4rem;
+            }
+
+            .cs-hero-minimal h1 {
+                font-size: 2.25rem;
+            }
+        }
+
         /* === Site Showcase: Browser Frame with Embedded iframe === */
         .site-showcase {
             max-width: 1400px;
@@ -407,9 +456,10 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <div class="cs-hero" style="background-image: url('SS27Trend/images/Hero-bg.jpg');">
+    <!-- Hero — clean minimal, no image -->
+    <div class="cs-hero-minimal">
         <div class="hero-content">
+            <span class="hero-eyebrow">Case Study</span>
             <h1>AI-Powered Trend Presentation</h1>
             <p class="subtitle">How I used Claude Cowork AI to build an interactive S/S 27 trend forecast — from concept to launch</p>
         </div>
