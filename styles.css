@@ -17,6 +17,10 @@ body {
     overflow-x: hidden;
 }
 
+h1, h2, .section-heading, .work-title, .quote-hero p, .quote-block p {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
 /* --- Navigation --- */
 nav {
     position: fixed;
@@ -956,6 +960,37 @@ footer p {
     line-height: 1.7;
 }
 
+/* About & Contact Hero */
+.hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3rem;
+    margin-top: 73px;
+    background: #fefdfb;
+    text-align: center;
+}
+
+.hero .hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+}
+
+.hero .subtitle {
+    font-size: 1.25rem;
+    color: #6a6a6a;
+    line-height: 1.6;
+}
+
 .hero-stats {
     display: flex;
     justify-content: center;
@@ -1223,6 +1258,10 @@ section {
     /* Homepage */
     .home-hero h1 {
         font-size: 2.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
     }
 
     .hero-image {
