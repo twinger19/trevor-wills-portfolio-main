@@ -1,3 +1,27 @@
+# macOS metadata
 .DS_Store
+**/.DS_Store
 *.DS_Store
+
+# Windows metadata
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node / build
+node_modules/
+dist/
+.cache/
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*

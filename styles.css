@@ -2,6 +2,71 @@
    Trevor Wills Portfolio — Shared Styles
    ========================================================================== */
 
+/* --- Design Tokens --- */
+:root {
+    /* Color — neutrals */
+    --color-ink: #1a1a1a;
+    --color-ink-soft: #4a4a4a;
+    --color-ink-muted: #6a6a6a;
+    --color-surface: #fefdfb;
+    --color-surface-1: #f9f7f4;
+    --color-surface-2: #f5f3f0;
+    --color-surface-3: #f5f2ed;
+    --color-border: #e8e5e1;
+    --color-black: #000;
+    --color-white: #fff;
+
+    /* Color — accent */
+    --color-accent: #b8552e;
+    --color-accent-tint: rgba(184, 85, 46, 0.08);
+
+    /* Typography */
+    --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-md: 1.125rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.5rem;
+    --text-2xl: 2rem;
+    --text-3xl: 2.5rem;
+    --text-4xl: 3.5rem;
+
+    /* Spacing */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4rem;
+
+    /* Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-pill: 20px;
+    --radius-round: 50%;
+
+    /* Elevation */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 2px 12px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    /* Motion */
+    --ease-base: 0.3s;
+    --ease-fast: 0.2s;
+
+    /* Layout */
+    --max-content: 1400px;
+    --max-prose: 900px;
+    --nav-height: 73px;
+}
+
 /* --- Reset & Base --- */
 * {
     margin: 0;
@@ -9,12 +74,43 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-sans);
     line-height: 1.6;
-    color: #1a1a1a;
-    background: #fefdfb;
+    color: var(--color-ink);
+    background: var(--color-surface);
     overflow-x: hidden;
+}
+
+/* --- Accessibility: Skip Link --- */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-ink);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 2000;
+    border-radius: 0 0 var(--radius-md) 0;
+    transition: top var(--ease-fast);
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* --- Accessibility: Visible focus --- */
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
 }
 
 h1, h2, .section-heading, .work-title, .quote-hero p, .quote-block p {
@@ -256,13 +352,14 @@ footer p {
     z-index: 10;
 }
 
-.meta-item h3 {
+.meta-item .meta-label {
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: #b8552e;
     margin-bottom: 0.5rem;
     font-weight: 600;
+    font-family: var(--font-sans);
 }
 
 .meta-item p {
@@ -271,11 +368,57 @@ footer p {
     font-weight: 500;
 }
 
+.meta-item dt {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #b8552e;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.meta-item dd {
+    font-size: 1.125rem;
+    color: #1a1a1a;
+    font-weight: 500;
+    margin: 0;
+}
+
 /* --- Case Study: Content Section --- */
 .content-section {
     max-width: 900px;
     margin: 0 auto;
     padding: 4rem 3rem;
+}
+
+/* --- Case Study: Subhead inside content-section --- */
+.content-section .subhead-accent {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--color-accent);
+}
+
+/* --- Case Study: Next-case quote block variant --- */
+.quote-block--next-case {
+    text-align: center;
+    border-left: none;
+}
+
+.quote-block--next-case .next-case-eyebrow {
+    font-size: 1rem;
+    font-style: normal;
+    color: var(--color-ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+}
+
+/* --- Lede paragraph utility --- */
+.lede {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
 }
 
 .content-section h2 {
@@ -960,6 +1103,161 @@ footer p {
     line-height: 1.7;
 }
 
+/* Homepage hero eyebrow */
+.home-hero .hero-eyebrow {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-accent);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-sans);
+}
+
+/* Homepage: Signature Work feature card */
+.signature-feature {
+    max-width: 1300px;
+    margin: 6rem auto 2rem;
+    padding: 0 2rem;
+}
+
+.signature-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    margin-top: 3rem;
+}
+
+.signature-card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all var(--ease-base);
+}
+
+.signature-card-link:hover .signature-card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.signature-card-media {
+    overflow: hidden;
+    border-radius: var(--radius-md);
+}
+
+.signature-card-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.signature-card-eyebrow {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-accent);
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+}
+
+.signature-card-title {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin: 0 0 1rem 0;
+    color: var(--color-ink);
+}
+
+.signature-card-summary {
+    color: var(--color-ink-soft);
+    margin: 0 0 1.5rem 0;
+}
+
+.signature-card-stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.signature-stat-value {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--color-ink);
+    font-family: var(--font-serif);
+}
+
+.signature-stat-label {
+    font-size: 0.85rem;
+    color: var(--color-ink-muted);
+}
+
+.signature-card-cta {
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Homepage: work-card link wrappers (strip underline) */
+.work-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Homepage: Principles section */
+.principles-section {
+    max-width: 1100px;
+    margin: 6rem auto 4rem;
+    padding: 0 2rem;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.principle-card {
+    padding: 2rem;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.principle-card h3 {
+    color: var(--color-accent);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+}
+
+.principle-card p {
+    color: var(--color-ink-soft);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .signature-card {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.75rem;
+    }
+
+    .signature-card-title {
+        font-size: 1.4rem;
+    }
+}
+
 /* About & Contact Hero */
 .hero {
     min-height: 60vh;
@@ -1425,3 +1723,112 @@ section {
     .lightbox-arrow.left { left: 1rem; }
     .lightbox-arrow.right { right: 1rem; }
 }
+
+/* ==========================================================================
+   Responsive — Small phone (≤480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+    nav {
+        padding: 1rem 1.25rem;
+    }
+
+    .home-hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.875rem;
+    }
+
+    .section-heading {
+        font-size: 1.75rem;
+    }
+
+    .cs-hero {
+        height: 60vh;
+        padding: 0 1.25rem 2rem;
+    }
+
+    .cs-hero h1 {
+        font-size: 2rem;
+    }
+
+    .cs-hero .subtitle {
+        font-size: 1.05rem;
+    }
+
+    .content-section {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .project-meta {
+        padding: 1.75rem;
+        gap: 1.25rem;
+    }
+
+    .quote-block {
+        padding: 2rem 1.5rem;
+        margin: 3rem 1rem;
+    }
+
+    .quote-block p {
+        font-size: 1.2rem;
+    }
+
+    .text-block h2 {
+        font-size: 2rem;
+    }
+
+    .text-block p {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 2rem 1.25rem;
+    }
+}
+
+/* ==========================================================================
+   Responsive — Tablet landscape / small laptop (≤1024px)
+   ========================================================================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav {
+        padding: 1.25rem 2rem;
+    }
+
+    .home-hero h1 {
+        font-size: 3rem;
+    }
+
+    .cs-hero h1 {
+        font-size: 3rem;
+    }
+
+    .project-meta {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .work-item {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section {
+        padding: 3rem 2rem;
+    }
+}
+
+/* ==========================================================================
+   Accessibility — Reduced motion preference
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
