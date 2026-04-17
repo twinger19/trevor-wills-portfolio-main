@@ -49,7 +49,7 @@ nav .nav-brand {
 }
 
 nav .nav-brand:hover {
-    color: #cc6d47;
+    color: #b8552e;
 }
 
 nav a {
@@ -60,7 +60,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #cc6d47;
+    color: #b8552e;
 }
 
 nav .nav-links {
@@ -144,7 +144,7 @@ nav .nav-links {
 
 .dropdown-content a:hover {
     background-color: #f5f3f0;
-    color: #cc6d47;
+    color: #b8552e;
 }
 
 .dropdown:hover .dropdown-content {
@@ -175,7 +175,7 @@ footer p {
     padding: 3rem;
     background: #f9f7f4;
     border-radius: 16px;
-    border-left: 4px solid #cc6d47;
+    border-left: 4px solid #b8552e;
 }
 
 .quote-block p {
@@ -260,7 +260,7 @@ footer p {
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #cc6d47;
+    color: #b8552e;
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
@@ -336,7 +336,7 @@ footer p {
 
 .highlight-box h3 {
     margin-top: 0;
-    color: #cc6d47;
+    color: #b8552e;
 }
 
 .image-full {
@@ -379,18 +379,18 @@ footer p {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: #cc6d47;
+    color: #b8552e;
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
-    border: 2px solid #cc6d47;
+    border: 2px solid #b8552e;
     border-radius: 8px;
     transition: all 0.3s;
 }
 
 .case-study-link:hover {
-    background: #cc6d47;
+    background: #b8552e;
     color: white;
     transform: translateX(4px);
 }
@@ -497,7 +497,7 @@ footer p {
 }
 
 .carousel-dot.active {
-    background: #cc6d47;
+    background: #b8552e;
     width: 32px;
     border-radius: 6px;
 }
@@ -709,7 +709,7 @@ footer p {
 .stat-large .number {
     font-size: 6rem;
     font-weight: 700;
-    color: #cc6d47;
+    color: #b8552e;
     line-height: 1;
     margin-bottom: 1rem;
 }
@@ -1005,7 +1005,7 @@ footer p {
 .stat-number {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #cc6d47;
+    color: #b8552e;
     display: block;
 }
 
@@ -1032,7 +1032,7 @@ section {
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: #cc6d47;
+    color: #b8552e;
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -1149,7 +1149,7 @@ section {
 
 .work-number {
     font-size: 0.875rem;
-    color: #cc6d47;
+    color: #b8552e;
     margin-bottom: 1rem;
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -1175,7 +1175,7 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: #cc6d47;
+    color: #b8552e;
     font-weight: 600;
     font-size: 0.95rem;
     transition: gap 0.3s;
