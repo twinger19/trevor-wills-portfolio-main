@@ -6,7 +6,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.nav-hamburger');
     const navLinks = document.querySelector('.nav-links');
-    const dropdown = document.querySelector('.nav-links .dropdown');
 
     function openMenu() {
         hamburger.classList.add('active');
@@ -22,46 +21,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hamburger && navLinks) {
         hamburger.addEventListener('click', () => {
-            if (hamburger.classList.contains('active')) {
-                closeMenu();
-            } else {
-                openMenu();
-            }
+            hamburger.classList.contains('active') ? closeMenu() : openMenu();
         });
 
-        // On mobile, tapping "Work" toggles the dropdown
-        if (dropdown) {
-            const dropdownToggle = dropdown.querySelector(':scope > a');
-            dropdownToggle.addEventListener('click', (e) => {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    dropdown.classList.toggle('active');
-                }
-            });
-        }
-
-        // Close menu when clicking a nav link (but not the Work toggle)
+        // Close menu when any nav link is tapped
         navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                if (window.innerWidth <= 768 && link.parentElement.classList.contains('dropdown') && link === link.parentElement.querySelector(':scope > a')) {
-                    return; // Let the dropdown toggle handle this
-                }
-                closeMenu();
-            });
+            link.addEventListener('click', () => closeMenu());
         });
 
-        // Close menu on Escape key
+        // Close on Escape
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && hamburger.classList.contains('active')) {
-                closeMenu();
-            }
+            if (e.key === 'Escape') closeMenu();
         });
 
-        // Re-enable scroll if window resizes above mobile breakpoint
+        // Reset on resize to desktop
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                closeMenu();
-            }
+            if (window.innerWidth > 768) closeMenu();
         });
     }
 });

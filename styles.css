@@ -1518,10 +1518,16 @@ section {
     /* Nav */
     .nav-hamburger {
         display: flex;
+        z-index: 2001;
+        position: relative;
     }
 
+    /* Use visibility+opacity instead of display:none so CSS transition works */
     nav .nav-links {
-        display: none;
+        display: flex;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -1529,73 +1535,76 @@ section {
         bottom: 0;
         background: var(--color-surface);
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2.25rem;
+        align-items: stretch;
+        justify-content: flex-start;
         z-index: 2000;
-        padding-top: 73px;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity var(--ease-base);
+        padding: 90px 0 3rem;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
     }
 
     nav .nav-links.active {
-        display: flex;
+        visibility: visible;
         opacity: 1;
         pointer-events: auto;
     }
 
-    /* Larger tap targets on mobile */
-    nav .nav-links > a,
+    /* "Work" label — acts as a section header, not a tap target */
     nav .nav-links .dropdown > a {
-        font-size: 1.375rem;
-        font-weight: 600;
-        letter-spacing: -0.01em;
-        padding: 0.5rem 1.5rem;
-        color: var(--color-ink);
-    }
-
-    nav .nav-links > a:hover,
-    nav .nav-links .dropdown > a:hover {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
         color: var(--color-accent);
+        padding: 0 1.75rem 0.75rem;
+        pointer-events: none; /* not tappable — links always show */
     }
 
-    /* Hamburger sits above the overlay */
-    .nav-hamburger {
-        z-index: 2001;
-        position: relative;
-    }
-
+    /* Case study links — always visible, no toggle needed */
     .dropdown-content {
+        display: block !important; /* always expanded on mobile */
         position: static;
-        display: none;
         transform: none;
         box-shadow: none;
         border: none;
-        border-top: 1px solid var(--color-border);
-        border-bottom: 1px solid var(--color-border);
         min-width: 100%;
-        text-align: center;
-        background: var(--color-surface-1);
-        padding: 0.75rem 0;
-        margin-top: 0.5rem;
+        background: transparent;
+        padding: 0 0 1.5rem;
     }
 
     .dropdown-content a {
-        font-size: 1rem;
-        color: var(--color-ink-soft);
-        padding: 0.75rem 2rem;
+        display: block;
+        font-size: 1.05rem;
+        font-weight: 500;
+        color: var(--color-ink);
+        padding: 0.65rem 1.75rem;
+        text-align: left;
+        border-bottom: none;
+        transition: color 0.2s;
     }
 
-    .dropdown-content a:hover {
+    .dropdown-content a:hover,
+    .dropdown-content a:active {
         color: var(--color-accent);
         background: transparent;
     }
 
-    .dropdown.active .dropdown-content {
+    /* Divider between Work links and About/Contact */
+    nav .nav-links > a {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--color-ink);
+        padding: 0.85rem 1.75rem;
+        border-top: 1px solid var(--color-border);
         display: block;
+        width: 100%;
+    }
+
+    nav .nav-links > a:hover,
+    nav .nav-links > a:active {
+        color: var(--color-accent);
     }
 
     /* Homepage */
