@@ -8,10 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     const dropdown = document.querySelector('.nav-links .dropdown');
 
+    function openMenu() {
+        hamburger.classList.add('active');
+        navLinks.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
     if (hamburger && navLinks) {
         hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
+            if (hamburger.classList.contains('active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
         });
 
         // On mobile, tapping "Work" toggles the dropdown
@@ -25,16 +40,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Close menu when clicking a link
+        // Close menu when clicking a nav link (but not the Work toggle)
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', (e) => {
-                // Don't close if it's the dropdown toggle on mobile
                 if (window.innerWidth <= 768 && link.parentElement.classList.contains('dropdown') && link === link.parentElement.querySelector(':scope > a')) {
-                    return;
+                    return; // Let the dropdown toggle handle this
                 }
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
+                closeMenu();
             });
+        });
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+
+        // Re-enable scroll if window resizes above mobile breakpoint
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
         });
     }
 });
