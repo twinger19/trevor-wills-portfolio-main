@@ -130,9 +130,39 @@
             font-style: normal;
         }
 
+        .about-intro {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-bottom: 2.5rem;
+        }
+
+        .about-headshot {
+            position: sticky;
+            top: 6rem;
+        }
+
+        .about-headshot img {
+            width: 100%;
+            border-radius: 16px;
+            display: block;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+
         @media (max-width: 768px) {
             .skills-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .about-intro {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-headshot {
+                position: static;
+                max-width: 220px;
             }
         }
     </style>
@@ -177,27 +207,34 @@
 
     <section class="content-section">
         <h2>Who I Am</h2>
-        <p>
-            A Senior Design Director who bridges creative vision and commercial results. Over 16 years I've led design
-            teams across a portfolio of 11 licensed global brands — Levi's, Calvin Klein, Tommy Hilfiger, Columbia,
-            Cole Haan, Tommy Bahama, Dickies, Kenneth Cole, Dockers, Red Wing, and Guess &mdash; and served as
-            Creative Director on the RAA team that built Damen + Hastings, an in-house brand we grew from a
-            pop-up to a national wholesale partnership with Kohl's.
-        </p>
-        <p>
-            My edge is seeing market, brand, team, calendar, and P&amp;L at the same time. I partner early with
-            merchandising, product development, and operations leadership so creative decisions land as commercial ones.
-            I direct the work, and I build the systems and relationships that let great design happen when I'm not in
-            the room.
-        </p>
+        <div class="about-intro">
+            <div class="about-headshot">
+                <img src="images/headshot.jpg" alt="Trevor Wills — Senior Design Director">
+            </div>
+            <div>
+                <p>
+                    A Senior Design Director who bridges creative vision and commercial results. Over 16 years I've led design
+                    teams across a portfolio of 11 licensed global brands — Levi's, Calvin Klein, Tommy Hilfiger, Columbia,
+                    Cole Haan, Tommy Bahama, Dickies, Kenneth Cole, Dockers, Red Wing, and Guess &mdash; and served as
+                    Creative Director on the RAA team that built Damen + Hastings, an in-house brand we grew from a
+                    pop-up to a national wholesale partnership with Kohl's.
+                </p>
+                <p>
+                    My edge is seeing market, brand, team, calendar, and P&amp;L at the same time. I partner early with
+                    merchandising, product development, and operations leadership so creative decisions land as commercial ones.
+                    I direct the work, and I build the systems and relationships that let great design happen when I'm not in
+                    the room.
+                </p>
 
-        <div class="highlight-box">
-            <h3>My Approach</h3>
-            <p>
-                Great creative work requires three things: <strong>strategic clarity</strong> (knowing what we're solving for),
-                <strong>collaborative culture</strong> (bringing the best out of teams), and <strong>operational excellence</strong>
-                (executing under real-world constraints). I focus on all three.
-            </p>
+                <div class="highlight-box">
+                    <h3>My Approach</h3>
+                    <p>
+                        Great creative work requires three things: <strong>strategic clarity</strong> (knowing what we're solving for),
+                        <strong>collaborative culture</strong> (bringing the best out of teams), and <strong>operational excellence</strong>
+                        (executing under real-world constraints). I focus on all three.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
