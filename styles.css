@@ -365,8 +365,8 @@ nav.site-nav {
 }
 .principle:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
 .principle .pnum { font-family: var(--label); font-weight: 700; font-size: .85rem; color: var(--clay); letter-spacing: .1em; }
-.principle h3 { font-size: 1.5rem; margin: 1rem 0 .7rem; }
-.principle p { font-size: 1rem; }
+.principle h3 { font-size: 1.5rem; margin: 1rem 0 .7rem; color: var(--ink); }
+.principle p { font-size: 1rem; color: var(--ink-soft); }
 .principle::after { content: ""; position: absolute; left: 0; bottom: 0; height: 4px; width: 0; background: var(--marigold); transition: width .4s var(--ease); }
 .principle:hover::after { width: 100%; }
 
