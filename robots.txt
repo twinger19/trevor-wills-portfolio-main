@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://trevorwills.com/sitemap.xml
