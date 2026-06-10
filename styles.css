@@ -94,6 +94,18 @@ body::before {
 }
 .skip-link:focus { top: 0; }
 
+/* Keyboard focus — visible, on-brand */
+:focus-visible { outline: 3px solid var(--cobalt); outline-offset: 3px; border-radius: 4px; }
+.bg-ink :focus-visible, .bg-clay :focus-visible, .site-footer :focus-visible { outline-color: var(--marigold); }
+
+/* Reading progress bar (case studies) */
+.progress-bar {
+    position: fixed; top: 0; left: 0; height: 4px; width: 100%;
+    transform: scaleX(0); transform-origin: 0 50%;
+    background: linear-gradient(90deg, var(--clay), var(--marigold));
+    z-index: 1001; pointer-events: none;
+}
+
 /* ------------------------------------------------------------ Typography -- */
 h1, h2, h3, h4 { font-family: var(--display); font-weight: 600; line-height: 1.04; letter-spacing: -.015em; color: var(--ink); }
 h1 { font-size: clamp(2.6rem, 7.2vw, 6.4rem); }

@@ -70,6 +70,23 @@ document.addEventListener('DOMContentLoaded', () => {
     nums.forEach(n => io.observe(n));
 });
 
+/* ------------------------------------------- Reading progress (case studies) */
+document.addEventListener('DOMContentLoaded', () => {
+    if (!document.querySelector('.cs-hero')) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const bar = document.createElement('div');
+    bar.className = 'progress-bar';
+    bar.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(bar);
+    const onScroll = () => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.transform = `scaleX(${max > 0 ? Math.min(window.scrollY / max, 1) : 0})`;
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+});
+
 /* ---------------------------------------------------------- Nav shadow ---- */
 document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.site-nav');
