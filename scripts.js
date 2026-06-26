@@ -207,3 +207,59 @@ document.addEventListener('keydown', e => {
         else if (e.key === 'Escape') closeLightbox();
     }
 });
+
+/* ===================================================== Intro / Preloader === */
+/* Broed-style page-load reveal. Plays once per session (the gate script in the
+   <head> decides before first paint). This drives the timeline, waits for
+   Fraunces to load so the name never flashes, and lets the visitor skip. */
+(function () {
+    const intro = document.getElementById('intro');
+    if (!intro) return;
+    const html = document.documentElement;
+
+    // Returning visitor this session — the gate flagged it; just clear it out.
+    if (html.classList.contains('intro-seen')) {
+        html.classList.remove('intro-playing');
+        intro.remove();
+        return;
+    }
+
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let torn = false;
+
+    const teardown = () => {
+        if (torn) return;
+        torn = true;
+        intro.dataset.done = '1';
+        try { sessionStorage.setItem('tw-intro-seen', '1'); } catch (e) {}
+        html.classList.remove('intro-playing');          // release the scroll lock
+        intro.classList.add('is-leaving');               // wipe the panel up
+        const remove = () => { if (intro.parentNode) intro.remove(); };
+        intro.addEventListener('transitionend', (ev) => { if (ev.target === intro) remove(); }, { once: true });
+        setTimeout(remove, 1100);                         // fallback if no transitionend
+    };
+
+    const reveal = () => {
+        intro.classList.add('is-revealing');
+        setTimeout(teardown, reduce ? 650 : 2050);        // reveal, hold to read, then exit
+    };
+
+    // Click or a key skips ahead.
+    intro.addEventListener('click', teardown);
+    window.addEventListener('keydown', function onKey(e) {
+        if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+            window.removeEventListener('keydown', onKey);
+            teardown();
+        }
+    });
+
+    // Start once Fraunces is ready, with a fallback so it never hangs.
+    if (document.fonts && document.fonts.ready) {
+        let started = false;
+        const go = () => { if (started) return; started = true; reveal(); };
+        document.fonts.ready.then(go);
+        setTimeout(go, 650);
+    } else {
+        reveal();
+    }
+})();

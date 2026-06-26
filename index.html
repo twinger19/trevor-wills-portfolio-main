@@ -49,8 +49,37 @@
         "knowsAbout": ["Creative Direction","Brand Strategy","Trend Forecasting","Product Design","Digital Product Creation","Sustainable Design","ESG Strategy"]
     }
     </script>
+
+    <script>
+      /* Intro gate — decide before first paint so there's no flash of content */
+      (function () {
+        try {
+          if (sessionStorage.getItem('tw-intro-seen')) {
+            document.documentElement.classList.add('intro-seen');
+          } else {
+            document.documentElement.classList.add('intro-playing');
+          }
+        } catch (e) {
+          document.documentElement.classList.add('intro-playing');
+        }
+      })();
+    </script>
 </head>
 <body>
+    <!-- ================= INTRO / PRELOADER ================= -->
+    <div class="intro" id="intro" role="presentation" aria-hidden="true">
+        <div class="intro__inner">
+            <div class="intro__name">
+                <span class="intro__line"><span class="intro__word intro__word--fill">Trevor</span></span>
+                <span class="intro__line"><span class="intro__word intro__word--outline">Wills</span></span>
+            </div>
+            <p class="intro__label">Creative Direction</p>
+        </div>
+        <span class="intro__meta intro__meta--tl">Senior Design Director</span>
+        <span class="intro__meta intro__meta--br">Chicago, IL</span>
+        <div class="intro__bar" aria-hidden="true"><span class="intro__bar-fill"></span></div>
+    </div>
+
     <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- ================= NAV ================= -->
@@ -323,6 +352,19 @@
         </div>
     </footer>
 
+    <script>
+      /* Failsafe: if scripts.js never runs, still remove the intro + unlock scroll */
+      setTimeout(function () {
+        var html = document.documentElement;
+        var intro = document.getElementById('intro');
+        html.classList.remove('intro-playing');
+        if (intro && !intro.dataset.done) {
+          intro.style.transition = 'opacity .5s';
+          intro.style.opacity = '0';
+          setTimeout(function () { if (intro.parentNode) intro.remove(); }, 520);
+        }
+      }, 6500);
+    </script>
     <script src="scripts.js"></script>
 </body>
 </html>

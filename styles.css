@@ -621,3 +621,98 @@ figcaption { font-family: var(--label); font-size: .78rem; letter-spacing: .03em
     a { color: var(--ink) !important; text-decoration: none; }
     .cs-meta { border-color: #bbb; }
 }
+
+/* ==========================================================================
+   Intro / Preloader  ·  "Loud color, big name"
+   A Broed-inspired page-load reveal: a solid clay field, the name set huge in
+   Fraunces (one word filled, one outlined), each line masked-and-lifted into
+   place, then the whole panel wipes upward to reveal the site.
+   Plays once per session — gated by an inline <head> script + scripts.js.
+   ========================================================================== */
+.intro {
+    position: fixed; inset: 0; z-index: 9999;
+    display: grid; place-items: center;
+    background: var(--clay);
+    color: var(--ink);
+    overflow: hidden;
+    will-change: transform;
+}
+/* warm highlight + faint grain so it reads like the rest of the site */
+.intro::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(125% 90% at 50% 14%, rgba(255,255,255,.12), transparent 62%);
+    mix-blend-mode: soft-light;
+}
+html.intro-seen .intro { display: none; }       /* returning visitor: never shows  */
+html.intro-playing { overflow: hidden; }         /* lock scroll while it plays      */
+
+.intro__inner { position: relative; z-index: 2; text-align: center; padding: 0 var(--gutter); }
+
+.intro__name {
+    font-family: var(--display);
+    font-weight: 600;
+    line-height: .88;
+    letter-spacing: -.022em;
+}
+.intro__line { display: block; overflow: hidden; padding: .02em .06em; }
+.intro__word {
+    display: inline-block;
+    font-size: clamp(3.4rem, 15.5vw, 12.5rem);
+    transform: translateY(118%);
+    will-change: transform;
+}
+.intro__word--fill    { color: var(--ink); }
+.intro__word--outline {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--ink);
+    text-stroke: 2px var(--ink);
+}
+@media (min-width: 720px) {
+    .intro__word--outline { -webkit-text-stroke-width: 3px; text-stroke-width: 3px; }
+}
+
+.intro__label {
+    margin-top: clamp(1rem, 2.2vw, 1.7rem);
+    font-family: var(--label);
+    text-transform: uppercase;
+    letter-spacing: .44em;
+    padding-left: .44em;                          /* balance the trailing tracking   */
+    font-size: clamp(.62rem, 1.5vw, .95rem);
+    color: var(--ink);
+    opacity: 0;
+    transform: translateY(14px);
+}
+
+/* small corner marks */
+.intro__meta {
+    position: absolute; z-index: 2;
+    font-family: var(--label); text-transform: uppercase;
+    letter-spacing: .18em; font-size: .72rem; color: var(--ink);
+    opacity: 0;
+}
+.intro__meta--tl { top: clamp(1.1rem, 3vw, 2rem);   left: clamp(1.1rem, 3vw, 2.4rem); }
+.intro__meta--br { bottom: clamp(1.5rem, 3vw, 2.2rem); right: clamp(1.1rem, 3vw, 2.4rem); }
+
+/* thin loading line along the bottom */
+.intro__bar { position: absolute; left: 0; bottom: 0; width: 100%; height: 4px; background: rgba(34,28,21,.16); z-index: 2; }
+.intro__bar-fill { display: block; height: 100%; width: 100%; background: var(--ink); transform: scaleX(0); transform-origin: 0 50%; }
+
+/* ---- revealing ---- */
+.intro.is-revealing .intro__word { transform: translateY(0); transition: transform .85s var(--ease-out); }
+.intro.is-revealing .intro__line:nth-child(1) .intro__word { transition-delay: .05s; }
+.intro.is-revealing .intro__line:nth-child(2) .intro__word { transition-delay: .17s; }
+.intro.is-revealing .intro__label { opacity: 1; transform: translateY(0); transition: opacity .7s var(--ease) .46s, transform .7s var(--ease-out) .46s; }
+.intro.is-revealing .intro__meta { opacity: .92; transition: opacity .7s var(--ease) .3s; }
+.intro.is-revealing .intro__bar-fill { transform: scaleX(1); transition: transform 1.7s var(--ease-out) .05s; }
+
+/* ---- leaving: panel wipes up, content lifts slightly faster ---- */
+.intro.is-leaving { transform: translateY(-100%); transition: transform .9s var(--ease-out); }
+.intro.is-leaving .intro__inner { transform: translateY(-14%); opacity: 0; transition: transform .9s var(--ease-out), opacity .55s linear; }
+
+@media (prefers-reduced-motion: reduce) {
+    .intro__word { transform: none; }
+    .intro__label, .intro__meta { opacity: 1; transform: none; transition: none; }
+    .intro__bar-fill { transform: scaleX(1); }
+    .intro.is-leaving { transform: none; opacity: 0; transition: opacity .45s linear; }
+    .intro.is-leaving .intro__inner { transition: none; }
+}
