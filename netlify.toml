@@ -1,8 +1,0 @@
-# Netlify configuration — Trevor Wills portfolio
-
-# Password gate: every request runs through the edge function first.
-# Password lives in the SITE_PASSWORD environment variable
-# (Netlify → Site configuration → Environment variables).
-[[edge_functions]]
-  path = "/*"
-  function = "gate"
