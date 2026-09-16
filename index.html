@@ -24,6 +24,17 @@
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Person","name":"Trevor Wills","jobTitle":"Senior Design Director","description":"Senior Design Director with 16+ years in accessories design across licensed global brands and retail private label.","url":"https://trevorwills.com","image":"https://trevorwills.com/images/og-image.jpg","email":"trevorwills@outlook.com","address":{"@type":"PostalAddress","addressLocality":"Chicago","addressRegion":"IL","addressCountry":"US"},"sameAs":["https://www.linkedin.com/in/trevorwills"],"knowsAbout":["Accessories Design","Design Leadership","Product Development","Licensed Brands","Digital Product Creation","CLO 3D","Trend Research"]}
     </script>
+    <script>
+      /* Intro splash gate: first homepage visit per session, skipped for reduced motion. Failsafe reveals the page after 5s. */
+      (function () {
+        var seen = false;
+        try { seen = !!sessionStorage.getItem('tw-intro'); } catch (e) { seen = true; }
+        if (!seen && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+          document.documentElement.classList.add('intro-pending');
+          setTimeout(function () { document.documentElement.classList.remove('intro-pending'); }, 5000);
+        }
+      })();
+    </script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>

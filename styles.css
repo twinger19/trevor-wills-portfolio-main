@@ -400,3 +400,26 @@ h4 { font-size: 1rem; font-weight: 700; font-variation-settings: "wdth" 100; }
   a { text-decoration: none; }
   .tl-item, .hl-item, .cap { break-inside: avoid; }
 }
+
+/* Intro splash (homepage, once per session) ------------------------------ */
+.intro-pending body > *:not(.intro) { visibility: hidden; }
+.intro {
+  position: fixed; inset: 0; z-index: 500;
+  background-color: var(--paper);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px; background-position: -1px -1px;
+  display: flex; align-items: center; justify-content: center; padding: var(--gutter);
+  transition: transform .7s cubic-bezier(.7, 0, .2, 1);
+}
+.intro.is-leaving { transform: translateY(-100%); }
+.intro__sheet { width: min(640px, 100%); }
+.intro__tag { font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-2); display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: .5rem; margin-bottom: 1.5rem; }
+.intro__name { font-family: var(--mono); font-weight: 500; font-size: clamp(2.2rem, 7vw, 4.4rem); line-height: 1; letter-spacing: -.02em; color: var(--ink); text-transform: uppercase; min-height: 1em; white-space: nowrap; }
+.intro__role { font-family: var(--mono); font-size: clamp(.85rem, 1.6vw, 1rem); color: var(--ink-2); margin-top: 1rem; min-height: 1.5em; }
+.intro__caret { display: inline-block; width: .55em; height: .9em; background: var(--red); vertical-align: -.05em; margin-left: .06em; animation: introBlink 1s steps(1) infinite; }
+.intro__role .intro__caret { height: 1em; width: .5em; }
+.intro__rule { height: 3px; background: var(--red); width: 0; margin-top: 1.5rem; transition: width .5s ease; }
+.intro.is-ruled .intro__rule { width: 100%; }
+.intro__skip { position: absolute; right: var(--gutter); bottom: var(--gutter); font: 500 .72rem var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--ink-2); background: none; border: 0; cursor: pointer; padding: .5rem; }
+.intro__skip:hover { color: var(--red); }
+@keyframes introBlink { 50% { opacity: 0; } }
