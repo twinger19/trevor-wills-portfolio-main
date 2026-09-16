@@ -15,6 +15,10 @@ Desktop.ini
 *.swo
 *~
 
+# LibreOffice lock files & autosave temp files
+.~lock.*#
+*.tmp
+
 # Node / build
 node_modules/
 dist/
@@ -29,11 +33,15 @@ npm-debug.log*
 # v3 launch — duplicate/leftover folders + sandbox artifacts (not part of the live site)
 /v3-new/
 .fuse_hidden*
-/Trevor-Wills-Portfolio-V2/
 /Trevor-Wills-Resume-Patagonia-Advanced-Concepts.pdf
 
-# Internal working docs — never deploy to trevorwills.com
-/EXECUTIVE-DOSSIER-AUDIT.md
-/PORTFOLIO-AUDIT-REPORT.md
-/CRITIQUE-Director-Positioning-Review.md
-/NEEDS-FROM-TREVOR.md
+# Internal working docs & one-off scripts — never deploy to trevorwills.com
+/docs/
+
+# Job-search materials — tailored resumes, cover letters, portfolio cover PDF.
+# Kept in the repo root per Trevor's working convention, never committed/deployed.
+/Trevor-Wills-Resume-*.docx
+/Trevor-Wills-Resume-*.pdf
+/Trevor-Wills-Cover-Letter-*.docx
+/Trevor-Wills-Cover-Letter-*.pdf
+/Trevor-Wills-Portfolio-Cover.pdf
