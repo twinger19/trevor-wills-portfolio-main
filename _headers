@@ -1,4 +1,4 @@
-# Netlify headers — caching + security
+# Netlify headers: caching + security
 
 /*
   X-Frame-Options: SAMEORIGIN
@@ -9,11 +9,14 @@
 /images/*
   Cache-Control: public, max-age=2592000
 
-/logos/*
-  Cache-Control: public, max-age=2592000
+/css/*
+  Cache-Control: public, max-age=3600
+
+/js/*
+  Cache-Control: public, max-age=3600
 
 /favicon.svg
   Cache-Control: public, max-age=604800
 
-/*.pdf
+/downloads/*
   Cache-Control: public, max-age=86400
