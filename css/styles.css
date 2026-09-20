@@ -592,6 +592,7 @@ html.show-drafts .wide-slot.slot-group, .wide-slot.slot-group.has-real { display
 .meta-logos img[src*="tommy-bahama"] { width: 86px; }
 .meta-logos img[src*="kenneth-cole"] { width: 96px; }
 .meta-logos img[src*="dockers"] { width: 62px; }
+.meta-logos img[src*="haggar"] { width: 76px; }
 .meta-logos img[src*="red-wing"] { width: 52px; }
 .meta-logos img[src*="guess"] { width: 62px; }
 @media (max-width: 760px) {
@@ -614,3 +615,6 @@ html.show-drafts .wide-slot.slot-group, .wide-slot.slot-group.has-real { display
   .carousel--clear .carousel-btn.next { right: 14px; }
   .carousel--clear .carousel-btn svg { width: 22px; height: 22px; }
 }
+
+/* Long URLs in the link-out box must wrap on narrow screens ------------------ */
+.linkout .url { overflow-wrap: anywhere; word-break: break-word; }
