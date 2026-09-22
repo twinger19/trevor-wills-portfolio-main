@@ -332,6 +332,7 @@ h4 { font-size: 1rem; font-weight: 700; font-variation-settings: "wdth" 100; }
 .img-grid img, .img-duo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .img-full img { width: 100%; }
 .zoomable { cursor: zoom-in; }
+.img-grid-credit { font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-2); margin: -1.75rem 0 clamp(2.5rem, 5vw, 3.5rem); }
 @media (max-width: 700px) { .img-grid { grid-template-columns: 1fr 1fr; } .img-duo { grid-template-columns: 1fr; } }
 
 .cs-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); max-width: 680px; margin-left: auto; margin-right: auto; }
