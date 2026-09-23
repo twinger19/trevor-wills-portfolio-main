@@ -409,15 +409,16 @@ h4 { font-size: 1rem; font-weight: 700; font-variation-settings: "wdth" 100; }
   .tl-item, .hl-item, .cap { break-inside: avoid; }
 }
 
-/* Intro splash (homepage, once per session) ------------------------------ */
-.intro-pending body > *:not(.intro) { visibility: hidden; }
+/* Intro splash (homepage root only, once per session, capped ~800ms) ---- */
+/* Non-blocking: the page underneath is never hidden, so it paints normally
+   even if this overlay is slow to load or its script fails. */
 .intro {
   position: fixed; inset: 0; z-index: 500;
   background-color: var(--paper);
   background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size: 28px 28px; background-position: -1px -1px;
   display: flex; align-items: center; justify-content: center; padding: var(--gutter);
-  transition: transform .7s cubic-bezier(.7, 0, .2, 1);
+  transition: transform .22s cubic-bezier(.7, 0, .2, 1);
 }
 .intro.is-leaving { transform: translateY(-100%); }
 .intro__sheet { width: min(640px, 100%); }

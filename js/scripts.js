@@ -152,14 +152,15 @@ document.addEventListener('keydown', e => {
   }
 });
 
-/* Intro splash: types the name like a typewriter, once per session.
+/* Intro splash: types the name like a typewriter, once per session, homepage
+   root only. Whole sequence is budgeted to land at roughly 800ms end to end.
    Only runs when the homepage head script sets .intro-pending. Click, key, or Skip to jump. */
 (function () {
   const html = document.documentElement;
   const done = () => html.classList.remove('intro-pending');
   if (!html.classList.contains('intro-pending')) return;
   const start = () => {
-    const name = 'Trevor Wills', role = 'Design & Creative Director · Chicago';
+    const name = 'Trevor Wills', role = 'Creative & Design Director · Chicago';
     const el = document.createElement('div');
     el.className = 'intro';
     el.setAttribute('aria-hidden', 'true');
@@ -178,14 +179,14 @@ document.addEventListener('keydown', e => {
       timers.forEach(clearTimeout);
       try { sessionStorage.setItem('tw-intro', '1'); } catch (e) {}
       el.classList.add('is-leaving');
-      setTimeout(() => el.remove(), 750);
+      setTimeout(() => el.remove(), 220);
     };
-    let t = 250;
-    [...name].forEach((ch, i) => later(() => { nameT.textContent = name.slice(0, i + 1); }, t += (ch === ' ' ? 160 : 85 + Math.random() * 50)));
-    later(() => { roleT.parentNode.appendChild(caret); }, t += 250);
-    [...role].forEach((ch, i) => later(() => { roleT.textContent = role.slice(0, i + 1); }, t += 18));
-    later(() => el.classList.add('is-ruled'), t += 200);
-    later(leave, t += 550);
+    let t = 20;
+    [...name].forEach((ch, i) => later(() => { nameT.textContent = name.slice(0, i + 1); }, t += (ch === ' ' ? 18 : 14)));
+    later(() => { roleT.parentNode.appendChild(caret); }, t += 50);
+    [...role].forEach((ch, i) => later(() => { roleT.textContent = role.slice(0, i + 1); }, t += 5));
+    later(() => el.classList.add('is-ruled'), t += 50);
+    later(leave, t += 80);
     el.addEventListener('click', leave);
     window.addEventListener('keydown', leave, { once: true });
   };
