@@ -15,8 +15,8 @@
 })();
 
 /* Trevor Wills · Portfolio · scripts.js
-   Mobile nav, image carousel, and the case-study lightbox. Nothing else:
-   all content is visible on load, no scroll animations. */
+   Mobile nav, image carousel, case-study lightbox, and (at the end) the
+   interaction layer. All content is visible on load without JS. */
 
 document.addEventListener('DOMContentLoaded', () => {
   /* Mobile nav */
@@ -153,7 +153,7 @@ document.addEventListener('keydown', e => {
 });
 
 /* Intro splash: types the name like a typewriter, once per session, homepage
-   root only. Whole sequence is budgeted to land at roughly 800ms end to end.
+   root only. Whole sequence is budgeted to land at roughly 1600ms end to end.
    Only runs when the homepage head script sets .intro-pending. Click, key, or Skip to jump. */
 (function () {
   const html = document.documentElement;
@@ -179,14 +179,15 @@ document.addEventListener('keydown', e => {
       timers.forEach(clearTimeout);
       try { sessionStorage.setItem('tw-intro', '1'); } catch (e) {}
       el.classList.add('is-leaving');
+      document.dispatchEvent(new Event('tw:intro-done'));
       setTimeout(() => el.remove(), 220);
     };
-    let t = 20;
-    [...name].forEach((ch, i) => later(() => { nameT.textContent = name.slice(0, i + 1); }, t += (ch === ' ' ? 18 : 14)));
-    later(() => { roleT.parentNode.appendChild(caret); }, t += 50);
-    [...role].forEach((ch, i) => later(() => { roleT.textContent = role.slice(0, i + 1); }, t += 5));
-    later(() => el.classList.add('is-ruled'), t += 50);
-    later(leave, t += 80);
+    let t = 40;
+    [...name].forEach((ch, i) => later(() => { nameT.textContent = name.slice(0, i + 1); }, t += (ch === ' ' ? 36 : 28)));
+    later(() => { roleT.parentNode.appendChild(caret); }, t += 100);
+    [...role].forEach((ch, i) => later(() => { roleT.textContent = role.slice(0, i + 1); }, t += 8));
+    later(() => el.classList.add('is-ruled'), t += 80);
+    later(leave, t += 520); /* hold so the full name + role can be read while the red rule draws */
     el.addEventListener('click', leave);
     window.addEventListener('keydown', leave, { once: true });
   };
@@ -213,3 +214,140 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+/* ==========================================================================
+   Interaction layer (Sept 2026). Each piece is progressive: without JS the
+   page shows the same content, just static.
+   ========================================================================== */
+const reduceMotion = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Tech-pack markup: adds crop marks, dimension lines and a figure label to
+   each homepage case study image. The label comes from data-fig. */
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.work-media').forEach(m => {
+    const row = m.closest('.work-row');
+    const idx = row && row.querySelector('.work-idx') ? row.querySelector('.work-idx').textContent.trim() : '';
+    const fig = 'Fig. ' + idx + (m.dataset.fig ? ' · ' + m.dataset.fig : '');
+    const tp = document.createElement('span');
+    tp.className = 'tp';
+    tp.setAttribute('aria-hidden', 'true');
+    tp.innerHTML = '<i class="tp-c tl"></i><i class="tp-c tr"></i><i class="tp-c bl"></i><i class="tp-c br"></i>' +
+      '<span class="tp-w"><b></b></span><span class="tp-h"></span><span class="tp-tag">Open case study →</span>';
+    tp.querySelector('b').textContent = fig;
+    m.appendChild(tp);
+  });
+});
+
+/* Before / after compare: drag anywhere on the image, or focus it and use the
+   arrow keys (a hidden range input carries the keyboard and screen reader). */
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-compare]').forEach(fig => {
+    const stage = fig.querySelector('.compare-stage');
+    const range = fig.querySelector('.compare-range');
+    const set = v => { v = Math.max(0, Math.min(100, v)); stage.style.setProperty('--pos', v + '%'); range.value = v; };
+    const fromX = x => { const r = stage.getBoundingClientRect(); return (x - r.left) / r.width * 100; };
+    let dragging = false;
+    stage.addEventListener('pointerdown', e => { dragging = true; stage.setPointerCapture(e.pointerId); set(fromX(e.clientX)); });
+    stage.addEventListener('pointermove', e => { if (dragging) set(fromX(e.clientX)); });
+    const stop = () => { dragging = false; };
+    stage.addEventListener('pointerup', stop);
+    stage.addEventListener('pointercancel', stop);
+    range.addEventListener('input', () => set(+range.value));
+    set(+range.value || 50);
+
+    /* One gentle sweep the first time it scrolls into view, so people see it moves */
+    if (reduceMotion() || !('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      io.disconnect();
+      const t0 = performance.now(), dur = 1400;
+      const step = now => {
+        if (dragging) return;
+        const p = Math.min(1, (now - t0) / dur);
+        set(50 + Math.sin(p * Math.PI * 2) * 22 * (1 - p));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      setTimeout(() => requestAnimationFrame(step), 250);
+    }), { threshold: 0.6 });
+    io.observe(stage);
+  });
+});
+
+/* Homepage stats: count up the first time the row is in view, with a small
+   ruler (one tick per year or brand) or a percent bar underneath. */
+document.addEventListener('DOMContentLoaded', () => {
+  const spec = document.querySelector('.spec[data-countup-row]');
+  if (!spec) return;
+  const cells = [...spec.querySelectorAll('[data-countup]')].map(el => {
+    const final = el.textContent.trim();
+    const to = +el.dataset.countup, pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+    el.innerHTML = '<span class="vh"></span><span aria-hidden="true"></span>';
+    el.firstChild.textContent = final;
+    const shown = el.lastChild;
+    const meter = document.createElement('div');
+    meter.setAttribute('aria-hidden', 'true');
+    if (el.dataset.ticks) {
+      meter.className = 'spec-meter spec-meter--ticks';
+      for (let i = 0; i < +el.dataset.ticks; i++) meter.insertAdjacentHTML('beforeend', '<i style="--i:' + i + '"></i>');
+    } else if (el.dataset.bar) {
+      meter.className = 'spec-meter spec-meter--bar';
+      meter.innerHTML = '<b style="--v:' + el.dataset.bar + '%"></b>';
+    }
+    el.after(meter);
+    return { to, pre, suf, shown, final };
+  });
+  const finish = () => { cells.forEach(c => { c.shown.textContent = c.final; }); spec.classList.add('is-counted'); };
+  if (reduceMotion() || !('IntersectionObserver' in window)) { finish(); return; }
+  cells.forEach(c => { c.shown.textContent = c.pre + '0' + c.suf; });
+  const run = () => {
+    spec.classList.add('is-counted');
+    const t0 = performance.now(), dur = 1100;
+    const step = now => {
+      const p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      cells.forEach(c => { c.shown.textContent = c.pre + Math.round(c.to * e) + c.suf; });
+      if (p < 1) requestAnimationFrame(step); else finish();
+    };
+    requestAnimationFrame(step);
+  };
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    io.disconnect();
+    /* Wait for the intro splash to leave so the count is actually seen */
+    if (document.querySelector('.intro')) document.addEventListener('tw:intro-done', run, { once: true });
+    else run();
+  }), { threshold: 0.5 });
+  io.observe(spec);
+});
+
+/* Page transitions: the clicked case study image grows into the next page's
+   hero, and shrinks back on the way home. Uses cross-document view
+   transitions where the browser supports them; everywhere else pages load
+   normally. Case study heroes are named in CSS; here we name the one
+   homepage thumbnail involved, and skip any image that is off screen so
+   nothing flies in from outside the viewport. */
+(function () {
+  const page = u => { try { return (new URL(u, location.href).pathname.split('/').pop() || 'index.html').replace(/\.html$/, ''); } catch (e) { return ''; } };
+  const here = page(location.href);
+  const isCase = p => p.indexOf('case-study-') === 0;
+  const thumbFor = p => document.querySelector('.work-media[href="' + p + '.html"] img');
+  const onScreen = el => { const r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; };
+  const name = (el, vt, n) => { el.style.viewTransitionName = n; vt.finished.finally(() => { el.style.viewTransitionName = ''; }); };
+  let lastHref = '';
+  document.addEventListener('click', e => { const a = e.target.closest && e.target.closest('a[href]'); if (a) lastHref = a.href; }, true);
+
+  window.addEventListener('pageswap', e => {
+    if (!e.viewTransition) return;
+    const to = page((e.activation && e.activation.entry && e.activation.entry.url) || lastHref);
+    const thumb = isCase(to) && thumbFor(to);
+    if (thumb && onScreen(thumb)) name(thumb, e.viewTransition, 'cs-media');
+    const hero = document.querySelector('.cs-hero-media img');
+    if (hero && !onScreen(hero)) name(hero, e.viewTransition, 'none');
+  });
+  window.addEventListener('pagereveal', e => {
+    if (!e.viewTransition) return;
+    const act = window.navigation && navigation.activation;
+    const from = page((act && act.from && act.from.url) || document.referrer);
+    const thumb = isCase(from) && from !== here && thumbFor(from);
+    if (thumb && onScreen(thumb)) name(thumb, e.viewTransition, 'cs-media');
+  });
+})();
