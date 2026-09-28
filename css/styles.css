@@ -694,3 +694,8 @@ html.show-drafts .wide-slot.slot-group, .wide-slot.slot-group.has-real { display
 ::view-transition-group(cs-media) { animation-duration: .5s; animation-timing-function: cubic-bezier(.7, 0, .2, 1); overflow: clip; }
 ::view-transition-old(cs-media), ::view-transition-new(cs-media) { height: 100%; object-fit: cover; animation-duration: .5s; }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
+
+/* Print shadow ----------------------------------------------------------------
+   Framed images sit on the grid paper like prints: a short, soft shadow so they
+   lift slightly off the page. No tilt, no motion. */
+.photo, .work-media, .cs-hero-media, .img-full, .img-grid figure, .img-duo figure { box-shadow: 2px 2px 3px rgba(0, 0, 0, .16); }
