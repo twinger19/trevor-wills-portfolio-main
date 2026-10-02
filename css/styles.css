@@ -542,6 +542,14 @@ html.show-drafts .img-grid.draft-only, html.show-drafts .img-duo.draft-only { di
 .logo-cell img[src*="tommy-bahama"] { max-height: 36px; max-width: 90%; }
 .logo-cell img[src*="red-wing"] { max-height: 52px; }
 .logo-cell img[src*="kohls"] { max-height: 20px; max-width: 70%; }
+/* Toolkit row (text only, sits under the logo wall) */
+.tool-grid { list-style: none; margin: 0; padding: 0 1px 1px 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tool-cell { min-height: 92px; display: flex; flex-direction: column; justify-content: flex-start; padding: 14px 18px; background: var(--white); border: 1px solid var(--line); margin: 0 -1px -1px 0; }
+.tool-kind { font-family: var(--mono); font-size: .68rem; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; color: var(--red); margin: 0 0 .4rem; }
+.tool-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; font-size: .95rem; line-height: 1.5; color: var(--ink); }
+.tool-list li { white-space: nowrap; }
+.tool-list li:not(:last-child)::after { content: "/"; color: var(--line); margin: 0 .55rem; }
+@media (max-width: 720px) { .tool-grid { grid-template-columns: 1fr; } .tool-cell { min-height: 0; } }
 
 /* Image spots: placeholder files stay hidden on the live site; a real image
    dropped in with the same file name shows automatically (see js/scripts.js). */
