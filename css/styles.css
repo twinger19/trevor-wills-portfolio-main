@@ -729,9 +729,9 @@ html.show-drafts .wide-slot.slot-group, .wide-slot.slot-group.has-real { display
 
 /* Key figure on each homepage case study (Oct 2026) ------------------------
    One number per project, set large so it reads before the summary. */
-.work-fig { display: flex; align-items: baseline; gap: .8rem; margin: 0 0 .85rem; }
+.work-fig { display: flex; align-items: center; gap: .9rem; margin: 0 0 .85rem; }
 .work-fig .n { font-family: var(--display); font-weight: 800; font-variation-settings: "wdth" 100; font-size: clamp(2.2rem, 3.6vw, 3rem); line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; }
-.work-fig .l { font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-2); line-height: 1.4; max-width: 24ch; }
+.work-fig .l { font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-2); line-height: 1.4; max-width: 24ch; padding-top: .15em; }
 
 /* Ink text on sage fills ------------------------------------------------- */
 .btn:not(.btn--ghost):hover, .btn:not(.btn--ghost):hover:visited { color: var(--ink); }
