@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Flipbook (Levi's Slippers case study)
+   The printed book sits on the grid paper like a real object, with a red
+   spec-sheet dimension line over it that reads the trim size of what's open.
+   ========================================================================== */
+
+.book { margin: 0 0 clamp(2.5rem, 5vw, 3.5rem); }
+
+/* Stage: room above for the dimension line, room below for the shadow */
+.book-stage { position: relative; max-width: 1040px; margin: 0 auto; padding: 34px 0 26px; }
+
+/* Dimension line: same drawing language as the homepage tech-pack hover */
+.book-dim { position: absolute; top: 8px; height: 9px; border-left: 1px solid var(--red); border-right: 1px solid var(--red); left: var(--dim-l, 0%); width: var(--dim-w, 100%); transition: left .45s cubic-bezier(.7, 0, .2, 1), width .45s cubic-bezier(.7, 0, .2, 1); pointer-events: none; }
+.book-dim::before { content: ""; position: absolute; left: 0; right: 0; top: 4px; border-top: 1px solid var(--red); }
+.book-dim b { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -52%); background: var(--paper); padding: 0 .55rem; font: 500 .66rem/1 var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--red); white-space: nowrap; }
+
+/* The book itself */
+.book-body { position: relative; }
+.book-pages { margin: 0 auto; transition: transform .6s cubic-bezier(.4, 0, .2, 1); }
+.book-hint .sm { display: none; }
+@media (max-width: 560px) { .book-hint .lg { display: none; } .book-hint .sm { display: inline; } }
+@media (prefers-reduced-motion: reduce) { .book-pages, .book-dim, .book-shadow { transition: none; } }
+.book-page { background: #fff; overflow: hidden; }
+.book-page img { width: 100%; height: 100%; object-fit: cover; display: block; -webkit-user-drag: none; user-select: none; }
+
+/* Gutter shading so an open spread reads as bound paper, not two images */
+.book-page::after { content: ""; position: absolute; top: 0; bottom: 0; width: 9%; pointer-events: none; }
+/* the page-turn script tags each page "--left" or "--right" as it moves */
+.book-page[class~="--left"]::after { right: 0; background: linear-gradient(to left, rgba(0, 0, 0, .16), rgba(0, 0, 0, .04) 35%, transparent); }
+.book-page[class~="--right"]::after { left: 0; background: linear-gradient(to right, rgba(0, 0, 0, .16), rgba(0, 0, 0, .04) 35%, transparent); }
+.book-page.is-cover::after { width: 2.5%; opacity: .7; }
+.book.is-portrait .book-page::after { width: 4%; }
+
+/* Contact shadow on the paper, sized to whatever is open */
+.book-shadow { position: absolute; bottom: 14px; height: 22px; left: var(--dim-l, 0%); width: var(--dim-w, 100%); background: radial-gradient(ellipse at center, rgba(40, 32, 20, .28), transparent 70%); filter: blur(4px); transition: left .45s cubic-bezier(.7, 0, .2, 1), width .45s cubic-bezier(.7, 0, .2, 1); pointer-events: none; z-index: -1; }
+
+/* Controls: arrows, page count, contents */
+.book-bar { max-width: 1040px; margin: .4rem auto 0; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 1rem; border-top: 2px solid var(--ink); padding-top: .9rem; }
+.book-btn { width: 44px; height: 44px; border: 1.5px solid var(--ink); background: var(--white); color: var(--ink); border-radius: 3px; cursor: pointer; display: grid; place-items: center; }
+.book-btn svg { width: 18px; height: 18px; }
+.book-btn:hover:not(:disabled) { background: var(--ink); color: var(--white); }
+.book-btn:disabled { opacity: .3; cursor: default; }
+.book-status { text-align: center; min-width: 0; }
+.book-count { font: 500 .78rem/1.3 var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--ink); font-variant-numeric: tabular-nums; }
+.book-chapter { font: 700 1rem/1.3 var(--display); font-variation-settings: "wdth" 100; margin-top: .15rem; color: var(--red); }
+.book-hint { font: 400 .7rem/1.4 var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--ink-2); margin-top: .3rem; }
+
+.book-toc { max-width: 1040px; margin: 1rem auto 0; display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid var(--line); list-style: none; padding: 0; }
+.book-toc li { flex: 1 1 auto; }
+.book-toc button { width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line); padding: .6rem .9rem .7rem 0; cursor: pointer; font: 500 .86rem/1.25 var(--sans); color: var(--ink); white-space: nowrap; }
+.book-toc button span { display: block; font: 500 .66rem/1 var(--mono); letter-spacing: .04em; color: var(--ink-2); margin-bottom: .3rem; }
+.book-toc button:hover { color: var(--red); }
+.book-toc button[aria-current="true"] { color: var(--red); border-bottom: 2px solid var(--red); padding-bottom: calc(.7rem - 1px); }
+.book-toc button[aria-current="true"] span { color: var(--red); }
+
+/* Print spec under the viewer */
+.book-spec { max-width: 1040px; margin: 1.6rem auto 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--white); }
+.book-spec div { padding: .8rem 1rem .9rem; }
+.book-spec div + div { border-left: 1px solid var(--line); }
+.book-spec dt { font: 500 .66rem/1 var(--mono); letter-spacing: .05em; text-transform: uppercase; color: var(--ink-2); margin-bottom: .4rem; }
+.book-spec dd { margin: 0; font-weight: 600; font-size: .95rem; line-height: 1.35; }
+
+@media (max-width: 760px) {
+  .book-stage { padding-top: 30px; }
+  .book-bar { gap: .6rem; }
+  .book-toc { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: thin; }
+  .book-toc li { flex: 0 0 auto; }
+  .book-spec { grid-template-columns: 1fr 1fr; }
+  .book-spec div:nth-child(odd) { border-left: 0; }
+  .book-spec div:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+
+/* Fallback if the page-turn script can't load: a swipeable strip of pages */
+.book.is-static .book-pages { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+.book.is-static .book-page { position: relative; flex: 0 0 min(80%, 480px); aspect-ratio: 1; scroll-snap-align: center; border: 1px solid var(--line); box-shadow: 2px 2px 3px rgba(0, 0, 0, .16); }
+.book.is-static .book-page::after, .book.is-static .book-dim, .book.is-static .book-shadow, .book.is-static .book-hint { display: none; }
+
+/* Swatch row for the line table */
+.style-k { font-family: var(--mono); font-size: .7rem; color: var(--red); letter-spacing: .04em; display: block; margin-bottom: .2rem; }
+.jump { background: none; border: 0; padding: 0; font: inherit; color: var(--red); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.jump:hover { color: var(--ink); }
