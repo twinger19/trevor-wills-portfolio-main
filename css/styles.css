@@ -767,3 +767,56 @@ html.show-drafts .wide-slot.slot-group, .wide-slot.slot-group.has-real { display
 .nav-menu > a.nav-cta:hover { color: var(--white); text-decoration: none; }
 
 :focus-visible, .carousel--clear:focus-visible, .compare-stage:has(.compare-range:focus-visible) { outline-color: var(--ink); }
+
+/* At a glance (Oct 2026) ----------------------------------------------------
+   Sits under the meta row on every case study: challenge, what I did, result.
+   Same ruled style as the meta row so it reads as part of the page header. */
+.glance { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); }
+.glance > div { padding: 1.1rem 1.25rem 1.3rem 0; }
+.glance > div + div { padding-left: 1.25rem; border-left: 1px solid var(--line); }
+.glance h4 { font-family: var(--mono); font-size: .72rem; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-2); margin: 0 0 .5rem; }
+.glance p { margin: 0; font-size: 1rem; line-height: 1.5; }
+.glance .n { display: block; font-family: var(--display); font-weight: 800; font-variation-settings: "wdth" 100; font-size: clamp(2rem, 3.4vw, 2.7rem); line-height: 1; margin: .1rem 0 .45rem; }
+.glance-k { font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; color: var(--ink); margin: 0 0 .6rem; }
+.glance-k span { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: .3em; }
+@media (max-width: 760px) {
+  .glance { grid-template-columns: 1fr; }
+  .glance > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+}
+
+/* More detail drawers (Oct 2026) ---------------------------------------------
+   Process detail is kept on the page but closed by default. Click the bar to
+   open it. */
+.more { max-width: 680px; margin: 0 auto clamp(2.5rem, 5vw, 3.5rem); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); }
+.more > summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .85rem 0; }
+.more > summary::-webkit-details-marker { display: none; }
+.more > summary .t { font-weight: 600; font-size: 1rem; line-height: 1.35; }
+.more > summary .k { display: block; font-family: var(--mono); font-size: .7rem; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-2); margin-bottom: .2rem; font-weight: 400; }
+.more > summary::after { content: "+"; flex: none; width: 30px; height: 30px; display: grid; place-items: center; background: var(--accent); color: var(--ink); font: 500 1.2rem/1 var(--mono); }
+.more[open] > summary::after { content: "\2212"; }
+.more > summary:hover .t { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: .3em; }
+.more-body { padding: .4rem 0 .6rem; }
+.more-body > *:last-child { margin-bottom: 1rem; }
+.more-body .cs-prose, .more-body .table-wrap, .more-body .stat-note { max-width: none; margin-left: 0; margin-right: 0; }
+.more-body .steps { --n: 3; }
+.more-body .stat-note { margin-top: 0; }
+@media print { .more > summary::after { display: none; } }
+
+/* More work (homepage): two smaller, matching cards ------------------------ */
+.more-work { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+.more-work .section-head { padding-bottom: .75rem; }
+.mw-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 2px solid var(--ink); }
+.mw-card { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 1.25rem; padding: 1.5rem 1.5rem 1.5rem 0; align-items: start; }
+.mw-card + .mw-card { padding-left: 1.5rem; padding-right: 0; border-left: 1px solid var(--line); }
+.mw-card .work-media img { aspect-ratio: 3 / 2; }
+.mw-card h3 { font-size: 1.2rem; margin-bottom: .45rem; }
+.mw-card h3 a { text-decoration: none; }
+.mw-card p { color: var(--ink-2); font-size: .95rem; margin: 0 0 .7rem; }
+@media (max-width: 960px) { .mw-card { grid-template-columns: 1fr; } }
+@media (max-width: 700px) {
+  .mw-grid { grid-template-columns: 1fr; }
+  .mw-card + .mw-card { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+}
+
+/* About: toolkit moved from the homepage */
+.about-tools { margin-top: .5rem; }
