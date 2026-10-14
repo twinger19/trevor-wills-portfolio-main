@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Flipbook (Levi's Slippers case study)
+   Flipbook (Levi's Slippers and Damen + Hastings case studies)
    The printed book sits on the grid paper like a real object, with a red
    spec-sheet dimension line over it that reads the trim size of what's open.
    ========================================================================== */
@@ -72,7 +72,7 @@
 
 /* Fallback if the page-turn script can't load: a swipeable strip of pages */
 .book.is-static .book-pages { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
-.book.is-static .book-page { position: relative; flex: 0 0 min(80%, 480px); aspect-ratio: 1; scroll-snap-align: center; border: 1px solid var(--line); box-shadow: 2px 2px 3px rgba(0, 0, 0, .16); }
+.book.is-static .book-page { position: relative; flex: 0 0 min(80%, 480px); aspect-ratio: var(--page-ar, 1); scroll-snap-align: center; border: 1px solid var(--line); box-shadow: 2px 2px 3px rgba(0, 0, 0, .16); }
 .book.is-static .book-page::after, .book.is-static .book-dim, .book.is-static .book-shadow, .book.is-static .book-hint { display: none; }
 
 /* Swatch row for the line table */

@@ -1,4 +1,6 @@
-/* Flipbook for the Levi's Slippers case study.
+/* Flipbook for the Levi's Slippers and Damen + Hastings case studies.
+   Page size, size labels and chapters can be set per book with data-page-w,
+   data-page-h, data-size-single, data-size-spread and data-chapters (JSON).
    Uses StPageFlip (page-flip@2.0.7, loaded before this file) for the page turn.
    If that library doesn't load, the pages fall back to a swipeable strip. */
 (function () {
@@ -19,8 +21,12 @@
   var tocButtons = Array.prototype.slice.call(document.querySelectorAll('[data-book-go]'));
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  var pageW = +book.dataset.pageW || 500, pageH = +book.dataset.pageH || 500;
+  var sizeSingle = book.dataset.sizeSingle || '8 × 8 in page';
+  var sizeSpread = book.dataset.sizeSpread || '16 × 8 in open spread';
+
   /* Chapter for every page index (0-based), read from the book's own contents page */
-  var chapters = [
+  var chapters = book.dataset.chapters ? JSON.parse(book.dataset.chapters) : [
     [0, 0, 'Cover'], [1, 2, 'Levi’s + Randa'], [3, 4, 'The Slipper'],
     [5, 6, 'Sundries, branding & linings'], [7, 8, 'Outsole design'],
     [9, 10, 'Downtime Convertible'], [11, 12, 'Coastal Convertible'], [13, 14, 'Double Up Glide'],
@@ -50,8 +56,9 @@
   pages[total - 1].classList.add('is-cover');
 
   var pf = new window.St.PageFlip(pagesEl, {
-    width: 500, height: 500, size: 'stretch',
-    minWidth: 240, maxWidth: 520, minHeight: 240, maxHeight: 520,
+    width: pageW, height: pageH, size: 'stretch',
+    minWidth: Math.round(pageW * 0.48), maxWidth: Math.round(pageW * 1.04),
+    minHeight: Math.round(pageH * 0.48), maxHeight: Math.round(pageH * 1.04),
     showCover: true, usePortrait: true, autoSize: true,
     maxShadowOpacity: 0.45, flippingTime: reduced ? 1 : 800,
     mobileScrollSupport: true, showPageCorners: !reduced, startZIndex: 1
@@ -104,7 +111,7 @@
     else if (portrait) { width = r.pageWidth; }
     stage.style.setProperty('--dim-l', (off + left) + 'px');
     stage.style.setProperty('--dim-w', width + 'px');
-    if (dimLabel) dimLabel.textContent = (single ? '8 × 8 in page' : '16 × 8 in open spread');
+    if (dimLabel) dimLabel.textContent = (single ? sizeSingle : sizeSpread);
   }
 
   function go(i) {
@@ -130,7 +137,7 @@
         pagesEl.style.transform = '';
         stage.style.setProperty('--dim-l', (pagesEl.offsetLeft + pagesEl.parentNode.offsetLeft + pf.getBoundsRect().left) + 'px');
         stage.style.setProperty('--dim-w', pf.getBoundsRect().width + 'px');
-        if (dimLabel) dimLabel.textContent = '16 × 8 in open spread';
+        if (dimLabel) dimLabel.textContent = sizeSpread;
       }
     } else if (e.data === 'read') update();
   });
