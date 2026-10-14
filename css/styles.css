@@ -830,3 +830,20 @@ html.show-drafts .wide-slot.slot-group, .wide-slot.slot-group.has-real { display
 
 /* Link under the design team principles (Oct 2026) */
 .principles-more { margin: clamp(1.5rem, 3vw, 2rem) 0 0; }
+
+/* Earlier work: label the hands-on designer projects (Oct 2026) */
+.era-tag { display: inline-block; font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); border-bottom: 1px solid var(--accent); margin: 0 0 .5rem; }
+.more-work .section-head { align-items: flex-end; }
+.more-work .section-head h3 { margin: 0; }
+.era-note { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem .9rem; margin: 1.25rem 0 0; color: var(--ink-2); font-size: .95rem; max-width: 62ch; }
+.era-note .era-tag { margin: 0; }
+.nav-drop-panel .nav-drop-label { font-family: var(--mono); font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-2); margin: .4rem 0 0; padding: .6rem 1rem .25rem; border-top: 1px solid var(--line); }
+@media (max-width: 760px) { .nav-drop-panel .nav-drop-label { padding-left: 0; } }
+@media (min-width: 961px) {
+  .mw-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 3rem; }
+  .mw-card { grid-template-columns: 1fr; align-content: start; }
+  .mw-card, .mw-card + .mw-card, .mw-card:nth-child(odd), .mw-card:nth-child(even) { padding: 1.5rem 0; border: 0; position: relative; }
+  .mw-card + .mw-card::before { content: ""; position: absolute; left: -1.5rem; top: 0; bottom: 0; width: 1px; background: var(--line); }
+}
+.more-work .section-head p.era-tag { color: var(--accent); }
+.era-note { margin-bottom: 1.5rem; }
