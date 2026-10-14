@@ -827,3 +827,6 @@ html.show-drafts .wide-slot.slot-group, .wide-slot.slot-group.has-real { display
   .mw-card:nth-child(even) { padding-left: 1.5rem; padding-right: 0; border-left: 1px solid var(--line); }
   .mw-card:nth-child(n+3) { border-top: 1px solid var(--line); }
 }
+
+/* Link under the design team principles (Oct 2026) */
+.principles-more { margin: clamp(1.5rem, 3vw, 2rem) 0 0; }
