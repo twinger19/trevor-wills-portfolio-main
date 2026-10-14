@@ -820,3 +820,10 @@ html.show-drafts .wide-slot.slot-group, .wide-slot.slot-group.has-real { display
 
 /* About: toolkit moved from the homepage */
 .about-tools { margin-top: .5rem; }
+
+/* More work: let a third card wrap cleanly (Oct 2026) */
+@media (min-width: 761px) {
+  .mw-card:nth-child(odd) { padding-left: 0; padding-right: 1.5rem; border-left: 0; }
+  .mw-card:nth-child(even) { padding-left: 1.5rem; padding-right: 0; border-left: 1px solid var(--line); }
+  .mw-card:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
